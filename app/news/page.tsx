@@ -1,60 +1,59 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'News | Mass ParentCorps',
+  title: 'News & Updates | Mass ParentCorps',
   description: 'Latest updates, stories, and announcements from Mass ParentCorps.',
 }
 
 const posts = [
   {
-    slug: 'focus-groups-complete',
-    category: 'Research',
-    date: 'January 28, 2026',
-    title: 'Mass ParentCorps Completes Statewide Focus Groups',
-    excerpt: 'Twenty-seven parent leaders across Massachusetts participated in six focus groups to shape the MPC credential pathway. Here\'s what we heard.',
-    readTime: '5 min read',
+    slug: 'needs-assessment-completed',
+    category: 'Milestone',
+    date: 'January 2026',
+    title: 'Phase 1 Needs Assessment Completed',
+    excerpt: 'Mass ParentCorps has completed Phase 1 of its development, gathering insights from parent leaders and organizations across Massachusetts to inform the pilot design.',
+    readTime: '3 min read',
     featured: true,
   },
   {
-    slug: 'five-cbo-partners',
-    category: 'Partnership',
-    date: 'December 10, 2025',
-    title: 'Five Community-Based Organizations Join the MPC Coalition',
-    excerpt: 'We\'re proud to announce that five CBOs across Massachusetts have committed to co-designing and hosting the Parent Leadership Credential program.',
+    slug: 'community-conversations',
+    category: 'Outreach',
+    date: 'Late 2025',
+    title: 'Conversations with Community Organizations Begin',
+    excerpt: 'Mass ParentCorps begins engaging community-based organizations across Massachusetts to explore the development of a Parent Leadership Workforce Credential.',
     readTime: '3 min read',
     featured: false,
   },
   {
-    slug: 'credential-pathway-announced',
+    slug: 'pilot-cohort-recruitment',
     category: 'Program',
-    date: 'October 22, 2025',
-    title: 'Introducing the MPC Parent Leadership Credential',
-    excerpt: 'Mass ParentCorps announces a new four-element credential pathway — combining college coursework, field experience, specialized training, and a capstone project.',
+    date: '2026',
+    title: 'Pilot Cohort Recruitment',
+    excerpt: 'Mass ParentCorps launches recruitment for the first cohort of 40+ parent leaders representing more than 10 organizations across Massachusetts.',
     readTime: '4 min read',
     featured: false,
   },
   {
-    slug: 'backbone-model-explainer',
-    category: 'Explainer',
-    date: 'September 15, 2025',
-    title: 'What Is a Backbone Model? How MPC Coordinates Without Duplicating',
-    excerpt: 'MPC operates as a backbone organization — coordinating funding, curriculum, and credentials while partner CBOs remain the direct connectors to families.',
-    readTime: '6 min read',
+    slug: 'course-development',
+    category: 'Academic',
+    date: '2026',
+    title: 'Course Development with Community Colleges',
+    excerpt: 'Community colleges collaborate with Mass ParentCorps to develop a 3-credit course connecting parent leadership experience with academic learning and workforce preparation.',
+    readTime: '4 min read',
     featured: false,
   },
   {
-    slug: 'ny-metro-center-visit',
-    category: 'Learning',
-    date: 'August 5, 2025',
-    title: 'Learning from New York: A Visit to the NY Metro Center',
-    excerpt: 'The MPC team traveled to New York City to learn from the NY Metro Center\'s established parent leadership credential model — and returned with key lessons for Massachusetts.',
-    readTime: '4 min read',
+    slug: 'evaluation-framework',
+    category: 'Research',
+    date: '2026',
+    title: 'Evaluation Framework Announced',
+    excerpt: 'Mass ParentCorps announces an evaluation partnership with NYU Metro Center under the leadership of Joanna Geller to measure outcomes and inform future expansion.',
+    readTime: '5 min read',
     featured: false,
   },
 ]
 
-const categories = ['All', 'Research', 'Partnership', 'Program', 'Explainer', 'Learning']
+const categories = ['All', 'Milestone', 'Outreach', 'Program', 'Academic', 'Research']
 
 export default function NewsPage() {
   const featured = posts.find(p => p.featured)
@@ -63,20 +62,31 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
 
-      {/* Hero */}
-      <section className="py-24 relative overflow-hidden" style={{ background: '#0C3B38' }}>
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute rounded-full" style={{ top: '-20%', left: '-5%', width: 600, height: 600, background: 'radial-gradient(circle, #2EC4B6 0%, transparent 70%)', opacity: 0.1, filter: 'blur(80px)' }} />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-6">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h1 className="mt-6 text-5xl md:text-6xl font-bold" style={{ color: '#F0DC9A' }}>
-            From the field
-          </h1>
-          <p className="mt-4 text-xl max-w-xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            Stories, research updates, and announcements as Mass ParentCorps grows.
-          </p>
+      {/* Photo Hero */}
+      <section className="relative pt-20 overflow-hidden" style={{ background: '#0C3B38' }}>
+        <div className="relative w-full h-[55vh] min-h-[380px]">
+          <img
+            src="/cbo-meeting.jpg"
+            alt="Community organization meeting"
+            className="w-full h-full object-cover"
+          />
+          <div
+            className="absolute inset-0"
+            style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.6) 0%, rgba(12,59,56,0.88) 100%)' }}
+          />
+          <div className="absolute inset-0 flex items-center">
+            <div className="max-w-7xl mx-auto px-6 w-full">
+              <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
+              <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+              <h1 className="mt-6 text-5xl md:text-6xl font-bold" style={{ color: '#F0DC9A' }}>
+                From the field
+              </h1>
+              <p className="mt-4 text-xl max-w-xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
+                Updates on pilot cohorts, partnerships, evaluation insights, and future opportunities
+                as Mass ParentCorps grows.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -84,7 +94,7 @@ export default function NewsPage() {
       <section className="py-20" style={{ background: '#FBF7E8' }}>
         <div className="max-w-7xl mx-auto px-6">
 
-          {/* Category filter — visual only */}
+          {/* Category filter */}
           <div className="flex flex-wrap gap-2 mb-14">
             {categories.map((cat, i) => (
               <span
@@ -178,9 +188,10 @@ export default function NewsPage() {
             >
               <div>
                 <div className="text-2xl mb-3">📬</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#0C3B38' }}>Stay in the loop</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#0C3B38' }}>Stay connected</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>
-                  Get MPC updates, research findings, and program news delivered directly to your inbox.
+                  Get updates about pilot cohorts, partnerships, evaluation insights, and future
+                  opportunities delivered directly to your inbox.
                 </p>
               </div>
               <a

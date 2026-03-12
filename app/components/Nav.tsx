@@ -4,10 +4,9 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const links = [
-  { label: 'About', href: '/about' },
-  { label: 'The Credential', href: '/#credential' },
-  { label: 'Impact', href: '/impact' },
-  { label: 'News', href: '/news' },
+  { label: 'The Initiative', href: '/about' },
+  { label: 'Pilot Program', href: '/impact' },
+  { label: 'News & Updates', href: '/news' },
 ]
 
 export default function Nav() {
