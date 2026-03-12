@@ -29,7 +29,7 @@ function Hero() {
     >
       {/* Background photo */}
       <img
-        src="/home-hero.jpg"
+        src="/community-banner.jpg"
         alt="Community members together"
         className="absolute inset-0 w-full h-full object-cover"
         style={{ opacity: 0.18 }}

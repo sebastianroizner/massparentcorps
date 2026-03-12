@@ -25,7 +25,7 @@ function PageHero() {
       {/* Photo hero */}
       <div className="relative w-full h-[80vh] min-h-[500px]">
         <img
-          src="/parent-leader.jpg"
+          src="/cbo-meeting.jpg"
           alt="Parent leader in the community"
           className="w-full h-full object-cover"
         />

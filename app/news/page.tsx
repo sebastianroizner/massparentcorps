@@ -66,7 +66,7 @@ export default function NewsPage() {
       <section className="relative overflow-hidden" style={{ background: '#0C3B38' }}>
         <div className="relative w-full h-[80vh] min-h-[500px]">
           <img
-            src="/cbo-meeting.jpg"
+            src="/news-hero.jpg"
             alt="Community organization meeting"
             className="w-full h-full object-cover"
           />
