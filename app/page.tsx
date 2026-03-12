@@ -398,6 +398,16 @@ function Voices() {
       />
 
       <div className="relative max-w-7xl mx-auto px-6">
+        {/* Photo */}
+        <div className="relative w-full h-72 rounded-3xl overflow-hidden mb-16">
+          <img
+            src="/community-banner.jpg"
+            alt="Community members joining hands together"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to right, rgba(12,59,56,0.7), rgba(12,59,56,0.2))' }} />
+        </div>
+
         <div className="mb-16">
           <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
             Voices from the Field
@@ -456,7 +466,15 @@ function ForWhom() {
 
         <div className="grid md:grid-cols-2 gap-6">
           {/* Parent Leaders */}
-          <div id="for-parents" className="rounded-3xl p-10 lg:p-14" style={{ background: '#FBF7E8' }}>
+          <div id="for-parents" className="rounded-3xl overflow-hidden" style={{ background: '#FBF7E8' }}>
+            <div className="relative h-56 w-full">
+              <img
+                src="/parent-leader.jpg"
+                alt="Parent leader in the community"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="p-10 lg:p-14">
             <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8" style={{ background: '#0C3B38' }}>
               <svg className="w-7 h-7" style={{ color: '#F0DC9A' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
@@ -488,11 +506,20 @@ function ForWhom() {
             <a href="mailto:marostrategies@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm" style={{ background: '#0C3B38', color: '#F0DC9A' }}>
               Get Involved →
             </a>
+            </div>
           </div>
 
           {/* CBOs */}
-          <div id="for-cbos" className="rounded-3xl p-10 lg:p-14 relative overflow-hidden" style={{ background: '#0C3B38' }}>
-            <div className="absolute top-0 right-0 rounded-full pointer-events-none" style={{ width: 300, height: 300, background: 'radial-gradient(circle, rgba(46,196,182,0.2) 0%, transparent 70%)', filter: 'blur(40px)', transform: 'translate(30%, -30%)' }} />
+          <div id="for-cbos" className="rounded-3xl overflow-hidden" style={{ background: '#0C3B38' }}>
+            <div className="relative h-56 w-full">
+              <img
+                src="/cbo-meeting.jpg"
+                alt="Community organization meeting"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0" style={{ background: 'rgba(12,59,56,0.45)' }} />
+            </div>
+            <div className="p-10 lg:p-14">
             <div className="relative">
               <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-8" style={{ background: 'rgba(240,220,154,0.15)' }}>
                 <svg className="w-7 h-7" style={{ color: '#F0DC9A' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -526,6 +553,7 @@ function ForWhom() {
               <a href="mailto:marostrategies@gmail.com" className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm" style={{ background: '#F0DC9A', color: '#0C3B38' }}>
                 Partner With Us →
               </a>
+            </div>
             </div>
           </div>
         </div>
