@@ -21,9 +21,9 @@ export default function ImpactPage() {
 
 function PageHero() {
   return (
-    <section className="relative pt-20 overflow-hidden" style={{ background: '#0C3B38' }}>
+    <section className="relative overflow-hidden" style={{ background: '#0C3B38' }}>
       {/* Photo hero */}
-      <div className="relative w-full h-[60vh] min-h-[400px]">
+      <div className="relative w-full h-[80vh] min-h-[500px]">
         <img
           src="/parent-leader.jpg"
           alt="Parent leader in the community"
@@ -33,8 +33,8 @@ function PageHero() {
           className="absolute inset-0"
           style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.6) 0%, rgba(12,59,56,0.88) 100%)' }}
         />
-        <div className="absolute inset-0 flex items-center">
-          <div className="max-w-7xl mx-auto px-6 w-full">
+        <div className="absolute inset-0 flex items-end pb-16">
+          <div className="max-w-7xl mx-auto px-6 w-full pt-24">
             <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Pilot Program</span>
             <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
             <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>

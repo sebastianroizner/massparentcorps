@@ -24,9 +24,17 @@ export default function Home() {
 function Hero() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center overflow-hidden"
       style={{ background: '#0C3B38' }}
     >
+      {/* Background photo */}
+      <img
+        src="/home-hero.jpg"
+        alt="Community members together"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ opacity: 0.18 }}
+      />
+
       {/* Aurora blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -71,7 +79,7 @@ function Hero() {
         </svg>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 pt-4 pb-24 w-full">
+      <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-24 w-full">
         <div className="max-w-5xl">
           {/* Badge */}
           <div className="mb-8">
