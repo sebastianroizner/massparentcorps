@@ -140,14 +140,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Hero illustration */}
-        <div className="absolute right-8 top-1/3 -translate-y-1/3 hidden xl:block">
-          <img
-            src="/hero-graphic-v3.png"
-            alt="Three parent leaders climbing a staircase together"
-            style={{ width: 420, height: 'auto' }}
-          />
-        </div>
       </div>
 
       {/* Scroll indicator */}
