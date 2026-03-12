@@ -17,7 +17,7 @@ export default function Footer() {
               <span className="font-bold text-lg" style={{ color: '#F0DC9A' }}>Mass ParentCorps</span>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Transforming Communities by Elevating Parent Leadership — a statewide initiative
+              Building workforce pathways for parent leaders — a statewide initiative
               across Massachusetts.
             </p>
             <div className="mt-6 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
@@ -31,10 +31,9 @@ export default function Footer() {
             <ul className="space-y-2">
               {[
                 { label: 'Home', href: '/' },
-                { label: 'About', href: '/about' },
-                { label: 'The Credential', href: '/#credential' },
-                { label: 'Impact', href: '/impact' },
-                { label: 'News', href: '/news' },
+                { label: 'The Initiative', href: '/about' },
+                { label: 'Pilot Program', href: '/impact' },
+                { label: 'News & Updates', href: '/news' },
               ].map((link) => (
                 <li key={link.label}>
                   <Link
@@ -49,14 +48,14 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Credential elements */}
+          {/* Program elements */}
           <div>
-            <div className="font-semibold text-sm mb-4 text-white">The Credential</div>
+            <div className="font-semibold text-sm mb-4 text-white">The Program</div>
             <ul className="space-y-2">
               {[
-                'College Course (2 Credits)',
-                'Field Experience (60 hrs)',
-                'Specialized Training (10 hrs)',
+                '3-Credit College Course',
+                'Parent Leadership Experience (60 hrs)',
+                'Leadership Training (8 hrs)',
                 'Capstone Project',
               ].map((s) => (
                 <li key={s} className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>{s}</li>
