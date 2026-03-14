@@ -68,7 +68,7 @@ export default function NewsPage() {
           <img
             src="/news-hero.jpg"
             alt="News and updates"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-top"
           />
           {/* Desktop overlay */}
           <div

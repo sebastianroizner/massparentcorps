@@ -34,7 +34,7 @@ function PageHero() {
         <img
           src="/parent-leader.jpg"
           alt="Parent leader in the community"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         {/* Desktop overlay */}
         <div

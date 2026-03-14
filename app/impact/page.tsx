@@ -33,7 +33,7 @@ function PageHero() {
         <img
           src="/cbo-meeting.jpg"
           alt="Community organization meeting"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         {/* Desktop overlay */}
         <div
