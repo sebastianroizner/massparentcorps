@@ -2,8 +2,10 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 const links = [
+  { label: 'Home', href: '/' },
   { label: 'The Initiative', href: '/about' },
   { label: 'Pilot Program', href: '/impact' },
   { label: 'News & Updates', href: '/news' },
@@ -11,6 +13,7 @@ const links = [
 
 export default function Nav() {
   const pathname = usePathname()
+  const [open, setOpen] = useState(false)
 
   return (
     <nav
@@ -18,7 +21,7 @@ export default function Nav() {
       style={{ background: '#0C3B38', borderColor: 'rgba(255,255,255,0.08)' }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <div
             className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
             style={{ background: '#F0DC9A', color: '#0C3B38' }}
@@ -30,19 +33,39 @@ export default function Nav() {
           </span>
         </Link>
 
-        {/* Mobile: Get Involved button */}
-        <a
-          href="mailto:marostrategies@gmail.com"
-          className="md:hidden px-4 py-2 rounded-full text-sm font-semibold"
-          style={{ background: '#F0DC9A', color: '#0C3B38' }}
+        {/* Mobile: hamburger */}
+        <button
+          className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
         >
-          Get Involved
-        </a>
+          <span
+            className="block w-6 h-0.5 transition-all duration-200"
+            style={{
+              background: '#F0DC9A',
+              transform: open ? 'translateY(8px) rotate(45deg)' : 'none',
+            }}
+          />
+          <span
+            className="block w-6 h-0.5 transition-all duration-200"
+            style={{
+              background: '#F0DC9A',
+              opacity: open ? 0 : 1,
+            }}
+          />
+          <span
+            className="block w-6 h-0.5 transition-all duration-200"
+            style={{
+              background: '#F0DC9A',
+              transform: open ? 'translateY(-8px) rotate(-45deg)' : 'none',
+            }}
+          />
+        </button>
 
         {/* Desktop: nav links + button */}
         <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => {
-            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href.replace('/#', '/').split('#')[0]))
+          {links.slice(1).map((link) => {
+            const isActive = pathname === link.href
             return (
               <Link
                 key={link.label}
@@ -65,6 +88,39 @@ export default function Nav() {
           </a>
         </div>
       </div>
+
+      {/* Mobile menu dropdown */}
+      {open && (
+        <div
+          className="md:hidden border-t"
+          style={{ background: '#0C3B38', borderColor: 'rgba(255,255,255,0.08)' }}
+        >
+          <div className="px-6 py-4 flex flex-col gap-1">
+            {links.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="py-3 text-base font-medium border-b"
+                style={{
+                  color: pathname === link.href ? '#F0DC9A' : 'rgba(255,255,255,0.75)',
+                  borderColor: 'rgba(255,255,255,0.07)',
+                }}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <a
+              href="mailto:marostrategies@gmail.com"
+              onClick={() => setOpen(false)}
+              className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold"
+              style={{ background: '#F0DC9A', color: '#0C3B38' }}
+            >
+              Get Involved
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
