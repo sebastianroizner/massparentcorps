@@ -35,31 +35,23 @@ export default function Nav() {
 
         {/* Mobile: hamburger */}
         <button
-          className="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5"
+          className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          style={{ color: '#F0DC9A' }}
         >
-          <span
-            className="block w-6 h-0.5 transition-all duration-200"
-            style={{
-              background: '#F0DC9A',
-              transform: open ? 'translateY(8px) rotate(45deg)' : 'none',
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all duration-200"
-            style={{
-              background: '#F0DC9A',
-              opacity: open ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all duration-200"
-            style={{
-              background: '#F0DC9A',
-              transform: open ? 'translateY(-8px) rotate(-45deg)' : 'none',
-            }}
-          />
+          {open ? (
+            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          ) : (
+            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          )}
         </button>
 
         {/* Desktop: nav links + button */}
