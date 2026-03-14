@@ -20,21 +20,28 @@ export default function AboutPage() {
 // ─── PAGE HERO ─────────────────────────────────────────────────────────────
 
 function PageHero() {
+  const navLinks = [
+    { label: 'Overview', href: '#overview' },
+    { label: 'Why It Matters', href: '#why' },
+    { label: 'Our History', href: '#history' },
+    { label: 'Founders', href: '#founders' },
+  ]
+
   return (
-    <section className="relative overflow-hidden" style={{ background: '#0C3B38' }}>
-      {/* Photo hero */}
-      <div className="relative w-full h-[80vh] min-h-[500px]">
+    <section style={{ background: '#0C3B38' }}>
+      {/* Photo */}
+      <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
         <img
           src="/parent-leader.jpg"
-          alt="Community members joining hands together"
+          alt="Parent leader in the community"
           className="w-full h-full object-cover"
         />
+        {/* Desktop overlay */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 hidden md:flex items-end pb-16"
           style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.85) 100%)' }}
-        />
-        <div className="absolute inset-0 flex items-end pb-16">
-          <div className="max-w-7xl mx-auto px-6 w-full pt-24">
+        >
+          <div className="max-w-7xl mx-auto px-6 w-full">
             <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
             <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
             <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
@@ -45,23 +52,29 @@ function PageHero() {
               preparation across Massachusetts.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
-              {[
-                { label: 'Overview', href: '#overview' },
-                { label: 'Why It Matters', href: '#why' },
-                { label: 'Our History', href: '#history' },
-                { label: 'Founders', href: '#founders' },
-              ].map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="px-5 py-2 rounded-full text-sm font-medium border transition-all"
-                  style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}
-                >
-                  {link.label}
-                </a>
+              {navLinks.map((link) => (
+                <a key={link.label} href={link.href} className="px-5 py-2 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
               ))}
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Mobile text below photo */}
+      <div className="md:hidden px-6 py-10">
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
+        <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+          A collaborative initiative for parent leadership
+        </h1>
+        <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          Connecting parent leadership experience with academic learning and workforce
+          preparation across Massachusetts.
+        </p>
+        <div className="mt-6 flex flex-wrap gap-2">
+          {navLinks.map((link) => (
+            <a key={link.label} href={link.href} className="px-4 py-1.5 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
+          ))}
         </div>
       </div>
     </section>

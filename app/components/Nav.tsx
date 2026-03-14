@@ -30,6 +30,16 @@ export default function Nav() {
           </span>
         </Link>
 
+        {/* Mobile: Get Involved button */}
+        <a
+          href="mailto:marostrategies@gmail.com"
+          className="md:hidden px-4 py-2 rounded-full text-sm font-semibold"
+          style={{ background: '#F0DC9A', color: '#0C3B38' }}
+        >
+          Get Involved
+        </a>
+
+        {/* Desktop: nav links + button */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((link) => {
             const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href.replace('/#', '/').split('#')[0]))

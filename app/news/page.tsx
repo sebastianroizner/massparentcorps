@@ -63,19 +63,19 @@ export default function NewsPage() {
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
 
       {/* Photo Hero */}
-      <section className="relative overflow-hidden" style={{ background: '#0C3B38' }}>
-        <div className="relative w-full h-[80vh] min-h-[500px]">
+      <section style={{ background: '#0C3B38' }}>
+        <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
           <img
             src="/news-hero.jpg"
-            alt="Community organization meeting"
+            alt="News and updates"
             className="w-full h-full object-cover"
           />
+          {/* Desktop overlay */}
           <div
-            className="absolute inset-0"
+            className="absolute inset-0 hidden md:flex items-end pb-16"
             style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.6) 0%, rgba(12,59,56,0.88) 100%)' }}
-          />
-          <div className="absolute inset-0 flex items-end pb-16">
-            <div className="max-w-7xl mx-auto px-6 w-full pt-24">
+          >
+            <div className="max-w-7xl mx-auto px-6 w-full">
               <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
               <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
               <h1 className="mt-6 text-5xl md:text-6xl font-bold" style={{ color: '#F0DC9A' }}>
@@ -87,6 +87,17 @@ export default function NewsPage() {
               </p>
             </div>
           </div>
+        </div>
+
+        {/* Mobile text below photo */}
+        <div className="md:hidden px-6 py-10">
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+          <h1 className="mt-5 text-4xl font-bold" style={{ color: '#F0DC9A' }}>From the field</h1>
+          <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            Updates on pilot cohorts, partnerships, evaluation insights, and future opportunities
+            as Mass ParentCorps grows.
+          </p>
         </div>
       </section>
 
