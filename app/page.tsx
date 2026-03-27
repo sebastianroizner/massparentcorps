@@ -25,48 +25,18 @@ function Hero() {
   return (
     <section
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: '#0C3B38' }}
+      style={{ background: '#000' }}
     >
       {/* Background photo */}
       <img
         src="/community-banner.jpg"
         alt="Community members together"
         className="absolute inset-0 w-full h-full object-cover"
-        style={{ opacity: 0.18 }}
+        style={{ opacity: 1 }}
       />
 
-      {/* Aurora blobs */}
+      {/* Decorative overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute rounded-full"
-          style={{
-            top: '-15%', left: '-10%',
-            width: 700, height: 700,
-            background: 'radial-gradient(circle, #2EC4B6 0%, transparent 70%)',
-            opacity: 0.12,
-            filter: 'blur(80px)',
-          }}
-        />
-        <div
-          className="absolute rounded-full"
-          style={{
-            top: '5%', right: '-8%',
-            width: 500, height: 500,
-            background: 'radial-gradient(circle, #7DD8D4 0%, transparent 70%)',
-            opacity: 0.10,
-            filter: 'blur(70px)',
-          }}
-        />
-        <div
-          className="absolute rounded-full"
-          style={{
-            bottom: '5%', left: '35%',
-            width: 600, height: 400,
-            background: 'radial-gradient(circle, #1A6B63 0%, transparent 70%)',
-            opacity: 0.25,
-            filter: 'blur(60px)',
-          }}
-        />
         {/* Decorative curve */}
         <svg
           className="absolute"
@@ -112,11 +82,12 @@ function Hero() {
             className="text-lg max-w-2xl leading-relaxed mb-12"
             style={{ color: 'rgba(255,255,255,0.50)' }}
           >
-            Mass ParentCorps is a Massachusetts initiative designed to strengthen organizations
-            that engage parents as leaders. By connecting parent leadership experience with academic
-            learning and workforce preparation, the initiative aims to create pathways for parent
-            leaders to transition into professional roles that strengthen programs, organizations,
-            and communities.
+            Mass ParentCorps is a Massachusetts initiative that works in partnership with
+            organizations that center parent leadership to advance opportunities for parent leaders
+            across the state. By connecting parent leadership experience with academic learning
+            and workforce preparation, the initiative aims to create pathways for parent leaders
+            to transition into professional roles that strengthen programs, organizations, and
+            communities.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">

@@ -28,7 +28,7 @@ function PageHero() {
   ]
 
   return (
-    <section style={{ background: '#0C3B38' }}>
+    <section style={{ background: '#000' }}>
       {/* Photo */}
       <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
         <img
@@ -39,7 +39,7 @@ function PageHero() {
         {/* Desktop overlay */}
         <div
           className="absolute inset-0 hidden md:flex items-end pb-16"
-          style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.85) 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6 w-full">
             <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
@@ -61,7 +61,7 @@ function PageHero() {
       </div>
 
       {/* Mobile text below photo */}
-      <div className="md:hidden px-6 py-10">
+      <div className="md:hidden px-6 py-10" style={{ background: '#0C3B38' }}>
         <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
         <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
         <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
@@ -94,17 +94,24 @@ function Overview() {
           </div>
           <div>
             <p className="text-3xl md:text-4xl font-semibold leading-snug mb-8" style={{ color: '#0C3B38' }}>
-              Mass ParentCorps is a collaborative initiative designed to{' '}
-              <span style={{ color: '#2EC4B6' }}>strengthen organizations that engage parents as leaders.</span>
+              Mass ParentCorps is building a collaborative model to{' '}
+              <span style={{ color: '#2EC4B6' }}>recognize parent leadership as a professional, compensated workforce.</span>
             </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
               Across Massachusetts, parents contribute as leaders, advisors, and community advocates.
-              Yet many organizations lack clear pathways for parent leaders to transition into
-              professional roles.
+              Yet too often, this leadership is treated as volunteerism rather than recognized as
+              skilled, impactful work — and there is an opportunity to better connect parent
+              leadership experience to structured, professional pathways.
+            </p>
+            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
+              Mass ParentCorps works alongside partners to do just that. We connect parent
+              leadership experience with academic learning and workforce preparation —
+              transforming parent leadership into a recognized, compensated, and professional
+              pathway.
             </p>
             <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
-              Mass ParentCorps seeks to bridge that gap by connecting parent leadership experience
-              with academic learning and workforce preparation.
+              Together, we are closing opportunity gaps, creating meaningful career pathways for
+              parents, and advancing community-driven leadership across Massachusetts.
             </p>
 
             {/* Vision callout */}
@@ -135,17 +142,17 @@ function WhyItMatters() {
     {
       icon: '📈',
       title: 'Parent Leadership Is Growing',
-      desc: 'Organizations across Massachusetts increasingly recognize the importance of engaging parents as partners and leaders.',
+      desc: 'Across Massachusetts, organizations increasingly recognize the importance of engaging parents as partners and leaders in shaping programs, services, and systems.',
     },
     {
       icon: '🏢',
-      title: 'Organizations Need Trusted Staff',
-      desc: 'Parents bring lived experience, community knowledge, and trusted relationships that strengthen programs serving families.',
+      title: 'Trusted Leadership Matters',
+      desc: 'Parents bring lived experience, cultural knowledge, and trusted relationships that strengthen connections between organizations and the communities they serve.',
     },
     {
       icon: '🚀',
       title: 'Career Pathways Matter',
-      desc: 'Many parent leaders seek opportunities to build careers that allow them to continue supporting their communities and contributing to organizations that serve families.',
+      desc: 'Many parent leaders are seeking opportunities to translate their leadership into careers — pathways that provide economic stability while allowing them to continue contributing to their communities.',
     },
   ]
 
@@ -187,12 +194,12 @@ function History() {
     {
       year: 'Early 2000s',
       title: 'Community Programs Expand',
-      desc: 'Community-based organizations across Massachusetts expand programs that engage parents as leaders.',
+      desc: 'Community-based organizations across Massachusetts expand programs that engage parents as leaders, laying the foundation for more formalized parent leadership efforts.',
     },
     {
       year: '2006–2010',
       title: 'Thrive in 5 & Parent Partners',
-      desc: 'The launch of Thrive in 5 helps elevate parent voices in shaping early childhood policies and systems. Parent Partners work alongside organizations to strengthen early childhood systems.',
+      desc: 'The launch of Thrive in 5 helps elevate parent voices in shaping early childhood policies and systems. Parent Partners work alongside organizations to strengthen early childhood systems. During this period, initiatives also promote the use of Ages and Stages developmental screening tools to support early identification and connection to services.',
     },
     {
       year: '2009',
@@ -207,17 +214,17 @@ function History() {
     {
       year: '2015–2024',
       title: 'Exploring Workforce Pathways',
-      desc: 'Don Hawley works closely with community-based organizations that engage parents as leaders and begins exploring how parent leadership experience could be connected to workforce pathways.',
+      desc: 'Don Hawley works closely with community-based organizations that engage parents as leaders and begins exploring how parent leadership experience can be connected to workforce pathways.',
     },
     {
       year: '2025',
       title: 'Mass ParentCorps Begins',
-      desc: 'Mass ParentCorps begins conversations with community organizations across Massachusetts about developing a Parent Leadership Workforce Credential.',
+      desc: 'Mass ParentCorps begins conversations with community organizations across Massachusetts to develop a Parent Leadership Workforce Credential.',
     },
     {
       year: 'Summer 2025',
       title: 'Co-Founders Unite',
-      desc: 'Magda Rodriguez-Villafañe joins the initiative and begins working with Don Hawley to develop the Mass ParentCorps pilot. Magda previously spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University.',
+      desc: 'Magda Rodriguez-Villafañe joins the initiative and begins working with Don Hawley to develop the Mass ParentCorps pilot. She previously led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University, and developed Families United for School and Education (FUSE).',
     },
     {
       year: '2026',
@@ -237,13 +244,28 @@ function History() {
 
           <div>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
-              A history of parent<br />leadership in Massachusetts
+              Parent Leadership in<br />Massachusetts
             </h2>
-            <p className="text-lg leading-relaxed mb-16" style={{ color: '#4B5563' }}>
-              Massachusetts has a strong history of initiatives that elevate parent leadership
-              and strengthen partnerships between families and organizations. Mass ParentCorps
-              builds on this legacy.
-            </p>
+            <div className="mb-16 space-y-4">
+              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
+                Massachusetts has a strong and evolving history of initiatives that elevate parent
+                leadership and strengthen partnerships between families and organizations.
+              </p>
+              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
+                This work has been shaped by generations of parent leaders across the state —
+                including pioneers such as Gloria Devine and Cyntoria Grant — alongside many others
+                who have led change within their communities, organizations, and systems.
+              </p>
+              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
+                Together, these leaders have shown that parent leadership is a powerful force for
+                strengthening communities, shaping systems, and improving outcomes for families.
+              </p>
+              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
+                Mass ParentCorps builds on this collective legacy — advancing a model that
+                recognizes parent leadership as a professional, compensated, and sustainable
+                workforce.
+              </p>
+            </div>
 
             {/* Timeline */}
             <div className="relative">
@@ -283,12 +305,12 @@ function Founders() {
     {
       name: 'Don Hawley',
       title: 'Co-Founder',
-      bio: 'Don Hawley has worked for many years with community-based organizations across Massachusetts that engage parents as leaders. Through this work he observed both the impact of parent leadership and the lack of workforce pathways connecting leadership experience to professional opportunities. Don brings extensive experience in public policy, nonprofit leadership, and early childhood systems change. Over the course of his career he has collaborated with community organizations, philanthropic partners, and government agencies to strengthen programs that support children and families. These experiences helped inspire the creation of Mass ParentCorps.',
+      bio: 'Don Hawley spent much of his career in senior leadership roles across the business sector, working as both a consultant and executive focused on strategy, organizational leadership, and performance. In 2010, he transitioned from the corporate world to apply his experience in service of local nonprofit organizations. Over time, his work became increasingly focused on early childhood, where he has contributed through pro bono consulting and active philanthropic engagement across Massachusetts. Through years of collaboration with community-based organizations that engage parents as leaders, Don observed both the profound impact of parent leadership and a critical opportunity: the need to better connect that leadership experience to structured workforce pathways. He brings deep experience in public policy, nonprofit leadership, and early childhood systems change, having worked alongside community organizations, philanthropic partners, and government agencies to support programs serving children and families. These experiences helped inspire the creation of Mass ParentCorps — an effort to recognize parent leadership as a professional, compensated workforce and expand economic opportunity for parents across Massachusetts.',
     },
     {
       name: 'Magda Rodriguez-Villafañe',
       title: 'Co-Founder',
-      bio: 'Magda Rodriguez-Villafañe is a family engagement leader and co-founder of Mass ParentCorps. She spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received a national award at Harvard University recognizing its innovative approach to empowering parents as leaders. Magda also developed Families United for School and Education (FUSE), an initiative designed to support families in advocating for their children and strengthening community leadership. At Mass ParentCorps she works with community organizations, community colleges, and research partners to design and implement the Parent Leadership Workforce Credential pilot.',
+      bio: 'Magda Rodriguez-Villafañe is a family engagement leader and co-founder of Mass ParentCorps, with a strong track record of advancing parent leadership and community-driven change. She spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University for its innovative approach to empowering parents as leaders. Magda also developed Families United for School and Education (FUSE), an initiative designed to support families in advocating for their children and strengthening leadership within their communities. At Mass ParentCorps, she works in partnership with community organizations, community colleges, and research partners to design and implement the Parent Leadership Workforce Credential pilot — helping to transform parent leadership into a recognized, professional, and compensated pathway.',
       email: 'marostrategies@gmail.com',
     },
   ]

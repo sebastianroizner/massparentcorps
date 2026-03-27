@@ -63,7 +63,7 @@ export default function NewsPage() {
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
 
       {/* Photo Hero */}
-      <section style={{ background: '#0C3B38' }}>
+      <section style={{ background: '#000' }}>
         <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
           <img
             src="/news-hero.jpg"
@@ -73,7 +73,7 @@ export default function NewsPage() {
           {/* Desktop overlay */}
           <div
             className="absolute inset-0 hidden md:flex items-end pb-16"
-            style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.6) 0%, rgba(12,59,56,0.88) 100%)' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%)' }}
           >
             <div className="max-w-7xl mx-auto px-6 w-full">
               <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
@@ -90,7 +90,7 @@ export default function NewsPage() {
         </div>
 
         {/* Mobile text below photo */}
-        <div className="md:hidden px-6 py-10">
+        <div className="md:hidden px-6 py-10" style={{ background: '#0C3B38' }}>
           <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
           <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
           <h1 className="mt-5 text-4xl font-bold" style={{ color: '#F0DC9A' }}>From the field</h1>
