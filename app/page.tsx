@@ -36,7 +36,7 @@ function Hero() {
       />
 
       {/* Teal overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.12) 0%, rgba(12,59,56,0.50) 100%)' }} />
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'rgba(12,59,56,0.45)' }} />
 
       {/* Decorative overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
