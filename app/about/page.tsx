@@ -39,7 +39,7 @@ function PageHero() {
         {/* Desktop overlay */}
         <div
           className="absolute inset-0 hidden md:flex items-end pb-16"
-          style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.55) 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.12) 0%, rgba(12,59,56,0.50) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6 w-full">
             <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
