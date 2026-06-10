@@ -41,11 +41,13 @@ function PageHero() {
             Contact Us to Partner →
           </a>
           <a
-            href="#referral"
+            href="https://docs.google.com/document/d/1Ei474xjRataSddf__vO6cpHhSVTv3-0J/edit"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg border"
             style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}
           >
-            Referral Process
+            Learn More
           </a>
         </div>
       </div>
