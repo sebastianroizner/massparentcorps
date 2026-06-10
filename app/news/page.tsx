@@ -81,8 +81,8 @@ export default function NewsPage() {
           />
           {/* Desktop overlay */}
           <div
-            className="absolute inset-0 hidden md:flex items-end pb-16"
-            style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.12) 0%, rgba(12,59,56,0.50) 100%)' }}
+            className="absolute inset-0 hidden md:flex items-start pt-20"
+            style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.10) 100%)' }}
           >
             <div className="max-w-7xl mx-auto px-6 w-full">
               <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
