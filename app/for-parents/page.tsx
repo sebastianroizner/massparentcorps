@@ -89,6 +89,17 @@ function WhatIsMPC() {
                 The course is taught in English. Participants must be proficient in English to fully participate and complete assignments.
               </p>
             </div>
+            <div className="mt-8">
+              <a
+                href="https://docs.google.com/document/d/1NNcT_9AHYZBR9s8_hFoP1KlODyjuGlqx/edit"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-base"
+                style={{ background: '#0C3B38', color: '#F0DC9A' }}
+              >
+                Learn More →
+              </a>
+            </div>
           </div>
         </div>
       </div>
