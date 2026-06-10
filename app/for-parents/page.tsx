@@ -40,7 +40,7 @@ function PageHero() {
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Apply Today →
+            Join Our Program →
           </a>
           <a
             href="#qualify"
@@ -229,7 +229,7 @@ function HowToApply() {
           Ready to get started?
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          Register your interest today. Once you submit, a member of our team will be in
+          Join our program today. Once you submit, a member of our team will be in
           touch to confirm eligibility and next steps.
         </p>
 
@@ -239,7 +239,7 @@ function HowToApply() {
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Register Your Interest →
+            Join Our Program →
           </a>
           <a
             href="mailto:mpc@massparentcorps.org"

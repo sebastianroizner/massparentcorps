@@ -62,7 +62,7 @@ function PageHero() {
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
                 style={{ background: '#2EC4B6', color: '#0C3B38' }}
               >
-                Register Your Interest →
+                Join Our Program →
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -90,7 +90,7 @@ function PageHero() {
           className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm"
           style={{ background: '#2EC4B6', color: '#0C3B38' }}
         >
-          Register Your Interest →
+          Join Our Program →
         </a>
         <div className="mt-6 flex flex-wrap gap-2">
           {navLinks.map((link) => (
@@ -284,7 +284,7 @@ function DoYouQualify() {
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full font-semibold text-lg"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Register Your Interest →
+            Join Our Program →
           </a>
         </div>
       </div>
@@ -383,7 +383,7 @@ function ProgramStructure() {
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
             style={{ background: '#0C3B38', color: '#F0DC9A' }}
           >
-            Register Your Interest →
+            Join Our Program →
           </a>
         </div>
       </div>

@@ -101,7 +101,7 @@ function Hero() {
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
               style={{ background: '#2EC4B6', color: '#0C3B38' }}
             >
-              Apply Today
+              Join Our Program
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -486,7 +486,7 @@ function GetInvolved() {
           Join the Mass<br />ParentCorps Initiative
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          The pilot is now open. Apply today or reach out to learn more about eligibility and how
+          The pilot is now open. Join our program or reach out to learn more about eligibility and how
           your organization can get involved.
         </p>
 
@@ -508,7 +508,7 @@ function GetInvolved() {
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Apply Today
+            Join Our Program
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
