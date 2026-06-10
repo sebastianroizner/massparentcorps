@@ -33,33 +33,6 @@ const posts = [
     readTime: '3 min read',
     featured: false,
   },
-  {
-    slug: 'needs-assessment-completed',
-    category: 'Milestone',
-    date: 'January 2026',
-    title: 'Phase 1 Needs Assessment Completed',
-    excerpt: 'Mass ParentCorps has completed Phase 1 of its development, gathering insights from parent leaders and organizations across Massachusetts to inform the pilot design.',
-    readTime: '3 min read',
-    featured: false,
-  },
-  {
-    slug: 'community-conversations',
-    category: 'Outreach',
-    date: 'Late 2025',
-    title: 'Conversations with Community Organizations Begin',
-    excerpt: 'Mass ParentCorps begins engaging community-based organizations across Massachusetts to explore the development of a Parent Leadership Workforce Credential.',
-    readTime: '3 min read',
-    featured: false,
-  },
-  {
-    slug: 'evaluation-framework',
-    category: 'Research',
-    date: '2026',
-    title: 'Evaluation Framework Announced',
-    excerpt: 'Mass ParentCorps announces an evaluation partnership with NYU Metro Center under the leadership of Joanna Geller to measure outcomes and inform future expansion.',
-    readTime: '5 min read',
-    featured: false,
-  },
 ]
 
 const categories = ['All', 'Milestone', 'Outreach', 'Program', 'Academic', 'Research']
