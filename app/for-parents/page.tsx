@@ -75,9 +75,11 @@ function WhatIsMPC() {
               you have been doing as a parent leader — and connects it to formal credentials,
               college credits, and career pathways.
             </p>
+            <p className="text-lg leading-relaxed mb-3" style={{ color: '#4B5563' }}>
+              <strong>Cohort 1</strong> with Urban College of Boston is now full.
+            </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              The first cohort launches <strong>June 17, 2026</strong>. Classes meet on
-              Wednesdays, 6:30–8:30 PM, for 8 weeks via Zoom.
+              <strong>Cohort 2</strong> with Middlesex Community College is now open. Classes meet Mon &amp; Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online. Registration closes <strong>September 9, 2026</strong>.
             </p>
             <div
               className="rounded-2xl p-6 mt-4"
@@ -139,10 +141,10 @@ function WhatYouEarn() {
               Award #2
             </div>
             <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
-              3–9 College Credits
+              3 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Earned through <strong>Urban College</strong> — credits you can apply toward
+              Earned through <strong>Middlesex Community College</strong> (Cohort 2) — credits you can apply toward
               future certificates, associate's degrees, and advanced degrees on your own timeline.
             </p>
           </div>

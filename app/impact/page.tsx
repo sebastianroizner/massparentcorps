@@ -53,8 +53,7 @@ function PageHero() {
               From design to<br />implementation
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              The Mass ParentCorps pilot launches June 17, 2026, with 20 parent leaders in the
-              first cohort representing organizations across Massachusetts.
+              Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
             </p>
             <div className="mt-6">
               <a
@@ -82,8 +81,7 @@ function PageHero() {
           From design to implementation
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          The Mass ParentCorps pilot launches June 17, 2026, with 20 parent leaders in the
-          first cohort representing organizations across Massachusetts.
+          Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
         </p>
         <a
           href={REGISTER_URL}
@@ -106,8 +104,8 @@ function PageHero() {
 
 function PilotOverview() {
   const stats = [
-    { number: '20', label: 'Parent Leaders', sub: 'First cohort' },
-    { number: '2nd', label: 'Cohort Planned', sub: 'Coming soon' },
+    { number: '20', label: 'Parent Leaders', sub: 'Cohort 1 — Full' },
+    { number: '2nd', label: 'Cohort Now Open', sub: 'Middlesex Community College' },
     { number: '10+', label: 'Organizations', sub: 'Across Massachusetts' },
     { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
   ]
@@ -125,14 +123,22 @@ function PilotOverview() {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
               Who's in the pilot
             </h2>
-            <p className="text-lg leading-relaxed mb-4" style={{ color: '#4B5563' }}>
-              The Mass ParentCorps pilot will include 20 parent leaders in the first cohort,
-              representing organizations that engage parents as leaders across Massachusetts.
-              A second cohort is planned.
-            </p>
-            <p className="text-base leading-relaxed mb-10" style={{ color: '#6B7280' }}>
-              Starting <strong>June 17, 2026</strong> — Wednesdays, 6:30–8:30 PM, 8 weeks via Zoom.
-            </p>
+            <div className="rounded-2xl p-5 mb-6" style={{ background: 'rgba(46,196,182,0.08)', border: '1px solid rgba(46,196,182,0.25)' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#1A6B63' }}>Cohort 1 — Urban College of Boston</p>
+              <p className="text-base" style={{ color: '#4B5563' }}>
+                The first cohort of 20 parent leaders, representing 7 sponsoring agencies, is now full.
+              </p>
+            </div>
+            <div className="rounded-2xl p-5 mb-8" style={{ background: '#0C3B38' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#2EC4B6' }}>Cohort 2 — Middlesex Community College · Now Open</p>
+              <p className="text-base mb-3" style={{ color: 'rgba(255,255,255,0.8)' }}>
+                Registration is now open for the Fall 2026 cohort in partnership with Middlesex Community College.
+                Course: <strong style={{ color: '#F0DC9A' }}>SOC 110: Community Leadership &amp; Organizing</strong> — Mon &amp; Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online.
+              </p>
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
+                Credentialing Kickoff: August 31, 2026 at 6:30 PM · Registration closes September 9, 2026
+              </p>
+            </div>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {stats.map((s, i) => (
@@ -311,7 +317,7 @@ function ProgramStructure() {
     {
       tag: '3–9 Credits',
       title: 'College Credit Course',
-      desc: 'Core Competencies for Community Workers, offered in partnership with Urban College. Wednesdays, 6:30–8:30 PM, starting June 17, 2026. 8 weeks via Zoom. Taught in English — participants must be proficient in English to fully participate and complete assignments.',
+      desc: 'SOC 110: Community Leadership & Organizing, offered in partnership with Middlesex Community College (Cohort 2). Mon & Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online. Taught in English — participants must be proficient in English to fully participate and complete assignments.',
       bullets: ['Leadership', 'Community engagement', 'Workforce preparation'],
     },
     {
@@ -493,9 +499,8 @@ function PartnersEvaluation() {
           <div className="rounded-2xl p-8 bg-white" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
             <div className="text-3xl mb-4">🎓</div>
             <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Academic Partnership</h3>
-            <p className="text-base leading-relaxed mb-5" style={{ color: '#4B5563' }}>
-              <strong>Urban College</strong> is the named partner for the credit-bearing course,
-              offering 3–9 college credits to program completers.
+            <p className="text-base leading-relaxed mb-3" style={{ color: '#4B5563' }}>
+              <strong>Urban College of Boston</strong> partnered on Cohort 1. <strong>Middlesex Community College</strong> is the academic partner for Cohort 2 (Fall 2026), offering 3 college credits through SOC 110: Community Leadership &amp; Organizing.
             </p>
             <div className="mt-4">
               <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#9CA3AF' }}>Design &amp; Government Partners</div>

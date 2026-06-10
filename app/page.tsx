@@ -170,7 +170,7 @@ function WhereWeAre() {
                 {
                   phase: 'Phase 2',
                   title: 'Design, Implementation, and Evaluation',
-                  status: 'Active — Pilot Launching June 17, 2026',
+                  status: 'Active — Cohort 2 Now Open',
                   statusColor: '#F0DC9A',
                   statusBg: 'rgba(240,220,154,0.15)',
                 },
@@ -202,9 +202,9 @@ function WhereWeAre() {
 
 function PilotSnapshot() {
   const stats = [
-    { number: '20', label: 'Parent Leaders', sub: 'First cohort; second cohort planned' },
+    { number: '20', label: 'Parent Leaders', sub: 'Cohort 1 — Full' },
     { number: '10+', label: 'Organizations', sub: 'Represented statewide' },
-    { number: '3–9', label: 'College Credits', sub: 'Up to 9 credits through Urban College' },
+    { number: '3', label: 'College Credits', sub: 'Middlesex Community College — Cohort 2' },
     { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
   ]
 
@@ -217,8 +217,7 @@ function PilotSnapshot() {
           </span>
           <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
           <p className="mt-6 text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            The Mass ParentCorps pilot will bring together parent leaders and organizations
-            from across Massachusetts.
+            Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
           </p>
         </div>
 
@@ -335,8 +334,8 @@ function WhatMakesUnique() {
     },
     {
       icon: '🎓',
-      title: 'Partnership with Urban College',
-      desc: 'Urban College is the named academic partner for the credit-bearing course — offering 3–9 college credits that connect parent leadership experience with academic learning and workforce preparation.',
+      title: 'Academic Partnerships',
+      desc: 'Urban College of Boston partnered on Cohort 1. Middlesex Community College is the academic partner for Cohort 2 (Fall 2026), offering 3 college credits through SOC 110: Community Leadership & Organizing.',
     },
     {
       icon: '🔬',
