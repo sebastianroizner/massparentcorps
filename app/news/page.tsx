@@ -71,39 +71,14 @@ export default function NewsPage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
 
-      {/* Photo Hero */}
-      <section style={{ background: '#000' }}>
-        <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
-          <img
-            src="/news-hero.jpg"
-            alt="News and updates"
-            className="w-full h-full object-cover object-top"
-          />
-          {/* Desktop overlay */}
-          <div
-            className="absolute inset-0 hidden md:flex items-start pt-20"
-            style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.10) 100%)' }}
-          >
-            <div className="max-w-7xl mx-auto px-6 w-full">
-              <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
-              <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-              <h1 className="mt-6 text-5xl md:text-6xl font-bold" style={{ color: '#F0DC9A' }}>
-                From the field
-              </h1>
-              <p className="mt-4 text-xl max-w-xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                Updates on pilot cohorts, partnerships, evaluation insights, and future opportunities
-                as Mass ParentCorps grows.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile text below photo */}
-        <div className="md:hidden px-6 py-10" style={{ background: '#0C3B38' }}>
+      <section style={{ background: '#0C3B38', paddingTop: 64 }}>
+        <div className="max-w-7xl mx-auto px-6 py-20">
           <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
           <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h1 className="mt-5 text-4xl font-bold" style={{ color: '#F0DC9A' }}>From the field</h1>
-          <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+            From the field
+          </h1>
+          <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
             Updates on pilot cohorts, partnerships, evaluation insights, and future opportunities
             as Mass ParentCorps grows.
           </p>
