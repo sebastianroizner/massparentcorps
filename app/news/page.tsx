@@ -7,13 +7,40 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'pilot-launch-june-2026',
+    category: 'Milestone',
+    date: 'June 2026',
+    title: 'Pilot Launch: First Credentialing Cohort Begins June 17, 2026',
+    excerpt: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College on June 17, 2026 — 20 parent leaders from across Massachusetts, Wednesdays 6:30–8:30 PM via Zoom. A second cohort is planned.',
+    readTime: '3 min read',
+    featured: true,
+  },
+  {
+    slug: 'focus-group-report',
+    category: 'Research',
+    date: 'January 2026',
+    title: 'Focus Group Report: What Parent Leaders Told Us',
+    excerpt: 'In January 2026, Mass ParentCorps conducted six focus groups with 27 parent leaders — four in English, two in Spanish — representing five community-based organizations. Key findings: parent leaders are building workforce-ready skills without formal recognition, and there is strong demand for credentials, paid roles, and college credit.',
+    readTime: '5 min read',
+    featured: false,
+  },
+  {
+    slug: 'urban-college-partnership',
+    category: 'Academic',
+    date: '2026',
+    title: 'Urban College Named as Academic Partner',
+    excerpt: "Urban College is the named partner for the credit-bearing course — offering 3–9 college credits through the \"Core Competencies for Community Workers\" course. Credits are applicable toward future certificates, associate's degrees, and advanced degrees.",
+    readTime: '3 min read',
+    featured: false,
+  },
+  {
     slug: 'needs-assessment-completed',
     category: 'Milestone',
     date: 'January 2026',
     title: 'Phase 1 Needs Assessment Completed',
     excerpt: 'Mass ParentCorps has completed Phase 1 of its development, gathering insights from parent leaders and organizations across Massachusetts to inform the pilot design.',
     readTime: '3 min read',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'community-conversations',
@@ -22,24 +49,6 @@ const posts = [
     title: 'Conversations with Community Organizations Begin',
     excerpt: 'Mass ParentCorps begins engaging community-based organizations across Massachusetts to explore the development of a Parent Leadership Workforce Credential.',
     readTime: '3 min read',
-    featured: false,
-  },
-  {
-    slug: 'pilot-cohort-recruitment',
-    category: 'Program',
-    date: '2026',
-    title: 'Pilot Cohort Recruitment',
-    excerpt: 'Mass ParentCorps launches recruitment for the first cohort of 40+ parent leaders representing more than 10 organizations across Massachusetts.',
-    readTime: '4 min read',
-    featured: false,
-  },
-  {
-    slug: 'course-development',
-    category: 'Academic',
-    date: '2026',
-    title: 'Course Development with Community Colleges',
-    excerpt: 'Community colleges collaborate with Mass ParentCorps to develop a 3-credit course connecting parent leadership experience with academic learning and workforce preparation.',
-    readTime: '4 min read',
     featured: false,
   },
   {
@@ -206,7 +215,7 @@ export default function NewsPage() {
                 </p>
               </div>
               <a
-                href="mailto:marostrategies@gmail.com?subject=Subscribe to MPC Updates"
+                href="mailto:mpc@massparentcorps.org?subject=Subscribe to MPC Updates"
                 className="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-full text-sm font-semibold"
                 style={{ background: '#0C3B38', color: '#F0DC9A' }}
               >

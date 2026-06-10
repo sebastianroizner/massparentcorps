@@ -5,11 +5,15 @@ export const metadata: Metadata = {
   description: 'Learn about the Mass ParentCorps pilot program structure, partnerships, and evaluation.',
 }
 
+const REGISTER_URL = 'https://forms.gle/8ivwftzEML241N1X7'
+
 export default function ImpactPage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
       <PageHero />
       <PilotOverview />
+      <WhatYouWillEarn />
+      <DoYouQualify />
       <ProgramStructure />
       <WhatWeHopeToLearn />
       <PartnersEvaluation />
@@ -22,6 +26,8 @@ export default function ImpactPage() {
 function PageHero() {
   const navLinks = [
     { label: 'Pilot Overview', href: '#overview' },
+    { label: 'What You Earn', href: '#earn' },
+    { label: 'Do You Qualify?', href: '#qualify' },
     { label: 'Program Structure', href: '#structure' },
     { label: 'Partners & Evaluation', href: '#partners' },
   ]
@@ -47,10 +53,19 @@ function PageHero() {
               From design to<br />implementation
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              The Mass ParentCorps pilot will include 40+ parent leaders representing more than
-              10 organizations across Massachusetts.
+              The Mass ParentCorps pilot launches June 17, 2026, with 20 parent leaders in the
+              first cohort representing organizations across Massachusetts.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-6">
+              <a
+                href={REGISTER_URL}
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
+                style={{ background: '#2EC4B6', color: '#0C3B38' }}
+              >
+                Register Your Interest →
+              </a>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-3">
               {navLinks.map((link) => (
                 <a key={link.label} href={link.href} className="px-5 py-2 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
               ))}
@@ -67,9 +82,16 @@ function PageHero() {
           From design to implementation
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          The Mass ParentCorps pilot will include 40+ parent leaders representing more than
-          10 organizations across Massachusetts.
+          The Mass ParentCorps pilot launches June 17, 2026, with 20 parent leaders in the
+          first cohort representing organizations across Massachusetts.
         </p>
+        <a
+          href={REGISTER_URL}
+          className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm"
+          style={{ background: '#2EC4B6', color: '#0C3B38' }}
+        >
+          Register Your Interest →
+        </a>
         <div className="mt-6 flex flex-wrap gap-2">
           {navLinks.map((link) => (
             <a key={link.label} href={link.href} className="px-4 py-1.5 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
@@ -84,10 +106,10 @@ function PageHero() {
 
 function PilotOverview() {
   const stats = [
-    { number: '40+', label: 'Parent Leaders' },
-    { number: '2', label: 'Cohorts' },
-    { number: '10+', label: 'Organizations' },
-    { number: '1', label: 'Evaluation Partner' },
+    { number: '20', label: 'Parent Leaders', sub: 'First cohort' },
+    { number: '2nd', label: 'Cohort Planned', sub: 'Coming soon' },
+    { number: '10+', label: 'Organizations', sub: 'Across Massachusetts' },
+    { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
   ]
 
   return (
@@ -103,10 +125,13 @@ function PilotOverview() {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
               Who's in the pilot
             </h2>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
-              The Mass ParentCorps pilot will include parent leaders across two cohorts,
-              representing more than 10 organizations across Massachusetts. Participants come
-              from organizations that engage parents as leaders.
+            <p className="text-lg leading-relaxed mb-4" style={{ color: '#4B5563' }}>
+              The Mass ParentCorps pilot will include 20 parent leaders in the first cohort,
+              representing organizations that engage parents as leaders across Massachusetts.
+              A second cohort is planned.
+            </p>
+            <p className="text-base leading-relaxed mb-10" style={{ color: '#6B7280' }}>
+              Starting <strong>June 17, 2026</strong> — Wednesdays, 6:30–8:30 PM, 8 weeks via Zoom.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -117,11 +142,150 @@ function PilotOverview() {
                   style={{ background: 'white', border: '1px solid rgba(46,196,182,0.15)' }}
                 >
                   <div className="text-5xl font-bold mb-2" style={{ color: '#0C3B38' }}>{s.number}</div>
-                  <div className="text-sm font-medium" style={{ color: '#6B7280' }}>{s.label}</div>
+                  <div className="text-sm font-medium mb-1" style={{ color: '#6B7280' }}>{s.label}</div>
+                  <div className="text-xs" style={{ color: '#9CA3AF' }}>{s.sub}</div>
                 </div>
               ))}
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── WHAT YOU WILL EARN ─────────────────────────────────────────────────────
+
+function WhatYouWillEarn() {
+  return (
+    <section id="earn" className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="mb-12">
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What You Will Earn</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+            Two awards. Both yours to keep.
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Award 1 */}
+          <div
+            className="rounded-2xl p-10 flex flex-col"
+            style={{ background: '#0C3B38' }}
+          >
+            <div
+              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
+              style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
+            >
+              Award #1
+            </div>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#F0DC9A' }}>
+              Mass ParentCorps Credential
+            </h3>
+            <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              A new, emerging credential gaining statewide recognition across Massachusetts —
+              a formal mark of your parent leadership expertise and community impact.
+            </p>
+          </div>
+
+          {/* Award 2 */}
+          <div
+            className="rounded-2xl p-10 flex flex-col"
+            style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.2)' }}
+          >
+            <div
+              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
+              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+            >
+              Award #2
+            </div>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
+              3–9 College Credits
+            </h3>
+            <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
+              Earned through <strong>Urban College</strong> — credits you can apply toward future
+              certificates, associate's degrees, and advanced degrees on your own timeline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── DO YOU QUALIFY ─────────────────────────────────────────────────────────
+
+function DoYouQualify() {
+  const requirements = [
+    {
+      number: '01',
+      title: '60 Hours of Leadership Experience',
+      desc: 'At least 60 hours of community leadership experience as a Parent Leader, Family Advocate, Community Organizer, or similar role. Hours can be combined from multiple organizations.',
+    },
+    {
+      number: '02',
+      title: '8 Hours of Leadership Training',
+      desc: 'At least 8 hours of approved parent leadership training completed before applying.',
+    },
+    {
+      number: '03',
+      title: 'High School Diploma or GED',
+      desc: 'Participants must have a High School Diploma, GED, or higher level of education to enroll.',
+    },
+    {
+      number: '04',
+      title: 'English Proficiency',
+      desc: 'The course is taught entirely in English. Participants must be proficient in English to fully participate and complete assignments.',
+    },
+    {
+      number: '05',
+      title: 'Agency Referral Required',
+      desc: 'Participants must be referred by a sponsoring community-based organization. Contact your organization or reach out to massparentcorps.org to learn more.',
+    },
+  ]
+
+  return (
+    <section id="qualify" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
+      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', left: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="mb-12">
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Eligibility</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+            Do You Qualify?
+          </h2>
+          <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
+            Spots are limited. To participate, applicants must meet all of the following:
+          </p>
+        </div>
+
+        <div className="space-y-4 mb-12">
+          {requirements.map((r) => (
+            <div
+              key={r.number}
+              className="rounded-2xl px-8 py-6 flex items-start gap-6"
+              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+            >
+              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(46,196,182,0.4)' }}>
+                {r.number}
+              </span>
+              <div>
+                <h3 className="font-bold text-lg mb-1" style={{ color: 'white' }}>{r.title}</h3>
+                <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{r.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center">
+          <a
+            href={REGISTER_URL}
+            className="inline-flex items-center gap-2 px-10 py-5 rounded-full font-semibold text-lg"
+            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+          >
+            Register Your Interest →
+          </a>
         </div>
       </div>
     </section>
@@ -133,27 +297,39 @@ function PilotOverview() {
 function ProgramStructure() {
   const elements = [
     {
-      tag: '3 Credits',
-      title: '3-Credit College Course',
-      desc: 'Participants enroll in a course developed with community colleges.',
-      bullets: ['Leadership', 'Community engagement', 'Workforce preparation'],
-    },
-    {
-      tag: 'Capstone',
-      title: 'Capstone Project',
-      desc: 'Participants complete a leadership project connected to their organization.',
-      bullets: ['Improving outreach to families', 'Developing engagement strategies', 'Organizing community resource events'],
-    },
-    {
-      tag: '60 Hours',
-      title: 'Parent Leadership Experience',
-      desc: 'The program recognizes 60 hours of parent leadership experience.',
+      tag: 'Prerequisite',
+      title: 'Leadership Experience (60 hrs)',
+      desc: 'At least 60 hours of parent leadership experience, verifiable through your sponsoring organization.',
       bullets: ['Facilitating meetings', 'Organizing programs', 'Community outreach', 'Advocacy'],
     },
     {
-      tag: '8 Hours',
-      title: 'Leadership Training',
-      desc: 'Recognition of 8 hours of leadership training completed through partner organizations.',
+      tag: 'Prerequisite',
+      title: 'Leadership Training (8 hrs)',
+      desc: 'At least 8 hours of approved leadership training completed through a partner organization before the course begins.',
+      bullets: [],
+    },
+    {
+      tag: '3–9 Credits',
+      title: 'College Credit Course',
+      desc: 'Core Competencies for Community Workers, offered in partnership with Urban College. Wednesdays, 6:30–8:30 PM, starting June 17, 2026. 8 weeks via Zoom. Taught in English — participants must be proficient in English to fully participate and complete assignments.',
+      bullets: ['Leadership', 'Community engagement', 'Workforce preparation'],
+    },
+    {
+      tag: 'Applied Learning',
+      title: 'Applied Learning Project',
+      desc: 'Participants complete an Applied Learning Project connected to their organization and community.',
+      bullets: ['Improving outreach to families', 'Developing engagement strategies', 'Organizing community resource events'],
+    },
+    {
+      tag: 'Community',
+      title: 'Community Learning Sessions',
+      desc: 'Structured sessions that connect participants with peers and practitioners across Massachusetts.',
+      bullets: [],
+    },
+    {
+      tag: 'Evaluation',
+      title: 'Evaluations & Graduation',
+      desc: 'Participants complete program evaluations and graduate with their credential and college credits upon successful completion.',
       bullets: [],
     },
   ]
@@ -168,7 +344,7 @@ function ProgramStructure() {
             How the program works
           </h2>
           <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: '#4B5563' }}>
-            Four elements that together build a recognized Parent Leadership Workforce Credential.
+            Six components that together build a recognized, emerging Parent Leadership Workforce Credential.
           </p>
         </div>
 
@@ -199,6 +375,16 @@ function ProgramStructure() {
               )}
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <a
+            href={REGISTER_URL}
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
+            style={{ background: '#0C3B38', color: '#F0DC9A' }}
+          >
+            Register Your Interest →
+          </a>
         </div>
       </div>
     </section>
@@ -261,6 +447,18 @@ function PartnersEvaluation() {
     'Document lessons learned',
   ]
 
+  const cbos = [
+    'Families First',
+    'East Boston Social Centers',
+    'Family Nurturing Center of Massachusetts',
+    'Union Capital Boston',
+  ]
+
+  const designPartners = [
+    'Department of Early Education and Care (EEC)',
+    'Department of Elementary and Secondary Education (DESE)',
+  ]
+
   return (
     <section id="partners" className="py-20" style={{ background: '#FBF7E8' }}>
       <div className="max-w-7xl mx-auto px-6">
@@ -272,17 +470,17 @@ function PartnersEvaluation() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 mb-12">
+        <div className="grid md:grid-cols-3 gap-5 mb-8">
           {/* Organizational */}
           <div className="rounded-2xl p-8 bg-white" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
             <div className="text-3xl mb-4">🏢</div>
-            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Organizational Partnerships</h3>
+            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Founding Community Partners</h3>
             <p className="text-base leading-relaxed mb-5" style={{ color: '#4B5563' }}>
-              Mass ParentCorps collaborates with organizations across Massachusetts that engage
+              Mass ParentCorps collaborates with founding community-based organizations that engage
               parents as leaders.
             </p>
             <ul className="space-y-2">
-              {['Nominate parent leaders', 'Support leadership activities', 'Host capstone projects'].map((item, i) => (
+              {cbos.map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
                   <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
                   {item}
@@ -294,11 +492,22 @@ function PartnersEvaluation() {
           {/* Academic */}
           <div className="rounded-2xl p-8 bg-white" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
             <div className="text-3xl mb-4">🎓</div>
-            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Academic Partnerships</h3>
-            <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Community colleges collaborate to develop the 3-credit course and support the
-              academic component of the pilot.
+            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Academic Partnership</h3>
+            <p className="text-base leading-relaxed mb-5" style={{ color: '#4B5563' }}>
+              <strong>Urban College</strong> is the named partner for the credit-bearing course,
+              offering 3–9 college credits to program completers.
             </p>
+            <div className="mt-4">
+              <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#9CA3AF' }}>Design &amp; Government Partners</div>
+              <ul className="space-y-2">
+                {designPartners.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#F0DC9A' }} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Evaluation */}
@@ -334,7 +543,7 @@ function PartnersEvaluation() {
             </p>
           </div>
           <a
-            href="mailto:marostrategies@gmail.com"
+            href="mailto:mpc@massparentcorps.org"
             className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm"
             style={{ background: '#F0DC9A', color: '#0C3B38' }}
           >

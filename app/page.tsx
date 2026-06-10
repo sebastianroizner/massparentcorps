@@ -6,12 +6,15 @@
 // Cream/yellow:   #F0DC9A
 // Light cream bg: #FBF7E8
 
+const REGISTER_URL = 'https://forms.gle/8ivwftzEML241N1X7'
+
 export default function Home() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
       <Hero />
       <WhereWeAre />
       <PilotSnapshot />
+      <WhatYouEarn />
       <WhatMakesUnique />
       <FoundingPartners />
       <GetInvolved />
@@ -40,7 +43,6 @@ function Hero() {
 
       {/* Decorative overlay */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Decorative curve */}
         <svg
           className="absolute"
           style={{ top: 0, right: 0, width: '35%', opacity: 0.15 }}
@@ -60,8 +62,8 @@ function Hero() {
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border"
               style={{ color: '#2EC4B6', borderColor: 'rgba(46,196,182,0.35)', background: 'rgba(46,196,182,0.06)' }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-current" />
-              Statewide Initiative · Massachusetts · Launching 2026
+              <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
+              Statewide Initiative · Massachusetts · Pilot Now Open — June 2026
             </span>
           </div>
 
@@ -78,7 +80,7 @@ function Hero() {
             className="text-xl md:text-2xl max-w-2xl leading-relaxed mb-6"
             style={{ color: 'rgba(255,255,255,0.65)' }}
           >
-            Connecting parent leadership experience with college learning and workforce opportunities.
+            Transforming Communities by Elevating Parent Leadership. Connecting parent leadership experience with academic learning, 3–9 college credits, and career pathways across Massachusetts.
           </p>
 
           <p
@@ -95,14 +97,21 @@ function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
+              href={REGISTER_URL}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
+              style={{ background: '#2EC4B6', color: '#0C3B38' }}
+            >
+              Apply Today
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a
               href="/impact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
               style={{ background: '#F0DC9A', color: '#0C3B38' }}
             >
               Learn About the Pilot
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
             </a>
             <a
               href="/about"
@@ -161,7 +170,7 @@ function WhereWeAre() {
                 {
                   phase: 'Phase 2',
                   title: 'Design, Implementation, and Evaluation',
-                  status: 'In Progress',
+                  status: 'Active — Pilot Launching June 17, 2026',
                   statusColor: '#F0DC9A',
                   statusBg: 'rgba(240,220,154,0.15)',
                 },
@@ -193,9 +202,9 @@ function WhereWeAre() {
 
 function PilotSnapshot() {
   const stats = [
-    { number: '40+', label: 'Parent Leaders', sub: 'Across two cohorts' },
+    { number: '20', label: 'Parent Leaders', sub: 'First cohort; second cohort planned' },
     { number: '10+', label: 'Organizations', sub: 'Represented statewide' },
-    { number: '3', label: 'College Credits', sub: 'Community college course' },
+    { number: '3–9', label: 'College Credits', sub: 'Up to 9 credits through Urban College' },
     { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
   ]
 
@@ -243,6 +252,68 @@ function PilotSnapshot() {
   )
 }
 
+// ─── WHAT YOU EARN ──────────────────────────────────────────────────────────
+
+function WhatYouEarn() {
+  return (
+    <section className="py-20" style={{ background: '#FBF7E8' }}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
+            What You Will Earn
+          </span>
+          <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#0C3B38' }}>
+            Two awards. Both yours to keep.
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {/* Award 1 */}
+          <div
+            className="rounded-2xl p-10 flex flex-col"
+            style={{ background: '#0C3B38' }}
+          >
+            <div
+              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
+              style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
+            >
+              Award #1
+            </div>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#F0DC9A' }}>
+              Mass ParentCorps Credential
+            </h3>
+            <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
+              A new, emerging credential gaining statewide recognition — a formal mark of your
+              parent leadership expertise and community impact.
+            </p>
+          </div>
+
+          {/* Award 2 */}
+          <div
+            className="rounded-2xl p-10 flex flex-col"
+            style={{ background: 'white', border: '1px solid rgba(46,196,182,0.2)' }}
+          >
+            <div
+              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
+              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+            >
+              Award #2
+            </div>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
+              3–9 College Credits
+            </h3>
+            <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
+              Earned through Urban College — credits you can apply toward future certificates,
+              associate's degrees, and advanced degrees on your own timeline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ─── WHAT MAKES MPC UNIQUE ──────────────────────────────────────────────────
 
 function WhatMakesUnique() {
@@ -250,7 +321,7 @@ function WhatMakesUnique() {
     {
       icon: '🤝',
       title: 'Collaborative Initiative',
-      desc: 'Mass ParentCorps is being developed through collaboration with community-based organizations, parent leaders, community colleges, and governmental partners across Massachusetts. This collaborative approach helps ensure the model reflects community needs, workforce opportunities, and the experience of organizations that engage parents as leaders.',
+      desc: 'Mass ParentCorps is being developed through collaboration with community-based organizations, parent leaders, Urban College, and governmental partners across Massachusetts. This collaborative approach helps ensure the model reflects community needs, workforce opportunities, and the experience of organizations that engage parents as leaders.',
     },
     {
       icon: '📜',
@@ -264,8 +335,8 @@ function WhatMakesUnique() {
     },
     {
       icon: '🎓',
-      title: 'Partnership with Community Colleges',
-      desc: 'Community colleges are collaborating to develop a 3-credit course that connects parent leadership experience with academic learning and workforce preparation.',
+      title: 'Partnership with Urban College',
+      desc: 'Urban College is the named academic partner for the credit-bearing course — offering 3–9 college credits that connect parent leadership experience with academic learning and workforce preparation.',
     },
     {
       icon: '🔬',
@@ -313,12 +384,16 @@ function WhatMakesUnique() {
 // ─── FOUNDING PARTNERS ──────────────────────────────────────────────────────
 
 function FoundingPartners() {
-  const partners = [
+  const communityPartners = [
     'Families First',
     'Union Capital Boston',
     'East Boston Social Centers',
     'Family Nurturing Center of Massachusetts',
-    'Vital Village Network',
+  ]
+
+  const designPartners = [
+    'Department of Early Education and Care (EEC)',
+    'Department of Elementary and Secondary Education (DESE)',
   ]
 
   return (
@@ -350,8 +425,8 @@ function FoundingPartners() {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
-          {partners.map((p, i) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+          {communityPartners.map((p, i) => (
             <div
               key={i}
               className="rounded-2xl px-6 py-5 flex items-center gap-4"
@@ -362,6 +437,27 @@ function FoundingPartners() {
             </div>
           ))}
         </div>
+
+        <div className="mb-4">
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: 'rgba(46,196,182,0.7)' }}>
+            Design &amp; Government Partners
+          </span>
+        </div>
+        <div className="grid sm:grid-cols-2 gap-4">
+          {designPartners.map((p, i) => (
+            <div
+              key={i}
+              className="rounded-2xl px-6 py-5 flex items-center gap-4"
+              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+            >
+              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#F0DC9A' }} />
+              <span className="font-medium text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>{p}</span>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+          EEC and DESE participated in the initial design phase of Mass ParentCorps.
+        </p>
       </div>
     </section>
   )
@@ -390,9 +486,8 @@ function GetInvolved() {
           Join the Mass<br />ParentCorps Initiative
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          Mass ParentCorps is currently in the pilot development phase. We welcome conversations
-          with organizations, educators, researchers, community leaders, and public partners
-          interested in learning more about the initiative.
+          The pilot is now open. Apply today or reach out to learn more about eligibility and how
+          your organization can get involved.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3 mb-12">
@@ -409,7 +504,17 @@ function GetInvolved() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href="mailto:marostrategies@gmail.com"
+            href={REGISTER_URL}
+            className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
+            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+          >
+            Apply Today
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+          <a
+            href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
             style={{ background: '#0C3B38', color: '#F0DC9A' }}
           >
@@ -420,10 +525,10 @@ function GetInvolved() {
             </svg>
             Get in Touch
           </a>
-          <a href="mailto:marostrategies@gmail.com" className="text-base font-medium" style={{ color: '#2EC4B6' }}>
-            marostrategies@gmail.com
-          </a>
         </div>
+        <a href="mailto:mpc@massparentcorps.org" className="mt-4 block text-base font-medium" style={{ color: '#2EC4B6' }}>
+          mpc@massparentcorps.org
+        </a>
       </div>
     </section>
   )

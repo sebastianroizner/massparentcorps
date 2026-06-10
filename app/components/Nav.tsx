@@ -8,6 +8,8 @@ const links = [
   { label: 'Home', href: '/' },
   { label: 'The Initiative', href: '/about' },
   { label: 'Pilot Program', href: '/impact' },
+  { label: 'For Parents', href: '/for-parents' },
+  { label: 'For Agencies', href: '/for-agencies' },
   { label: 'News & Updates', href: '/news' },
 ]
 
@@ -72,7 +74,7 @@ export default function Nav() {
             )
           })}
           <a
-            href="mailto:marostrategies@gmail.com"
+            href="mailto:mpc@massparentcorps.org"
             className="px-5 py-2 rounded-full text-sm font-semibold transition-all"
             style={{ background: '#F0DC9A', color: '#0C3B38' }}
           >
@@ -103,7 +105,7 @@ export default function Nav() {
               </Link>
             ))}
             <a
-              href="mailto:marostrategies@gmail.com"
+              href="mailto:mpc@massparentcorps.org"
               onClick={() => setOpen(false)}
               className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold"
               style={{ background: '#F0DC9A', color: '#0C3B38' }}

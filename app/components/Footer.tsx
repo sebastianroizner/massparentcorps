@@ -20,8 +20,8 @@ export default function Footer() {
               Building workforce pathways for parent leaders — a statewide initiative
               across Massachusetts.
             </p>
-            <div className="mt-6 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-              Launching 2026
+            <div className="mt-6 text-xs font-medium" style={{ color: '#2EC4B6' }}>
+              Pilot Now Open — June 2026
             </div>
           </div>
 
@@ -33,6 +33,8 @@ export default function Footer() {
                 { label: 'Home', href: '/' },
                 { label: 'The Initiative', href: '/about' },
                 { label: 'Pilot Program', href: '/impact' },
+                { label: 'For Parents', href: '/for-parents' },
+                { label: 'For Agencies', href: '/for-agencies' },
                 { label: 'News & Updates', href: '/news' },
               ].map((link) => (
                 <li key={link.label}>
@@ -53,10 +55,12 @@ export default function Footer() {
             <div className="font-semibold text-sm mb-4 text-white">The Program</div>
             <ul className="space-y-2">
               {[
-                '3-Credit College Course',
-                'Parent Leadership Experience (60 hrs)',
+                'College Credit Course (3–9 credits)',
+                'Leadership Experience (60 hrs)',
                 'Leadership Training (8 hrs)',
-                'Capstone Project',
+                'Applied Learning Project',
+                'Community Learning Sessions',
+                'Evaluations & Graduation',
               ].map((s) => (
                 <li key={s} className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>{s}</li>
               ))}
@@ -71,11 +75,11 @@ export default function Footer() {
                 Magda Rodriguez
               </div>
               <a
-                href="mailto:marostrategies@gmail.com"
+                href="mailto:mpc@massparentcorps.org"
                 className="text-sm transition-colors"
                 style={{ color: '#2EC4B6' }}
               >
-                marostrategies@gmail.com
+                mpc@massparentcorps.org
               </a>
               <div className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
                 Massachusetts

@@ -11,6 +11,7 @@ export default function AboutPage() {
       <PageHero />
       <Overview />
       <WhyItMatters />
+      <WhatParentsToldUs />
       <History />
       <Founders />
     </div>
@@ -23,6 +24,7 @@ function PageHero() {
   const navLinks = [
     { label: 'Overview', href: '#overview' },
     { label: 'Why It Matters', href: '#why' },
+    { label: 'What Parents Told Us', href: '#parents-voice' },
     { label: 'Our History', href: '#history' },
     { label: 'Founders', href: '#founders' },
   ]
@@ -107,7 +109,8 @@ function Overview() {
               Mass ParentCorps works alongside partners to do just that. We connect parent
               leadership experience with academic learning and workforce preparation —
               transforming parent leadership into a recognized, compensated, and professional
-              pathway.
+              pathway. Participants earn a new, emerging credential gaining statewide recognition
+              across Massachusetts, as well as 3–9 college credits through Urban College.
             </p>
             <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
               Together, we are closing opportunity gaps, creating meaningful career pathways for
@@ -187,6 +190,71 @@ function WhyItMatters() {
   )
 }
 
+// ─── WHAT PARENTS TOLD US ────────────────────────────────────────────────────
+
+function WhatParentsToldUs() {
+  const findings = [
+    'Leadership is advocacy — they use lived experience to influence systems and support families',
+    'They are building workforce-ready skills without formal recognition',
+    'No clear pathway exists to turn leadership into career advancement',
+    'There is strong demand for credentials, paid roles, and college credit',
+    'Equity and multilingual access are non-negotiable',
+  ]
+
+  return (
+    <section id="parents-voice" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
+      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', right: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
+          <div className="md:pt-2">
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What Parents Told Us</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+          </div>
+
+          <div>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#F0DC9A' }}>
+              Findings from the<br />January 2026 Focus Groups
+            </h2>
+            <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              In January 2026, Mass ParentCorps conducted six focus groups with 27 parent leaders
+              from across Massachusetts — four in English and two in Spanish — representing five
+              community-based organizations. Parents told us clearly:
+            </p>
+
+            <div className="space-y-3 mb-10">
+              {findings.map((f, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl px-6 py-4 flex items-start gap-4"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#2EC4B6' }} />
+                  <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Pull quote */}
+            <div
+              className="rounded-2xl p-8"
+              style={{ background: 'rgba(240,220,154,0.08)', border: '1px solid rgba(240,220,154,0.2)' }}
+            >
+              <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#F0DC9A' }}>
+                "Right now, we kind of play it by ear. I took one class, then another, but there wasn't a real pathway to follow."
+              </p>
+              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>— Massachusetts Parent Leader</p>
+            </div>
+
+            <p className="mt-8 text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+              These findings directly shaped the design of Mass ParentCorps.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 // ─── HISTORY ────────────────────────────────────────────────────────────────
 
 function History() {
@@ -219,7 +287,7 @@ function History() {
     {
       year: '2025',
       title: 'Mass ParentCorps Begins',
-      desc: 'Mass ParentCorps begins conversations with community organizations across Massachusetts to develop a Parent Leadership Workforce Credential.',
+      desc: 'Mass ParentCorps begins conversations with community organizations across Massachusetts to develop a new, emerging Parent Leadership Workforce Credential gaining statewide recognition.',
     },
     {
       year: 'Summer 2025',
@@ -227,9 +295,9 @@ function History() {
       desc: 'Magda Rodriguez-Villafañe joins the initiative and begins working with Don Hawley to develop the Mass ParentCorps pilot. She previously led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University, and developed Families United for School and Education (FUSE).',
     },
     {
-      year: '2026',
+      year: 'June 17, 2026',
       title: 'Pilot Launch',
-      desc: 'Mass ParentCorps launches the pilot phase of the initiative.',
+      desc: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College, with 20 parent leaders from across Massachusetts.',
     },
   ]
 
@@ -305,13 +373,13 @@ function Founders() {
     {
       name: 'Don Hawley',
       title: 'Co-Founder',
-      bio: 'Don Hawley spent much of his career in senior leadership roles across the business sector, working as both a consultant and executive focused on strategy, organizational leadership, and performance. In 2010, he transitioned from the corporate world to apply his experience in service of local nonprofit organizations. Over time, his work became increasingly focused on early childhood, where he has contributed through pro bono consulting and active philanthropic engagement across Massachusetts. Through years of collaboration with community-based organizations that engage parents as leaders, Don observed both the profound impact of parent leadership and a critical opportunity: the need to better connect that leadership experience to structured workforce pathways. He brings deep experience in public policy, nonprofit leadership, and early childhood systems change, having worked alongside community organizations, philanthropic partners, and government agencies to support programs serving children and families. These experiences helped inspire the creation of Mass ParentCorps — an effort to recognize parent leadership as a professional, compensated workforce and expand economic opportunity for parents across Massachusetts.',
+      bio: 'Don Hawley spent much of his career in senior leadership roles across the business sector, working as both a consultant and executive focused on strategy, organizational leadership, and performance. In 2010, he transitioned from the corporate world to apply his experience in service of local nonprofit organizations. Over time, his work became increasingly focused on early childhood, where he has contributed through pro bono consulting and active philanthropic engagement across Massachusetts. Through years of collaboration with community-based organizations that engage parents as leaders, Don observed both the profound impact of parent leadership and a critical opportunity: the need to better connect that leadership experience to structured workforce pathways. He brings deep experience in public policy, nonprofit leadership, and early childhood systems change, having worked alongside community organizations, philanthropic partners, and government agencies to support programs serving children and families. These experiences helped inspire the creation of Mass ParentCorps — an effort to recognize parent leadership as a new, emerging credential gaining statewide recognition and expand economic opportunity for parents across Massachusetts.',
     },
     {
       name: 'Magda Rodriguez-Villafañe',
       title: 'Co-Founder',
-      bio: 'Magda Rodriguez-Villafañe is a family engagement leader and co-founder of Mass ParentCorps, with a strong track record of advancing parent leadership and community-driven change. She spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University for its innovative approach to empowering parents as leaders. Magda also developed Families United for School and Education (FUSE), an initiative designed to support families in advocating for their children and strengthening leadership within their communities. At Mass ParentCorps, she works in partnership with community organizations, community colleges, and research partners to design and implement the Parent Leadership Workforce Credential pilot — helping to transform parent leadership into a recognized, professional, and compensated pathway.',
-      email: 'marostrategies@gmail.com',
+      bio: 'Magda Rodriguez-Villafañe is a family engagement leader and co-founder of Mass ParentCorps, with a strong track record of advancing parent leadership and community-driven change. She spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University for its innovative approach to empowering parents as leaders. Magda also developed Families United for School and Education (FUSE), an initiative designed to support families in advocating for their children and strengthening leadership within their communities. At Mass ParentCorps, she works in partnership with community organizations, Urban College, and research partners to design and implement the pilot — helping to transform parent leadership into a recognized, professional, and compensated pathway.',
+      email: 'mpc@massparentcorps.org',
     },
   ]
 
@@ -329,7 +397,7 @@ function Founders() {
               The people behind<br />Mass ParentCorps
             </h2>
 
-            <div className="grid sm:grid-cols-2 gap-5">
+            <div className="grid sm:grid-cols-2 gap-5 mb-10">
               {founders.map((f) => (
                 <div
                   key={f.name}
@@ -352,6 +420,30 @@ function Founders() {
                   )}
                 </div>
               ))}
+            </div>
+
+            {/* Design Partners note */}
+            <div
+              className="rounded-2xl p-8"
+              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.15)' }}
+            >
+              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#2EC4B6' }}>
+                Design &amp; Government Partners
+              </div>
+              <p className="text-base leading-relaxed mb-4" style={{ color: '#4B5563' }}>
+                EEC and DESE participated in the initial design phase of Mass ParentCorps.
+              </p>
+              <ul className="space-y-2">
+                {[
+                  'Department of Early Education and Care (EEC)',
+                  'Department of Elementary and Secondary Education (DESE)',
+                ].map((p, i) => (
+                  <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
+                    {p}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
