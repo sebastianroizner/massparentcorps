@@ -6,8 +6,6 @@
 // Cream/yellow:   #F0DC9A
 // Light cream bg: #FBF7E8
 
-const REGISTER_URL = 'https://forms.gle/8ivwftzEML241N1X7'
-
 export default function Home() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -63,9 +61,16 @@ function Hero() {
               style={{ color: '#2EC4B6', borderColor: 'rgba(46,196,182,0.35)', background: 'rgba(46,196,182,0.06)' }}
             >
               <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-              Statewide Initiative · Massachusetts · Pilot Now Open — June 2026
+              Now in Phase 3: Building Statewide Infrastructure
             </span>
           </div>
+
+          <p
+            className="text-2xl md:text-3xl max-w-3xl leading-relaxed mb-8 font-medium"
+            style={{ color: 'rgba(255,255,255,0.9)' }}
+          >
+            Across Massachusetts, parents are already leading — in their communities, in their children's schools, in the organizations that serve their families. Mass ParentCorps is building the infrastructure to recognize that leadership, credential it, and connect it to a career.
+          </p>
 
           <h1
             className="text-6xl md:text-7xl lg:text-[88px] font-bold leading-[1.02] tracking-tight mb-8"
@@ -80,7 +85,7 @@ function Hero() {
             className="text-xl md:text-2xl max-w-2xl leading-relaxed mb-6"
             style={{ color: 'rgba(255,255,255,0.65)' }}
           >
-            Transforming Communities by Elevating Parent Leadership. Connecting parent leadership experience with academic learning, 3–9 college credits, and career pathways across Massachusetts.
+            Transforming Communities by Elevating Parent Leadership. Connecting parent leadership experience with academic learning, 3–6 college credits, and career pathways across Massachusetts.
           </p>
 
           <p
@@ -97,11 +102,11 @@ function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href={REGISTER_URL}
+              href="/about"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
               style={{ background: '#2EC4B6', color: '#0C3B38' }}
             >
-              Join Our Program
+              Learn More About Us
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -112,13 +117,6 @@ function Hero() {
               style={{ background: '#F0DC9A', color: '#0C3B38' }}
             >
               Learn About the Pilot
-            </a>
-            <a
-              href="/about"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg transition-all border"
-              style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}
-            >
-              About the Initiative
             </a>
           </div>
         </div>
@@ -158,7 +156,7 @@ function WhereWeAre() {
               connecting parent leadership with professional opportunities.
             </p>
 
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
                 {
                   phase: 'Phase 1',
@@ -174,6 +172,14 @@ function WhereWeAre() {
                   statusColor: '#F0DC9A',
                   statusBg: 'rgba(240,220,154,0.15)',
                 },
+                {
+                  phase: 'Phase 3',
+                  title: 'Infrastructure & Sustainability',
+                  status: 'Coming Next',
+                  statusColor: '#6B7280',
+                  statusBg: 'rgba(107,114,128,0.12)',
+                  desc: 'Building the statewide framework, coalition, and funding base to scale parent leadership pathways across Massachusetts — organized around three working areas: Framework & Curriculum, Funding & Policy, and Evaluation & Research.',
+                },
               ].map((item) => (
                 <div
                   key={item.phase}
@@ -187,7 +193,10 @@ function WhereWeAre() {
                     {item.status}
                   </div>
                   <div className="font-bold text-xs tracking-widest uppercase mb-1" style={{ color: '#9CA3AF' }}>{item.phase}</div>
-                  <div className="font-semibold" style={{ color: '#0C3B38' }}>{item.title}</div>
+                  <div className="font-semibold mb-1" style={{ color: '#0C3B38' }}>{item.title}</div>
+                  {item.desc && (
+                    <p className="text-sm leading-relaxed mt-2" style={{ color: '#6B7280' }}>{item.desc}</p>
+                  )}
                 </div>
               ))}
             </div>
@@ -202,10 +211,10 @@ function WhereWeAre() {
 
 function PilotSnapshot() {
   const stats = [
-    { number: '20', label: 'Parent Leaders', sub: 'Cohort 1 — Full' },
-    { number: '10+', label: 'Organizations', sub: 'Represented statewide' },
-    { number: '3', label: 'College Credits', sub: 'Middlesex Community College — Cohort 2' },
-    { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
+    { number: '39', label: 'Parent Leaders', sub: 'Across both cohorts' },
+    { number: '15', label: 'Sponsor Agencies', sub: '' },
+    { number: '2', label: 'Community Colleges', sub: 'Urban College of Boston & Middlesex Community College' },
+    { number: '15+', label: 'Other Agencies', sub: 'Partner organizations statewide' },
   ]
 
   return (
@@ -217,7 +226,7 @@ function PilotSnapshot() {
           </span>
           <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
           <p className="mt-6 text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
+            Cohort 1 with Urban College of Boston and Cohort 2 with Middlesex Community College are both now underway.
           </p>
         </div>
 
@@ -300,11 +309,12 @@ function WhatYouEarn() {
               Award #2
             </div>
             <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
-              3–9 College Credits
+              3–6 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Earned through Urban College — credits you can apply toward future certificates,
-              associate's degrees, and advanced degrees on your own timeline.
+              Earned through Urban College of Boston or Middlesex Community College — credits
+              you can apply toward future certificates, associate's degrees, and advanced
+              degrees on your own timeline.
             </p>
           </div>
         </div>
@@ -335,12 +345,12 @@ function WhatMakesUnique() {
     {
       icon: '🎓',
       title: 'Academic Partnerships',
-      desc: 'Urban College of Boston partnered on Cohort 1. Middlesex Community College is the academic partner for Cohort 2 (Fall 2026), offering 3 college credits through SOC 110: Community Leadership & Organizing.',
+      desc: 'Urban College of Boston partnered on Cohort 1, offering HUS110: Core Competencies for Community Behavioral Health Workers. Middlesex Community College is the academic partner for Cohort 2, offering SOC 110: Community Leadership & Organizing.',
     },
     {
       icon: '🔬',
       title: 'Research and Evaluation Partnership',
-      desc: 'The pilot will be evaluated in partnership with NYU Metro Center under the leadership of Joanna Geller. The evaluation will help document outcomes and inform future expansion of the model.',
+      desc: 'The pilot is being evaluated in partnership with NYU Metro Center’s Center for Policy, Research & Evaluation, led by Dr. Joanna Geller and Lisette DeSouza. The evaluation will help document outcomes and inform future expansion of the model.',
     },
   ]
 
@@ -485,8 +495,8 @@ function GetInvolved() {
           Join the Mass<br />ParentCorps Initiative
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          The pilot is now open. Join our program or reach out to learn more about eligibility and how
-          your organization can get involved.
+          Both cohorts of the pilot are now underway. Explore the program or reach out to learn
+          more about future opportunities and how your organization can get involved.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-3 mb-12">
@@ -503,11 +513,11 @@ function GetInvolved() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={REGISTER_URL}
+            href="/impact"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Join Our Program
+            Explore the Pilot
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>

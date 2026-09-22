@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   description: 'Learn about the Mass ParentCorps pilot program structure, partnerships, and evaluation.',
 }
 
-const REGISTER_URL = 'https://forms.gle/8ivwftzEML241N1X7'
-
 export default function ImpactPage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -53,15 +51,15 @@ function PageHero() {
               From design to<br />implementation
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
+              Both cohorts are now underway — 39 parent leaders enrolled across Urban College of Boston and Middlesex Community College.
             </p>
             <div className="mt-6">
               <a
-                href={REGISTER_URL}
+                href="mailto:mpc@massparentcorps.org"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
                 style={{ background: '#2EC4B6', color: '#0C3B38' }}
               >
-                Join Our Program →
+                Get Notified About Future Cohorts →
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-3">
@@ -81,14 +79,14 @@ function PageHero() {
           From design to implementation
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          Cohort 1 with Urban College of Boston is full. Cohort 2 with Middlesex Community College is now open — registration closes September 9, 2026.
+          Both cohorts are now underway — 39 parent leaders enrolled across Urban College of Boston and Middlesex Community College.
         </p>
         <a
-          href={REGISTER_URL}
+          href="mailto:mpc@massparentcorps.org"
           className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm"
           style={{ background: '#2EC4B6', color: '#0C3B38' }}
         >
-          Join Our Program →
+          Get Notified About Future Cohorts →
         </a>
         <div className="mt-6 flex flex-wrap gap-2">
           {navLinks.map((link) => (
@@ -104,10 +102,10 @@ function PageHero() {
 
 function PilotOverview() {
   const stats = [
-    { number: '20', label: 'Parent Leaders', sub: 'Cohort 1 — Full' },
-    { number: '2nd', label: 'Cohort Now Open', sub: 'Middlesex Community College' },
-    { number: '10+', label: 'Organizations', sub: 'Across Massachusetts' },
-    { number: '1', label: 'Evaluation Partner', sub: 'NYU Metro Center' },
+    { number: '39', label: 'Parent Leaders', sub: 'Across both cohorts' },
+    { number: '15', label: 'Sponsor Agencies', sub: '' },
+    { number: '2', label: 'Community Colleges', sub: '' },
+    { number: '15+', label: 'Other Agencies', sub: 'Statewide' },
   ]
 
   return (
@@ -126,17 +124,16 @@ function PilotOverview() {
             <div className="rounded-2xl p-5 mb-6" style={{ background: 'rgba(46,196,182,0.08)', border: '1px solid rgba(46,196,182,0.25)' }}>
               <p className="text-sm font-semibold mb-1" style={{ color: '#1A6B63' }}>Cohort 1 — Urban College of Boston</p>
               <p className="text-base" style={{ color: '#4B5563' }}>
-                The first cohort of 20 parent leaders, representing 7 sponsoring agencies, is now full.
+                The first cohort of parent leaders completed their credentialing course in partnership
+                with Urban College of Boston — Course: <strong>HUS110: Core Competencies for
+                Community Behavioral Health Workers</strong>.
               </p>
             </div>
             <div className="rounded-2xl p-5 mb-8" style={{ background: '#0C3B38' }}>
-              <p className="text-sm font-semibold mb-1" style={{ color: '#2EC4B6' }}>Cohort 2 — Middlesex Community College · Now Open</p>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#2EC4B6' }}>Cohort 2 — Middlesex Community College</p>
               <p className="text-base mb-3" style={{ color: 'rgba(255,255,255,0.8)' }}>
-                Registration is now open for the Fall 2026 cohort in partnership with Middlesex Community College.
-                Course: <strong style={{ color: '#F0DC9A' }}>SOC 110: Community Leadership &amp; Organizing</strong> — Mon &amp; Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online.
-              </p>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
-                Credentialing Kickoff: August 31, 2026 at 6:30 PM · Registration closes September 9, 2026
+                The second cohort is underway in partnership with Middlesex Community College.
+                Course: <strong style={{ color: '#F0DC9A' }}>SOC 110: Community Leadership &amp; Organizing</strong> — Mon &amp; Wed, 12:30–1:45 PM · 100% Online.
               </p>
             </div>
 
@@ -207,11 +204,12 @@ function WhatYouWillEarn() {
               Award #2
             </div>
             <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
-              3–9 College Credits
+              3–6 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Earned through <strong>Urban College</strong> — credits you can apply toward future
-              certificates, associate's degrees, and advanced degrees on your own timeline.
+              Earned through <strong>Urban College of Boston or Middlesex Community College</strong> —
+              credits you can apply toward future certificates, associate's degrees, and advanced
+              degrees on your own timeline.
             </p>
           </div>
         </div>
@@ -286,11 +284,11 @@ function DoYouQualify() {
 
         <div className="text-center">
           <a
-            href={REGISTER_URL}
+            href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full font-semibold text-lg"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Join Our Program →
+            Get Notified About Future Cohorts →
           </a>
         </div>
       </div>
@@ -315,9 +313,9 @@ function ProgramStructure() {
       bullets: [],
     },
     {
-      tag: '3–9 Credits',
+      tag: '3–6 Credits',
       title: 'College Credit Course',
-      desc: 'SOC 110: Community Leadership & Organizing, offered in partnership with Middlesex Community College (Cohort 2). Mon & Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online. Taught in English — participants must be proficient in English to fully participate and complete assignments.',
+      desc: 'HUS110: Core Competencies for Community Behavioral Health Workers (Urban College of Boston, Cohort 1) or SOC 110: Community Leadership & Organizing (Middlesex Community College, Cohort 2). Taught in English — participants must be proficient in English to fully participate and complete assignments.',
       bullets: ['Leadership', 'Community engagement', 'Workforce preparation'],
     },
     {
@@ -385,11 +383,11 @@ function ProgramStructure() {
 
         <div className="mt-10 text-center">
           <a
-            href={REGISTER_URL}
+            href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
             style={{ background: '#0C3B38', color: '#F0DC9A' }}
           >
-            Join Our Program →
+            Get Notified About Future Cohorts →
           </a>
         </div>
       </div>
@@ -500,7 +498,9 @@ function PartnersEvaluation() {
             <div className="text-3xl mb-4">🎓</div>
             <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Academic Partnership</h3>
             <p className="text-base leading-relaxed mb-3" style={{ color: '#4B5563' }}>
-              <strong>Urban College of Boston</strong> partnered on Cohort 1. <strong>Middlesex Community College</strong> is the academic partner for Cohort 2 (Fall 2026), offering 3 college credits through SOC 110: Community Leadership &amp; Organizing.
+              <strong>Urban College of Boston</strong> partnered on Cohort 1, offering HUS110: Core
+              Competencies for Community Behavioral Health Workers. <strong>Middlesex Community College</strong> is
+              the academic partner for Cohort 2, offering SOC 110: Community Leadership &amp; Organizing.
             </p>
             <div className="mt-4">
               <div className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: '#9CA3AF' }}>Design &amp; Government Partners</div>
@@ -520,8 +520,8 @@ function PartnersEvaluation() {
             <div className="text-3xl mb-4">🔬</div>
             <h3 className="font-bold text-xl mb-3" style={{ color: '#F0DC9A' }}>Evaluation</h3>
             <p className="text-base leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.65)' }}>
-              The pilot will be evaluated in partnership with NYU Metro Center under the
-              leadership of Joanna Geller.
+              The pilot is being evaluated in partnership with NYU Metro Center's Center for Policy,
+              Research &amp; Evaluation, led by Dr. Joanna Geller and Lisette DeSouza.
             </p>
             <ul className="space-y-2">
               {evalPoints.map((item, i) => (

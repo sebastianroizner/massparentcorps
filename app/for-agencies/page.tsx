@@ -93,11 +93,17 @@ function RoleOfAgencies() {
             <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
               How your organization<br />makes it work
             </h2>
-            <p className="text-lg leading-relaxed mb-12" style={{ color: '#4B5563' }}>
+            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
               Mass ParentCorps is a partnership between community-based organizations,
               parent leaders, and academic partners. CBOs are not just a referral source —
               they are essential co-designers of the pathway.
             </p>
+            <div
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold mb-12"
+              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+            >
+              Join 15 sponsor agencies and 15+ partner organizations already part of the Mass ParentCorps network.
+            </div>
             <div className="grid sm:grid-cols-2 gap-5">
               {roles.map((r, i) => (
                 <div

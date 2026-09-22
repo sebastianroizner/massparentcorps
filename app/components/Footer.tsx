@@ -21,7 +21,7 @@ export default function Footer() {
               across Massachusetts.
             </p>
             <div className="mt-6 text-xs font-medium" style={{ color: '#2EC4B6' }}>
-              Pilot Now Open — June 2026
+              Now in Phase 3: Building Statewide Infrastructure
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
             <div className="font-semibold text-sm mb-4 text-white">The Program</div>
             <ul className="space-y-2">
               {[
-                'College Credit Course (3–9 credits)',
+                'College Credit Course (3–6 credits)',
                 'Leadership Experience (60 hrs)',
                 'Leadership Training (8 hrs)',
                 'Applied Learning Project',
@@ -72,7 +72,7 @@ export default function Footer() {
             <div className="font-semibold text-sm mb-4 text-white">Contact</div>
             <div className="space-y-1">
               <div className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Magda Rodriguez
+                Magda Rodriguez-Villafañe
               </div>
               <a
                 href="mailto:mpc@massparentcorps.org"

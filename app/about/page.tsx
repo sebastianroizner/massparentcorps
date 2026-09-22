@@ -12,6 +12,7 @@ export default function AboutPage() {
       <Overview />
       <WhyItMatters />
       <WhatParentsToldUs />
+      <RecentVideo />
       <History />
       <Founders />
     </div>
@@ -47,11 +48,12 @@ function PageHero() {
             <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
             <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
             <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
-              A collaborative initiative<br />for parent leadership
+              Parent leadership<br />already exists in Massachusetts.
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              Connecting parent leadership experience with academic learning and workforce
-              preparation across Massachusetts.
+              What's been missing is the infrastructure to recognize it, credential it, and connect
+              it to a career — that's what we're building, together with the organizations already
+              doing this work.
             </p>
             <div className="mt-10 flex flex-wrap gap-3">
               {navLinks.map((link) => (
@@ -67,11 +69,12 @@ function PageHero() {
         <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
         <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
         <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
-          A collaborative initiative for parent leadership
+          Parent leadership already exists in Massachusetts.
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          Connecting parent leadership experience with academic learning and workforce
-          preparation across Massachusetts.
+          What's been missing is the infrastructure to recognize it, credential it, and connect
+          it to a career — that's what we're building, together with the organizations already
+          doing this work.
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
           {navLinks.map((link) => (
@@ -110,12 +113,27 @@ function Overview() {
               leadership experience with academic learning and workforce preparation —
               transforming parent leadership into a recognized, compensated, and professional
               pathway. Participants earn a new, emerging credential gaining statewide recognition
-              across Massachusetts, as well as 3–9 college credits through Urban College.
+              across Massachusetts, as well as 3–6 college credits through Urban College of Boston
+              or Middlesex Community College.
             </p>
             <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
               Together, we are closing opportunity gaps, creating meaningful career pathways for
               parents, and advancing community-driven leadership across Massachusetts.
             </p>
+
+            {/* Definition callout */}
+            <div
+              className="rounded-2xl p-8 mb-6"
+              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.25)' }}
+            >
+              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#1A6B63' }}>
+                What Is Parent Leadership?
+              </div>
+              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#0C3B38' }}>
+                The active engagement of parents &amp; caregivers in the design, implementation,
+                and evaluation of the systems that impact their families and communities.
+              </p>
+            </div>
 
             {/* Vision callout */}
             <div
@@ -201,13 +219,20 @@ function WhatParentsToldUs() {
     'Equity and multilingual access are non-negotiable',
   ]
 
+  const agencyFindings = [
+    'A persistent lack of dedicated funding for parent leadership roles',
+    'Parent leadership not consistently recognized as a formal role within organizations',
+    'A disconnected framework — no shared standards or structure across organizations doing this work',
+    'Burnout among the staff who support and sustain parent leaders',
+  ]
+
   return (
     <section id="parents-voice" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
       <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', right: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What Parents Told Us</span>
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What Parents and Agencies Told Us</span>
             <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
           </div>
 
@@ -245,9 +270,63 @@ function WhatParentsToldUs() {
               <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>— Massachusetts Parent Leader</p>
             </div>
 
-            <p className="mt-8 text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.55)' }}>
+            <p className="mt-8 text-base leading-relaxed mb-16" style={{ color: 'rgba(255,255,255,0.55)' }}>
               These findings directly shaped the design of Mass ParentCorps.
             </p>
+
+            {/* What Agencies Told Us */}
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#F0DC9A' }}>
+              What Agencies Told Us
+            </h2>
+            <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
+              Alongside parent voices, MPC's stakeholder and strategic planning conversations —
+              corroborated by Dr. Joanna Geller's "The Ripple" research with Families First —
+              surfaced a consistent set of challenges from the organizations that support parent
+              leaders:
+            </p>
+            <div className="space-y-3">
+              {agencyFindings.map((f, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl px-6 py-4 flex items-start gap-4"
+                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                >
+                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#F0DC9A' }} />
+                  <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── MOST RECENT VIDEO ──────────────────────────────────────────────────────
+
+function RecentVideo() {
+  return (
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
+          <div className="md:pt-2">
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Watch</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+          </div>
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6" style={{ color: '#0C3B38' }}>
+              Mass ParentCorps in Action
+            </h2>
+            <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '16 / 9', border: '1px solid rgba(46,196,182,0.2)' }}>
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/fbjoawtn_1w"
+                title="Watch: Mass ParentCorps in Action"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -297,7 +376,22 @@ function History() {
     {
       year: 'June 17, 2026',
       title: 'Pilot Launch',
-      desc: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College, with 20 parent leaders from across Massachusetts.',
+      desc: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College of Boston. A second cohort follows in Fall 2026 with Middlesex Community College — together enrolling 39 parent leaders across Massachusetts.',
+    },
+  ]
+
+  const lookingAhead = [
+    {
+      title: 'Framework & Curriculum',
+      desc: 'Finalizing a shared Parent Leadership Framework and a universal, credit-bearing curriculum — deepening partnerships with higher education so training becomes real college credit and career pathways.',
+    },
+    {
+      title: 'Funding & Policy',
+      desc: 'Building a standing coalition of state agencies, community organizations, and higher education partners, pursuing durable public funding, and engaging policymakers to formally recognize parent leadership.',
+    },
+    {
+      title: 'Evaluation & Research',
+      desc: 'Building a statewide evidence base, in partnership with NYU Metro Center, that lets the field prove its impact and continuously improve the model.',
     },
   ]
 
@@ -358,6 +452,33 @@ function History() {
                   </div>
                 ))}
               </div>
+            </div>
+
+            {/* Looking Ahead */}
+            <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: '#0C3B38' }}>
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#F0DC9A' }}>
+                Looking Ahead: Building Statewide Infrastructure
+              </h3>
+              <p className="text-lg leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                The pilot proved the concept. The next phase is building the infrastructure to
+                bring it to scale across Massachusetts — organized around three working areas:
+              </p>
+              <div className="grid sm:grid-cols-3 gap-5 mb-8">
+                {lookingAhead.map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-2xl p-6"
+                    style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
+                  >
+                    <h4 className="font-bold text-lg mb-2" style={{ color: '#2EC4B6' }}>{item.title}</h4>
+                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+              <p className="text-base font-medium leading-relaxed" style={{ color: '#F0DC9A' }}>
+                We're not asking organizations and partners to fund this from the outside — we're
+                inviting you to help build it.
+              </p>
             </div>
           </div>
         </div>

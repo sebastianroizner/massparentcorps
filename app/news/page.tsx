@@ -7,13 +7,22 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'infrastructure-sustainability-planning',
+    category: 'Milestone',
+    date: 'September 2026',
+    title: 'Building What’s Next: MPC Enters Infrastructure & Sustainability Planning',
+    excerpt: 'With both pilot cohorts underway, Mass ParentCorps is turning to its next phase: building the statewide infrastructure to bring parent leadership pathways to scale across Massachusetts. This work is organized around three working areas — Framework & Curriculum, Funding & Policy, and Evaluation & Research — led by a newly formed coalition of partners, funders, and parent leaders.',
+    readTime: '3 min read',
+    featured: true,
+  },
+  {
     slug: 'pilot-launch-june-2026',
     category: 'Milestone',
     date: 'June 2026',
     title: 'Pilot Launch: First Credentialing Cohort Begins June 17, 2026',
-    excerpt: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College on June 17, 2026 — 20 parent leaders from across Massachusetts, Wednesdays 6:30–8:30 PM via Zoom. A second cohort is planned.',
+    excerpt: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College on June 17, 2026 — 20 parent leaders from across Massachusetts, Wednesdays 6:30–8:30 PM via Zoom. A second cohort is planned.\n\nUpdate — September 2026: Both cohorts are now underway. Cohort 1 completed its credentialing course with Urban College of Boston; Cohort 2 began in Fall 2026 with Middlesex Community College. Together, 39 parent leaders are enrolled across the two cohorts, representing 15 sponsor agencies and 15+ other partner organizations statewide.',
     readTime: '3 min read',
-    featured: true,
+    featured: false,
   },
   {
     slug: 'focus-group-report',
@@ -29,7 +38,7 @@ const posts = [
     category: 'Academic',
     date: '2026',
     title: 'Urban College Named as Academic Partner',
-    excerpt: "Urban College is the named partner for the credit-bearing course — offering 3–9 college credits through the \"Core Competencies for Community Workers\" course. Credits are applicable toward future certificates, associate's degrees, and advanced degrees.",
+    excerpt: "Urban College of Boston is the named partner for the credit-bearing course — offering 3–6 college credits through HUS110: Core Competencies for Community Behavioral Health Workers. Credits are applicable toward future certificates, associate's degrees, and advanced degrees.",
     readTime: '3 min read',
     featured: false,
   },

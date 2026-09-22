@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   description: 'Everything parent leaders need to know about the Mass ParentCorps pilot — what you earn, eligibility, and how to apply.',
 }
 
-const REGISTER_URL = 'https://forms.gle/8ivwftzEML241N1X7'
-
 export default function ForParentsPage() {
   return (
     <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
@@ -36,11 +34,11 @@ function PageHero() {
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <a
-            href={REGISTER_URL}
+            href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Join Our Program →
+            Get Notified About Future Cohorts →
           </a>
           <a
             href="#qualify"
@@ -75,11 +73,11 @@ function WhatIsMPC() {
               you have been doing as a parent leader — and connects it to formal credentials,
               college credits, and career pathways.
             </p>
-            <p className="text-lg leading-relaxed mb-3" style={{ color: '#4B5563' }}>
-              <strong>Cohort 1</strong> with Urban College of Boston is now full.
-            </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              <strong>Cohort 2</strong> with Middlesex Community College is now open. Classes meet Mon &amp; Wed, 12:30–1:45 PM · September 9 – December 23, 2026 · 100% Online. Registration closes <strong>September 9, 2026</strong>.
+              <strong>Cohort 1</strong> with Urban College of Boston and <strong>Cohort 2</strong> with
+              Middlesex Community College are both now underway. Interested in a future cohort?
+              Email us at <a href="mailto:mpc@massparentcorps.org" style={{ color: '#1A6B63' }}>mpc@massparentcorps.org</a> to
+              be notified when applications open again.
             </p>
             <div
               className="rounded-2xl p-6 mt-4"
@@ -152,11 +150,12 @@ function WhatYouEarn() {
               Award #2
             </div>
             <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
-              3 College Credits
+              3–6 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Earned through <strong>Middlesex Community College</strong> (Cohort 2) — credits you can apply toward
-              future certificates, associate's degrees, and advanced degrees on your own timeline.
+              Earned through <strong>Urban College of Boston or Middlesex Community College</strong> —
+              credits you can apply toward future certificates, associate's degrees, and advanced
+              degrees on your own timeline.
             </p>
           </div>
         </div>
@@ -239,20 +238,20 @@ function HowToApply() {
         <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>How to Apply</span>
         <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
         <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
-          Ready to get started?
+          Interested in a future cohort?
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          Join our program today. Once you submit, a member of our team will be in
-          touch to confirm eligibility and next steps.
+          Both current cohorts are underway. Email us to be notified when applications open
+          again, and a member of our team will follow up with next steps.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
-            href={REGISTER_URL}
+            href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
             style={{ background: '#2EC4B6', color: '#0C3B38' }}
           >
-            Join Our Program →
+            Get Notified About Future Cohorts →
           </a>
           <a
             href="mailto:mpc@massparentcorps.org"
