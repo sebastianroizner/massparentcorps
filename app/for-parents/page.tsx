@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ForParentsPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <PageHero />
       <WhatIsMPC />
       <WhatYouEarn />
@@ -21,11 +21,11 @@ export default function ForParentsPage() {
 
 function PageHero() {
   return (
-    <section style={{ background: '#0C3B38', paddingTop: 64 }}>
+    <section style={{ background: '#2E5B3B', paddingTop: 64 }}>
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>For Parents</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-        <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>For Parents</span>
+        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+        <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
           Your leadership<br />deserves recognition.
         </h1>
         <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -36,7 +36,7 @@ function PageHero() {
           <a
             href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
-            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+            style={{ background: '#C19844', color: '#2E5B3B' }}
           >
             Get Notified About Future Cohorts →
           </a>
@@ -57,15 +57,15 @@ function PageHero() {
 
 function WhatIsMPC() {
   return (
-    <section className="py-20" style={{ background: '#FBF7E8' }}>
+    <section className="py-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What Is It?</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What Is It?</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
               A program built<br />for parent leaders
             </h2>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
@@ -76,14 +76,14 @@ function WhatIsMPC() {
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
               <strong>Cohort 1</strong> with Urban College of Boston and <strong>Cohort 2</strong> with
               Middlesex Community College are both now underway. Interested in a future cohort?
-              Email us at <a href="mailto:mpc@massparentcorps.org" style={{ color: '#1A6B63' }}>mpc@massparentcorps.org</a> to
+              Email us at <a href="mailto:mpc@massparentcorps.org" style={{ color: '#1E3D28' }}>mpc@massparentcorps.org</a> to
               be notified when applications open again.
             </p>
             <div
               className="rounded-2xl p-6 mt-4"
-              style={{ background: 'white', border: '1px solid rgba(46,196,182,0.2)' }}
+              style={{ background: 'white', border: '1px solid rgba(193,152,68,0.2)' }}
             >
-              <p className="text-base font-semibold" style={{ color: '#0C3B38' }}>
+              <p className="text-base font-semibold" style={{ color: '#2E5B3B' }}>
                 The course is taught in English. Participants must be proficient in English to fully participate and complete assignments.
               </p>
             </div>
@@ -93,7 +93,7 @@ function WhatIsMPC() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-base"
-                style={{ background: '#0C3B38', color: '#F0DC9A' }}
+                style={{ background: '#2E5B3B', color: '#EBD29A' }}
               >
                 Learn More →
               </a>
@@ -112,9 +112,9 @@ function WhatYouEarn() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What You Will Earn</span>
-          <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What You Will Earn</span>
+          <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             Two awards. Both yours to keep.
           </h2>
         </div>
@@ -122,15 +122,15 @@ function WhatYouEarn() {
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           <div
             className="rounded-2xl p-10"
-            style={{ background: '#0C3B38' }}
+            style={{ background: '#2E5B3B' }}
           >
             <div
               className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
+              style={{ background: 'rgba(193,152,68,0.2)', color: '#C19844' }}
             >
               Award #1
             </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#F0DC9A' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#EBD29A' }}>
               Mass ParentCorps Credential
             </h3>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -141,15 +141,15 @@ function WhatYouEarn() {
 
           <div
             className="rounded-2xl p-10"
-            style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.2)' }}
+            style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.2)' }}
           >
             <div
               className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+              style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
             >
               Award #2
             </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#2E5B3B' }}>
               3–6 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
@@ -196,12 +196,12 @@ function Eligibility() {
   ]
 
   return (
-    <section id="qualify" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
+    <section id="qualify" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Eligibility</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#F0DC9A' }}>Do You Qualify?</h2>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Eligibility</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#EBD29A' }}>Do You Qualify?</h2>
           <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
             Spots are limited. To participate, you must meet all of the following:
           </p>
@@ -214,7 +214,7 @@ function Eligibility() {
               className="rounded-2xl px-8 py-6 flex items-start gap-6"
               style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
             >
-              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(46,196,182,0.4)' }}>
+              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(193,152,68,0.4)' }}>
                 {r.number}
               </span>
               <div>
@@ -233,11 +233,11 @@ function Eligibility() {
 
 function HowToApply() {
   return (
-    <section className="py-20" style={{ background: '#FBF7E8' }}>
+    <section className="py-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>How to Apply</span>
-        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-        <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>How to Apply</span>
+        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#C19844' }} />
+        <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
           Interested in a future cohort?
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
@@ -249,14 +249,14 @@ function HowToApply() {
           <a
             href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
-            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+            style={{ background: '#C19844', color: '#2E5B3B' }}
           >
             Get Notified About Future Cohorts →
           </a>
           <a
             href="mailto:mpc@massparentcorps.org"
             className="text-base font-medium"
-            style={{ color: '#2EC4B6' }}
+            style={{ color: '#C19844' }}
           >
             mpc@massparentcorps.org
           </a>

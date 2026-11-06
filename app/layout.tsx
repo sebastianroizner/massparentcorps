@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Plus_Jakarta_Sans } from 'next/font/google'
 import './globals.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700', '800'],
+})
 
 export const metadata: Metadata = {
   title: 'Mass ParentCorps | Transforming Communities by Elevating Parent Leadership',
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
+      <body className={plusJakartaSans.className}>
         <Nav />
         {children}
         <Footer />

@@ -1,544 +1,815 @@
 'use client'
 
-// Brand colors:
-// Deep teal bg:   #0C3B38
-// Accent mint:    #2EC4B6
-// Cream/yellow:   #F0DC9A
-// Light cream bg: #FBF7E8
+import { useState } from 'react'
+
+// Brand colors (The Movement):
+// Deep green bg:     #2E5B3B
+// Gold accent:        #C19844
+// Light gold (on dark): #EBD29A
+// Ink (on gold):       #17301F
+// Cream section bg:   #F3E8CF
+// Mint section bg:    #EEF3EF
+// Soft mint card bg:  #E6EFE8 / #EEF3EF
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ paddingTop: 64 }}>
       <Hero />
-      <WhereWeAre />
-      <PilotSnapshot />
-      <WhatYouEarn />
-      <WhatMakesUnique />
-      <FoundingPartners />
-      <GetInvolved />
+      <ThreeBigQuestions />
+      <WhatIsParentLeadership />
+      <MythOrFact />
+      <WhyItMatters />
+      <CaseForInvestment />
+      <Voice />
+      <Journey />
+      <MeetOurParentLeaders />
+      <Join />
+      <FinalCTA />
     </div>
   )
 }
 
-// ─── HERO ──────────────────────────────────────────────────────────────────
+// ─── FINAL CTA ──────────────────────────────────────────────────────────
+
+function FinalCTA() {
+  return (
+    <section style={{ background: '#2E5B3B', color: '#FFFFFF' }}>
+      <div
+        className="max-w-7xl mx-auto px-6 flex flex-wrap gap-8 items-center justify-between"
+        style={{ paddingTop: 'clamp(56px, 6vw, 80px)', paddingBottom: 'clamp(56px, 6vw, 80px)' }}
+      >
+        <h2
+          className="font-extrabold"
+          style={{ margin: 0, flex: '1 1 520px', fontSize: 'clamp(2.4rem, 4.6vw, 4.2rem)', lineHeight: 1, letterSpacing: '-0.03em' }}
+        >
+          When parents lead, <span style={{ color: '#EBD29A' }}>we all rise.</span>
+        </h2>
+        <a
+          href="mailto:mpc@massparentcorps.org"
+          className="font-bold rounded-full"
+          style={{ background: '#C19844', color: '#17301F', padding: '18px 32px', fontSize: 19, textDecoration: 'none' }}
+        >
+          Join the Movement
+        </a>
+      </div>
+    </section>
+  )
+}
+
+// ─── HERO ────────────────────────────────────────────────────────────────
 
 function Hero() {
   return (
-    <section
-      className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: '#000' }}
-    >
-      {/* Background photo */}
-      <img
-        src="/community-banner.jpg"
-        alt="Community members together"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ opacity: 1 }}
-      />
-
-      {/* Teal overlay */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'rgba(12,59,56,0.15)' }} />
-
-      {/* Decorative overlay */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <svg
-          className="absolute"
-          style={{ top: 0, right: 0, width: '35%', opacity: 0.15 }}
-          viewBox="0 0 400 400"
-          fill="none"
-        >
-          <path d="M400 0 Q200 200 400 400" stroke="white" strokeWidth="1" />
-          <path d="M420 0 Q220 200 420 400" stroke="white" strokeWidth="0.5" />
-        </svg>
-      </div>
-
-      <div className="relative max-w-7xl mx-auto px-6 pt-24 pb-24 w-full">
-        <div className="max-w-5xl">
-          {/* Badge */}
-          <div className="mb-8">
-            <span
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-medium border"
-              style={{ color: '#2EC4B6', borderColor: 'rgba(46,196,182,0.35)', background: 'rgba(46,196,182,0.06)' }}
-            >
-              <span className="w-1.5 h-1.5 rounded-full bg-current animate-pulse" />
-              Now in Phase 3: Building Statewide Infrastructure
-            </span>
-          </div>
-
-          <p
-            className="text-2xl md:text-3xl max-w-3xl leading-relaxed mb-8 font-medium"
-            style={{ color: 'rgba(255,255,255,0.9)' }}
+    <section id="top" style={{ background: '#2E5B3B', color: '#FFFFFF', overflow: 'hidden' }}>
+      <div
+        className="max-w-7xl mx-auto px-6 flex flex-wrap items-center gap-12"
+        style={{ paddingTop: 'clamp(56px, 7vw, 96px)', paddingBottom: 'clamp(56px, 7vw, 96px)' }}
+      >
+        <div style={{ flex: '1 1 600px', minWidth: 0 }}>
+          <div
+            className="inline-flex items-center gap-2 rounded-full text-sm font-bold uppercase"
+            style={{ background: 'rgba(255,255,255,0.1)', padding: '8px 16px', color: '#EBD29A', letterSpacing: '0.04em' }}
           >
-            Across Massachusetts, parents are already leading — in their communities, in their children's schools, in the organizations that serve their families. Mass ParentCorps is building the infrastructure to recognize that leadership, credential it, and connect it to a career.
-          </p>
+            <span className="inline-block w-2.5 h-2.5 rounded-full" style={{ background: '#C19844' }} />
+            A statewide movement for parent leadership
+          </div>
 
           <h1
-            className="text-6xl md:text-7xl lg:text-[88px] font-bold leading-[1.02] tracking-tight mb-8"
-            style={{ color: '#F0DC9A' }}
+            className="font-extrabold"
+            style={{ fontSize: 'clamp(2.6rem, 5vw, 4.6rem)', lineHeight: 1.04, letterSpacing: '-0.035em', margin: '24px 0 28px' }}
           >
-            Building Workforce<br />
-            Pathways for<br />
-            <span style={{ color: 'white' }}>Parent Leaders</span>
+            <span className="block whitespace-nowrap">
+              I am a parent
+              <Dot />
+            </span>
+            <span className="block whitespace-nowrap" style={{ color: '#EBD29A' }}>
+              I am a leader
+              <Dot />
+            </span>
           </h1>
 
-          <p
-            className="text-xl md:text-2xl max-w-2xl leading-relaxed mb-6"
-            style={{ color: 'rgba(255,255,255,0.65)' }}
-          >
-            Transforming Communities by Elevating Parent Leadership. Connecting parent leadership experience with academic learning, 3–6 college credits, and career pathways across Massachusetts.
+          <p className="font-bold" style={{ fontSize: 26, lineHeight: 1.3, margin: '0 0 14px' }}>
+            When parents lead, Massachusetts rises.
+          </p>
+          <p style={{ fontSize: 20, lineHeight: 1.55, margin: '0 0 36px', maxWidth: '36rem', color: '#E6EFE8' }}>
+            Parent leadership is the cornerstone of a healthy economy. Mass ParentCorps is a
+            movement to recognize, credential, and elevate the parents already leading our
+            communities — and to build the statewide infrastructure that makes it last.
           </p>
 
-          <p
-            className="text-lg max-w-2xl leading-relaxed mb-12"
-            style={{ color: 'rgba(255,255,255,0.50)' }}
-          >
-            Mass ParentCorps is a Massachusetts initiative that works in partnership with
-            organizations that center parent leadership to advance opportunities for parent leaders
-            across the state. By connecting parent leadership experience with academic learning
-            and workforce preparation, the initiative aims to create pathways for parent leaders
-            to transition into professional roles that strengthen programs, organizations, and
-            communities.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-wrap gap-3.5">
             <a
-              href="/about"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
-              style={{ background: '#2EC4B6', color: '#0C3B38' }}
+              href="#join"
+              className="font-extrabold rounded-full"
+              style={{ background: '#C19844', color: '#17301F', padding: '16px 28px', fontSize: 18, textDecoration: 'none' }}
             >
-              Learn More About Us
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
+              Join the Movement
             </a>
             <a
-              href="/impact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-semibold text-lg transition-all"
-              style={{ background: '#F0DC9A', color: '#0C3B38' }}
+              href="#invest"
+              className="font-bold rounded-full"
+              style={{
+                background: 'transparent',
+                color: '#FFFFFF',
+                padding: '14px 26px',
+                fontSize: 18,
+                border: '2px solid #FFFFFF',
+                textDecoration: 'none',
+              }}
             >
-              Learn About the Pilot
+              See the Case for Investment
             </a>
           </div>
         </div>
 
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1" style={{ color: 'rgba(255,255,255,0.3)' }}>
-        <span className="text-xs tracking-widest uppercase">Scroll</span>
-        <div className="w-px h-10" style={{ background: 'linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)' }} />
+        <div style={{ flex: '1 1 320px', minWidth: 0, display: 'flex', justifyContent: 'center' }}>
+          <HeroGraphic />
+        </div>
       </div>
     </section>
   )
 }
 
-// ─── WHERE WE ARE ───────────────────────────────────────────────────────────
-
-function WhereWeAre() {
+function Dot() {
   return (
-    <section id="where-we-are" className="pt-16 pb-28" style={{ background: '#FBF7E8' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-              Where We Are Now
-            </span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          </div>
-
-          <div>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-snug mb-6" style={{ color: '#0C3B38' }}>
-              From Needs Assessment to Pilot
-            </h2>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
-              Mass ParentCorps was developed in response to insights from parent leaders and
-              organizations across Massachusetts who identified the need for stronger pathways
-              connecting parent leadership with professional opportunities.
-            </p>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                {
-                  phase: 'Phase 1',
-                  title: 'Needs Assessment',
-                  status: 'Completed',
-                  statusColor: '#2EC4B6',
-                  statusBg: 'rgba(46,196,182,0.12)',
-                },
-                {
-                  phase: 'Phase 2',
-                  title: 'Design, Implementation, and Evaluation',
-                  status: 'Active — Cohort 2 Now Open',
-                  statusColor: '#F0DC9A',
-                  statusBg: 'rgba(240,220,154,0.15)',
-                },
-                {
-                  phase: 'Phase 3',
-                  title: 'Infrastructure & Sustainability',
-                  status: 'Coming Next',
-                  statusColor: '#6B7280',
-                  statusBg: 'rgba(107,114,128,0.12)',
-                  desc: 'Building the statewide framework, coalition, and funding base to scale parent leadership pathways across Massachusetts — organized around three working areas: Framework & Curriculum, Funding & Policy, and Evaluation & Research.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.phase}
-                  className="rounded-2xl p-6"
-                  style={{ background: 'white', border: '1px solid rgba(46,196,182,0.2)' }}
-                >
-                  <div
-                    className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold mb-3"
-                    style={{ background: item.statusBg, color: item.statusColor }}
-                  >
-                    {item.status}
-                  </div>
-                  <div className="font-bold text-xs tracking-widest uppercase mb-1" style={{ color: '#9CA3AF' }}>{item.phase}</div>
-                  <div className="font-semibold mb-1" style={{ color: '#0C3B38' }}>{item.title}</div>
-                  {item.desc && (
-                    <p className="text-sm leading-relaxed mt-2" style={{ color: '#6B7280' }}>{item.desc}</p>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <span
+      aria-hidden="true"
+      className="inline-block rounded-full"
+      style={{ width: '0.2em', height: '0.2em', background: '#C19844', marginLeft: '0.06em' }}
+    />
   )
 }
 
-// ─── PILOT SNAPSHOT ─────────────────────────────────────────────────────────
-
-function PilotSnapshot() {
-  const stats = [
-    { number: '39', label: 'Parent Leaders', sub: 'Across both cohorts' },
-    { number: '15', label: 'Sponsor Agencies', sub: '' },
-    { number: '2', label: 'Community Colleges', sub: 'Urban College of Boston & Middlesex Community College' },
-    { number: '15+', label: 'Other Agencies', sub: 'Partner organizations statewide' },
-  ]
-
+function HeroGraphic() {
   return (
-    <section className="py-20" style={{ background: '#0C3B38' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-            Pilot Snapshot
-          </span>
-          <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-          <p className="mt-6 text-xl max-w-2xl mx-auto leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            Cohort 1 with Urban College of Boston and Cohort 2 with Middlesex Community College are both now underway.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 mb-12">
-          {stats.map((s, i) => (
-            <div
-              key={i}
-              className="text-center px-8 py-6"
-              style={{ borderRight: i < 3 ? '1px solid rgba(255,255,255,0.08)' : 'none' }}
-            >
-              <div className="text-6xl md:text-7xl font-bold mb-2" style={{ color: '#F0DC9A' }}>
-                {s.number}
-              </div>
-              <div className="font-semibold text-white mb-1">{s.label}</div>
-              <div className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>{s.sub}</div>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center">
-          <a
-            href="/impact"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm transition-all"
-            style={{ background: '#F0DC9A', color: '#0C3B38' }}
-          >
-            Explore the Pilot →
-          </a>
-        </div>
-      </div>
-    </section>
+    <svg
+      viewBox="0 0 500 600"
+      role="img"
+      aria-label="Parent, Family and Community rise like the bars of the Mass ParentCorps logo, with Economy as the gold dot on top"
+      style={{ width: '100%', maxWidth: 400, height: 'auto', display: 'block', overflow: 'visible' }}
+    >
+      <g style={{ animation: 'mpcRise 1.1s cubic-bezier(.2,.8,.2,1) 0.1s both', transformBox: 'fill-box', transformOrigin: '50% 100%' }}>
+        <rect x="0" y="392" width="128" height="208" rx="64" fill="#FFFFFF" />
+        <text x="64" y="452" textAnchor="middle" fontSize="21" fontWeight="800" fill="#2E5B3B">Parent</text>
+      </g>
+      <g style={{ animation: 'mpcRise 1.1s cubic-bezier(.2,.8,.2,1) 0.3s both', transformBox: 'fill-box', transformOrigin: '50% 100%' }}>
+        <rect x="186" y="288" width="128" height="312" rx="64" fill="#FFFFFF" />
+        <text x="250" y="348" textAnchor="middle" fontSize="21" fontWeight="800" fill="#2E5B3B">Family</text>
+      </g>
+      <g style={{ animation: 'mpcRise 1.1s cubic-bezier(.2,.8,.2,1) 0.5s both', transformBox: 'fill-box', transformOrigin: '50% 100%' }}>
+        <rect x="372" y="184" width="128" height="416" rx="64" fill="#FFFFFF" />
+        <text x="436" y="244" textAnchor="middle" fontSize="18" fontWeight="800" fill="#2E5B3B">Community</text>
+      </g>
+      <g style={{ animation: 'mpcDrop .8s cubic-bezier(.3,.7,.3,1) 0.9s both', transformBox: 'fill-box' }}>
+        <g style={{ animation: 'mpcBounce 2.4s ease-in-out 1.7s infinite', transformBox: 'fill-box' }}>
+          <circle cx="436" cy="68" r="64" fill="#C19844" />
+          <text x="436" y="75" textAnchor="middle" fontSize="20" fontWeight="800" fill="#17301F">Economy</text>
+        </g>
+      </g>
+      <style>{`
+        @keyframes mpcRise { from { transform: scaleY(0) } to { transform: scaleY(1) } }
+        @keyframes mpcBounce { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-16px) } }
+        @keyframes mpcDrop { 0% { transform: translateY(-120px); opacity: 0 } 60% { transform: translateY(10px); opacity: 1 } 100% { transform: translateY(0); opacity: 1 } }
+        @media (prefers-reduced-motion: reduce) { g { animation: none !important } }
+      `}</style>
+    </svg>
   )
 }
 
-// ─── WHAT YOU EARN ──────────────────────────────────────────────────────────
+// ─── THREE BIG QUESTIONS ────────────────────────────────────────────────────
 
-function WhatYouEarn() {
-  return (
-    <section className="py-20" style={{ background: '#FBF7E8' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-            What You Will Earn
-          </span>
-          <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#0C3B38' }}>
-            Two awards. Both yours to keep.
-          </h2>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Award 1 */}
-          <div
-            className="rounded-2xl p-10 flex flex-col"
-            style={{ background: '#0C3B38' }}
-          >
-            <div
-              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
-            >
-              Award #1
-            </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#F0DC9A' }}>
-              Mass ParentCorps Credential
-            </h3>
-            <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-              A new, emerging credential gaining statewide recognition — a formal mark of your
-              parent leadership expertise and community impact.
-            </p>
-          </div>
-
-          {/* Award 2 */}
-          <div
-            className="rounded-2xl p-10 flex flex-col"
-            style={{ background: 'white', border: '1px solid rgba(46,196,182,0.2)' }}
-          >
-            <div
-              className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
-            >
-              Award #2
-            </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
-              3–6 College Credits
-            </h3>
-            <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
-              Earned through Urban College of Boston or Middlesex Community College — credits
-              you can apply toward future certificates, associate's degrees, and advanced
-              degrees on your own timeline.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── WHAT MAKES MPC UNIQUE ──────────────────────────────────────────────────
-
-function WhatMakesUnique() {
-  const pillars = [
+function ThreeBigQuestions() {
+  const cards = [
     {
-      icon: '🤝',
-      title: 'Collaborative Initiative',
-      desc: 'Mass ParentCorps is being developed through collaboration with community-based organizations, parent leaders, Urban College, and governmental partners across Massachusetts. This collaborative approach helps ensure the model reflects community needs, workforce opportunities, and the experience of organizations that engage parents as leaders.',
+      n: '01', href: '#what', bg: '#FFFFFF', color: '#2E5B3B', numColor: '#376846',
+      title: 'What is parent leadership?', body: 'Parents shaping the systems that shape their families.', cta: 'Read the definition', ctaColor: '#2E5B3B',
     },
     {
-      icon: '📜',
-      title: 'Builds on a Strong History',
-      desc: 'Massachusetts has a long history of initiatives that elevate parent leadership and family engagement, including Thrive in 5, Parent Partners, Parent University, and community-based programs across the state. Mass ParentCorps builds on this legacy while exploring new ways to connect parent leadership experience with workforce opportunities.',
+      n: '02', href: '#why', bg: '#FFFFFF', color: '#2E5B3B', numColor: '#376846',
+      title: 'Why does it matter?', body: "One parent's leadership lifts a family, a community, and our whole economy.", cta: 'See the ripple', ctaColor: '#2E5B3B',
     },
     {
-      icon: '💼',
-      title: 'Connects Leadership with Workforce Pathways',
-      desc: 'Parent leaders bring valuable lived experience, community knowledge, and trusted relationships. Mass ParentCorps explores how this leadership experience can be recognized and connected to professional roles within organizations that partner with families and communities.',
-    },
-    {
-      icon: '🎓',
-      title: 'Academic Partnerships',
-      desc: 'Urban College of Boston partnered on Cohort 1, offering HUS110: Core Competencies for Community Behavioral Health Workers. Middlesex Community College is the academic partner for Cohort 2, offering SOC 110: Community Leadership & Organizing.',
-    },
-    {
-      icon: '🔬',
-      title: 'Research and Evaluation Partnership',
-      desc: 'The pilot is being evaluated in partnership with NYU Metro Center’s Center for Policy, Research & Evaluation, led by Dr. Joanna Geller and Lisette DeSouza. The evaluation will help document outcomes and inform future expansion of the model.',
+      n: '03', href: '#invest', bg: '#2E5B3B', color: '#FFFFFF', numColor: '#EBD29A',
+      title: 'Why invest now?', body: "Parent leadership is infrastructure. It's time we fund it like it is.", cta: 'Make the case', ctaColor: '#EBD29A',
     },
   ]
 
   return (
-    <section id="unique" className="pt-16 pb-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-              What Makes MPC Unique
-            </span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          </div>
-
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-12" style={{ color: '#0C3B38' }}>
-              Built differently,<br />by design
-            </h2>
-
-            <div className="grid sm:grid-cols-2 gap-5">
-              {pillars.map((p, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl p-8"
-                  style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.12)' }}
-                >
-                  <div className="text-2xl mb-4">{p.icon}</div>
-                  <h3 className="font-bold text-lg mb-3" style={{ color: '#0C3B38' }}>{p.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{p.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── FOUNDING PARTNERS ──────────────────────────────────────────────────────
-
-function FoundingPartners() {
-  const communityPartners = [
-    'Families First',
-    'Union Capital Boston',
-    'East Boston Social Centers',
-    'Family Nurturing Center of Massachusetts',
-  ]
-
-  const designPartners = [
-    'Department of Early Education and Care (EEC)',
-    'Department of Elementary and Secondary Education (DESE)',
-  ]
-
-  return (
-    <section className="py-28 relative overflow-hidden" style={{ background: '#0C3B38' }}>
+    <section style={{ background: '#F3E8CF' }}>
       <div
-        className="absolute rounded-full pointer-events-none"
-        style={{
-          top: '50%', left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: 900, height: 500,
-          background: 'radial-gradient(ellipse, rgba(46,196,182,0.08) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
+        className="max-w-7xl mx-auto px-6 flex flex-wrap gap-6"
+        style={{ paddingTop: 'clamp(40px, 5vw, 64px)', paddingBottom: 'clamp(40px, 5vw, 64px)' }}
+      >
+        {cards.map((c) => (
+          <a
+            key={c.n}
+            href={c.href}
+            className="mpc-card rounded-3xl flex flex-col gap-3"
+            style={{ flex: '1 1 300px', minWidth: 0, background: c.bg, color: c.color, padding: 32, textDecoration: 'none' }}
+          >
+            <span className="font-extrabold" style={{ fontSize: 56, lineHeight: 1, color: c.numColor }}>
+              {c.n}
+              <span aria-hidden="true" className="inline-block rounded-full" style={{ width: 12, height: 12, background: '#C19844', marginLeft: 4 }} />
+            </span>
+            <span className="font-bold" style={{ fontSize: 28, lineHeight: 1.15 }}>{c.title}</span>
+            <span style={{ fontSize: 17 }}>{c.body}</span>
+            <span className="font-bold" style={{ fontSize: 16, textDecoration: 'underline', color: c.ctaColor }}>{c.cta}</span>
+          </a>
+        ))}
+      </div>
+      <style>{`.mpc-card{transition:transform .2s ease, box-shadow .2s ease}.mpc-card:hover{transform:translateY(-6px) rotate(-.6deg);box-shadow:0 18px 36px rgba(12,69,55,.18)}`}</style>
+    </section>
+  )
+}
 
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-            Founding Community Partners
-          </span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: 'white' }}>
-            Organizations that helped{' '}
-            <span style={{ color: '#F0DC9A' }}>shape the vision</span>
-          </h2>
-          <p className="mt-6 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
-            The development of Mass ParentCorps has been supported by several community-based
-            organizations that have long histories of engaging parents as leaders.
+// ─── WHAT IS PARENT LEADERSHIP ───────────────────────────────────────────
+
+function WhatIsParentLeadership() {
+  const bullets = [
+    { label: 'schools', text: 'Guiding their children’s ', icon: <HomeIcon /> },
+    { label: 'neighborhoods', text: 'Organizing their ', icon: <PeopleIcon /> },
+    { label: 'organizations', text: 'Shaping the ', suffix: ' that serve families', icon: <OrgIcon /> },
+    { label: 'public systems', text: 'Informing ', suffix: ' and policy', icon: <PolicyIcon /> },
+  ]
+
+  return (
+    <section id="what" style={{ background: '#FFFFFF' }}>
+      <div
+        className="max-w-7xl mx-auto px-6 flex flex-wrap gap-14 items-center"
+        style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}
+      >
+        <div style={{ flex: '1 1 560px', minWidth: 0 }}>
+          <Eyebrow color="#2E5B3B">01 · What is parent leadership?</Eyebrow>
+          <blockquote
+            className="font-bold"
+            style={{ margin: 0, fontSize: 'clamp(2rem, 3.4vw, 3rem)', lineHeight: 1.12, letterSpacing: '-0.02em' }}
+          >
+            “The active engagement of parents &amp; caregivers in the{' '}
+            <span style={{ background: '#F3E8CF', padding: '0 6px', borderRadius: 6 }}>
+              design, implementation, and evaluation
+            </span>{' '}
+            of the systems that impact their families and communities.”
+          </blockquote>
+          <p style={{ margin: '28px 0 0', fontSize: 20, maxWidth: '38rem' }}>
+            It&apos;s not volunteering on the side. It&apos;s real work, with real skills — and
+            across Massachusetts, parents are already doing it.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-          {communityPartners.map((p, i) => (
+        <div style={{ flex: '1 1 380px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 14 }}>
+          <p className="font-bold" style={{ margin: 0, fontSize: 17 }}>Parent leaders are already…</p>
+          {bullets.map((b) => (
             <div
-              key={i}
-              className="rounded-2xl px-6 py-5 flex items-center gap-4"
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
+              key={b.label}
+              className="flex items-center gap-4 rounded-2xl"
+              style={{ background: '#EEF3EF', padding: '18px 22px' }}
             >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
-              <span className="font-medium" style={{ color: 'white' }}>{p}</span>
+              {b.icon}
+              <span style={{ fontSize: 18 }}>
+                {b.text}
+                <strong>{b.label}</strong>
+                {b.suffix}
+              </span>
             </div>
           ))}
+          <p className="font-bold" style={{ margin: '6px 0 0', fontSize: 18, color: '#2E5B3B' }}>
+            Mass ParentCorps makes sure that leadership is seen, credentialed, and elevated.
+          </p>
         </div>
+      </div>
+    </section>
+  )
+}
 
-        <div className="mb-4">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: 'rgba(46,196,182,0.7)' }}>
-            Design &amp; Government Partners
-          </span>
+function Eyebrow({ children, color }: { children: React.ReactNode; color: string }) {
+  return (
+    <p
+      className="flex items-center gap-2.5 font-bold uppercase"
+      style={{ margin: '0 0 16px', fontSize: 15, letterSpacing: '0.08em', color }}
+    >
+      <span aria-hidden="true" className="rounded-full flex-none" style={{ width: 10, height: 10, background: '#C19844' }} />
+      {children}
+    </p>
+  )
+}
+
+function IconBase({ children }: { children: React.ReactNode }) {
+  return (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2E5B3B" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      {children}
+    </svg>
+  )
+}
+function HomeIcon() {
+  return <IconBase><path d="M3 10l9-6 9 6" /><path d="M5 10v10h14V10" /><path d="M10 20v-6h4v6" /></IconBase>
+}
+function PeopleIcon() {
+  return <IconBase><circle cx="9" cy="8" r="3" /><circle cx="17" cy="9" r="2.5" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" /><path d="M15 14.5c3 0 6 1.8 6 5.5" /></IconBase>
+}
+function OrgIcon() {
+  return <IconBase><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></IconBase>
+}
+function PolicyIcon() {
+  return <IconBase><path d="M4 21V10l8-6 8 6v11" /><path d="M9 21v-5h6v5" /><path d="M2 21h20" /></IconBase>
+}
+
+// ─── MYTH OR FACT ───────────────────────────────────────────────────────
+
+const MYTHS = [
+  { myth: 'Parent leadership is just volunteering.', fact: 'It’s skilled work: designing, implementing, and evaluating the systems families rely on. It deserves to be recognized as a profession.' },
+  { myth: 'Leadership at your kid’s school doesn’t count on a résumé.', fact: 'With Mass ParentCorps it counts: a Mass ParentCorps Credential plus 3–6 college credits, both yours to keep.' },
+  { myth: 'It’s a nice-to-have.', fact: 'Research shows parent leadership builds civic power, expands education and career pathways, and influences systems and policy.' },
+  { myth: 'It only helps one family.', fact: 'One parent’s leadership lifts a family, a community, the organizations that serve them — and our economy.' },
+]
+
+function MythOrFact() {
+  const [flipped, setFlipped] = useState<Record<number, boolean>>({})
+
+  return (
+    <section style={{ background: '#F3E8CF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <Eyebrow color="#2E5B3B">Myth or fact?</Eyebrow>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 12px', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', lineHeight: 1.05, letterSpacing: '-0.02em', maxWidth: '48rem' }}
+        >
+          Think you know parent leadership? Flip a card.
+        </h2>
+        <p style={{ margin: '0 0 40px', fontSize: 20, maxWidth: '40rem' }}>
+          What we heard from parents and partners across Massachusetts.
+        </p>
+        <div className="flex flex-wrap gap-5">
+          {MYTHS.map((m, i) => {
+            const f = !!flipped[i]
+            return (
+              <button
+                key={i}
+                type="button"
+                className="mpc-card rounded-3xl text-left flex flex-col gap-[18px] cursor-pointer"
+                aria-pressed={f}
+                onClick={() => setFlipped((prev) => ({ ...prev, [i]: !prev[i] }))}
+                style={{
+                  flex: '1 1 260px', minWidth: 0, minHeight: 280, boxSizing: 'border-box',
+                  border: 'none', padding: 28, fontFamily: 'inherit',
+                  background: f ? '#2E5B3B' : '#FFFFFF', color: f ? '#FFFFFF' : '#2E5B3B',
+                }}
+              >
+                <span
+                  className="self-start rounded-full font-bold"
+                  style={{ padding: '6px 14px', fontSize: 14, letterSpacing: '0.08em', background: f ? '#C19844' : '#2E5B3B', color: f ? '#17301F' : '#FFFFFF' }}
+                >
+                  {f ? 'FACT' : 'MYTH'}
+                </span>
+                <span className="font-bold" style={{ fontSize: 24, lineHeight: 1.2 }}>{f ? m.fact : m.myth}</span>
+                <span
+                  className="font-bold"
+                  style={{ marginTop: 'auto', fontSize: 15, textDecoration: 'underline', color: f ? '#EBD29A' : '#2E5B3B' }}
+                >
+                  {f ? 'Tap to see the myth' : 'Tap to reveal the fact'}
+                </span>
+              </button>
+            )
+          })}
         </div>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {designPartners.map((p, i) => (
+      </div>
+    </section>
+  )
+}
+
+// ─── WHY IT MATTERS — INTERACTIVE RIPPLE ──────────────────────────────────
+
+const LEVELS = [
+  { id: 'parent', label: 'Parent leader', title: 'It starts with one parent.', body: 'Parents are already leading in schools, community organizations, and early childhood programs. Mass ParentCorps recognizes that leadership with a credential and 3–6 college credits, and connects it to professional roles.', source: '' },
+  { id: 'family', label: 'Family', title: 'Families grow stronger.', body: "When a parent’s leadership is recognized and connected to a career pathway, the whole household rises with them — and children see leadership modeled up close.", source: '' },
+  { id: 'community', label: 'Community', title: 'Builds connection & civic power.', body: 'Parent leaders build trust, bring neighbors together, and help families find their voice in the decisions that shape their lives.', source: 'ZERO TO THREE (2020); Henderson et al. (2016)' },
+  { id: 'orgs', label: 'Organizations', title: 'Expands education & career pathways.', body: 'Agencies gain skilled, trusted leaders with lived experience. Parents gain pathways into professional roles that strengthen programs and organizations.', source: 'Geller et al. (2017), NYU Metro Center' },
+  { id: 'systems', label: 'Systems & policy', title: 'Influences systems & policy.', body: 'When parents help design, implement, and evaluate the systems that affect their families, those systems work better for everyone they serve.', source: 'Geller et al. (2017); Henderson et al. (2016)' },
+  { id: 'economy', label: 'Economy', title: 'Massachusetts rises.', body: "Stronger families, connected communities, and better systems add up to a healthier economy. Parent leadership isn’t a side project — it’s economic infrastructure.", source: '' },
+]
+
+function WhyItMatters() {
+  const [sel, setSel] = useState('economy')
+  const idx = Math.max(0, LEVELS.findIndex((d) => d.id === sel))
+  const current = LEVELS[idx]
+
+  return (
+    <section id="why" style={{ background: '#EEF3EF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <Eyebrow color="#2E5B3B">02 · Why it matters</Eyebrow>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 16px', fontSize: 'clamp(2.4rem, 4.4vw, 4rem)', lineHeight: 1.02, letterSpacing: '-0.025em', maxWidth: '52rem' }}
+        >
+          One parent leader. A whole ecosystem rises.
+        </h2>
+        <p style={{ margin: '0 0 48px', fontSize: 20, maxWidth: '42rem' }}>
+          Parent leadership is a force that moves through every layer of our society — all the
+          way to the economy. Tap each step to see how.
+        </p>
+
+        <div className="flex flex-wrap gap-10 items-stretch">
+          <div style={{ flex: '1 1 560px', minWidth: 0, overflowX: 'auto' }}>
             <div
-              key={i}
-              className="rounded-2xl px-6 py-5 flex items-center gap-4"
-              style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.07)' }}
+              role="group"
+              aria-label="Levels of impact"
+              className="flex items-end gap-2.5"
+              style={{ minWidth: 540, height: 380 }}
             >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#F0DC9A' }} />
-              <span className="font-medium text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>{p}</span>
+              {LEVELS.map((item, i) => {
+                const selected = item.id === sel
+                const h = 90 + i * 46
+                const bg = selected ? '#2E5B3B' : i % 2 === 0 ? '#C9DCCD' : '#A9C6B0'
+                const fg = selected ? '#FFFFFF' : '#2E5B3B'
+                return (
+                  <div key={item.id} className="flex flex-col items-center justify-end gap-2.5 h-full" style={{ flex: '1 1 0', minWidth: 0 }}>
+                    {selected && (
+                      <div aria-hidden="true" className="mpc-bounce rounded-full" style={{ width: 28, height: 28, background: '#C19844' }} />
+                    )}
+                    <button
+                      type="button"
+                      className="mpc-bar font-bold"
+                      aria-pressed={selected}
+                      onClick={() => setSel(item.id)}
+                      style={{
+                        width: '100%', height: h, background: bg, color: fg, border: 'none',
+                        borderRadius: '999px 999px 0 0', fontSize: 15, padding: '26px 6px',
+                        display: 'flex', alignItems: 'flex-start', justifyContent: 'center',
+                        textAlign: 'center', cursor: 'pointer', lineHeight: 1.2,
+                      }}
+                    >
+                      {item.label}
+                    </button>
+                  </div>
+                )
+              })}
             </div>
-          ))}
+          </div>
+
+          <div
+            className="rounded-3xl flex flex-col gap-4 justify-center"
+            style={{ flex: '1 1 380px', minWidth: 0, background: '#FFFFFF', padding: 40 }}
+          >
+            <span className="font-bold uppercase" style={{ fontSize: 15, letterSpacing: '0.08em', color: '#2E5B3B' }}>
+              Step {idx + 1} of 6 · {current.label}
+            </span>
+            <h3 className="font-extrabold" style={{ margin: 0, fontSize: 34, lineHeight: 1.1 }}>{current.title}</h3>
+            <p style={{ margin: 0, fontSize: 19 }}>{current.body}</p>
+            {current.source && (
+              <p style={{ margin: 0, fontSize: 15, color: '#3F5B47' }}>Research: {current.source}</p>
+            )}
+          </div>
         </div>
-        <p className="mt-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-          EEC and DESE participated in the initial design phase of Mass ParentCorps.
+      </div>
+      <style>{`@keyframes mpcBounce2{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}.mpc-bounce{animation:mpcBounce2 2.4s ease-in-out infinite}.mpc-bar{transition:filter .15s ease, transform .15s ease}.mpc-bar:hover{filter:brightness(1.06);transform:translateY(-4px)}`}</style>
+    </section>
+  )
+}
+
+// ─── CASE FOR INVESTMENT ──────────────────────────────────────────────────
+
+function CaseForInvestment() {
+  const stats = [
+    { n: '40', label: 'Parent leaders enrolled' },
+    { n: '2', label: 'Cohorts' },
+    { n: '15', label: 'Sponsor agencies' },
+    { n: '2', label: 'Community colleges' },
+    { n: '15+', label: 'Other agencies' },
+  ]
+
+  return (
+    <section id="invest" style={{ background: '#2E5B3B', color: '#FFFFFF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <Eyebrow color="#EBD29A">03 · The case for investment</Eyebrow>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 20px', fontSize: 'clamp(2.4rem, 4.4vw, 4rem)', lineHeight: 1.02, letterSpacing: '-0.025em', maxWidth: '54rem' }}
+        >
+          Parent leadership is infrastructure. Let&apos;s fund it like it is.
+        </h2>
+        <p style={{ margin: '0 0 56px', fontSize: 20, maxWidth: '44rem', color: '#E6EFE8' }}>
+          Massachusetts already depends on parent leaders. What&apos;s missing is the
+          infrastructure to recognize them, pay them, and help them elevate. That&apos;s what
+          your investment builds.
+        </p>
+
+        <div className="flex flex-wrap gap-6">
+          <div className="rounded-3xl" style={{ flex: '1 1 340px', minWidth: 0, background: 'rgba(255,255,255,0.07)', padding: 32 }}>
+            <h3 className="font-bold" style={{ margin: '0 0 18px', fontSize: 26, color: '#EBD29A' }}>What we&apos;re hearing</h3>
+            <p className="font-bold" style={{ margin: '0 0 8px', fontSize: 16 }}>From parents</p>
+            <ul className="flex flex-col gap-1.5" style={{ margin: '0 0 20px', paddingLeft: 20, fontSize: 17, color: '#E6EFE8' }}>
+              <li>Parent leadership is still widely seen as volunteerism, not a profession</li>
+              <li>Their impact is undervalued and not formally recognized in systems</li>
+              <li>There are no structured pathways to elevate</li>
+              <li>Leadership skills are hard to translate into résumés and careers</li>
+            </ul>
+            <p className="font-bold" style={{ margin: '0 0 8px', fontSize: 16 }}>From agencies</p>
+            <ul className="flex flex-col gap-1.5" style={{ margin: 0, paddingLeft: 20, fontSize: 17, color: '#E6EFE8' }}>
+              <li>Limited funding and recognition</li>
+              <li>A disconnected framework across organizations</li>
+              <li>Disconnection with higher education</li>
+              <li>Burnout among staff who support parent leaders</li>
+            </ul>
+          </div>
+
+          <div
+            className="rounded-3xl flex flex-col gap-[18px]"
+            style={{ flex: '1 1 340px', minWidth: 0, background: '#FFFFFF', color: '#2E5B3B', padding: 32 }}
+          >
+            <h3 className="font-bold" style={{ margin: 0, fontSize: 26 }}>The pilot is working</h3>
+            <div className="flex flex-wrap gap-3.5">
+              {stats.map((s) => (
+                <div key={s.label} className="rounded-2xl" style={{ flex: '1 1 120px', background: '#EEF3EF', padding: 16 }}>
+                  <div
+                    className="font-extrabold inline-block"
+                    style={{ fontSize: 48, lineHeight: 1, borderBottom: '4px solid #C19844', paddingBottom: 6, marginBottom: 8 }}
+                  >
+                    {s.n}
+                  </div>
+                  <div className="font-medium" style={{ fontSize: 15 }}>{s.label}</div>
+                </div>
+              ))}
+            </div>
+            <p style={{ margin: 0, fontSize: 16 }}>
+              Independently evaluated by NYU Metro Center&apos;s Center for Policy, Research &amp;
+              Evaluation.
+            </p>
+          </div>
+
+          <div
+            className="rounded-3xl flex flex-col gap-3.5"
+            style={{ flex: '1 1 340px', minWidth: 0, background: '#F3E8CF', color: '#2E5B3B', padding: 32 }}
+          >
+            <h3 className="font-bold" style={{ margin: '0 0 4px', fontSize: 26 }}>What your investment builds</h3>
+            <p style={{ margin: 0, fontSize: 17 }}>
+              A statewide infrastructure for parent leadership, built with parent leaders and
+              organizations, to:
+            </p>
+            {['Increase awareness of impact', 'Expand pathways', 'Influence policy', 'Attract investment'].map((t, i) => (
+              <div key={t} className="flex gap-3.5 items-baseline">
+                <span className="font-extrabold" style={{ fontSize: 28 }}>{i + 1}</span>
+                <span className="font-bold" style={{ fontSize: 18 }}>{t}</span>
+              </div>
+            ))}
+            <a
+              href="mailto:mpc@massparentcorps.org?subject=Investing%20in%20parent%20leadership"
+              className="font-bold rounded-full text-center"
+              style={{ marginTop: 'auto', background: '#2E5B3B', color: '#FFFFFF', padding: '16px 24px', textDecoration: 'none' }}
+            >
+              Invest in Parent Leadership
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── VOICE ──────────────────────────────────────────────────────────────
+
+function Voice() {
+  return (
+    <section style={{ background: '#FFFFFF' }}>
+      <div
+        className="mx-auto px-6 text-center"
+        style={{ maxWidth: 1000, paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}
+      >
+        <svg width="56" height="44" viewBox="0 0 56 44" aria-hidden="true" className="mx-auto">
+          <path d="M0 44V26C0 11 8 2 22 0l3 6c-8 3-12 9-12 16h10v22H0zm31 0V26C31 11 39 2 53 0l3 6c-8 3-12 9-12 16h10v22H31z" fill="#C19844" />
+        </svg>
+        <p className="font-bold" style={{ margin: '20px 0 16px', fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', lineHeight: 1.2 }}>
+          [Parent leader quote from the January 2026 focus groups]
+        </p>
+        <p className="font-bold" style={{ margin: 0, fontSize: 17, color: '#2E5B3B' }}>
+          [First name], Parent Leader · [Cohort / Community]
         </p>
       </div>
     </section>
   )
 }
 
-// ─── GET INVOLVED ──────────────────────────────────────────────────────────
+// ─── JOURNEY ──────────────────────────────────────────────────────────────
 
-function GetInvolved() {
-  const audiences = [
-    'Community organizations that engage parents as leaders',
-    'Community colleges and educators',
-    'Government agencies',
-    'Researchers and practitioners',
-    'Parent leaders interested in future opportunities',
+function Journey() {
+  const phases = [
+    { tag: 'Complete', title: 'Phase 1 · Listening', body: 'A needs assessment with parent leaders, community organizations, state agencies, and higher education — including focus groups with 27 parents.', bg: '#FFFFFF', color: '#2E5B3B', tagBg: '#E6EFE8', tagColor: '#2E5B3B', minH: 260 },
+    { tag: 'Underway', title: 'Phase 2 · The Pilot', body: 'Two cohorts with Urban College of Boston and Middlesex Community College. Parents earn a Mass ParentCorps Credential and 3–6 college credits — both theirs to keep.', bg: '#FFFFFF', color: '#2E5B3B', tagBg: '#E6EFE8', tagColor: '#2E5B3B', minH: 320, withSeal: true },
+    { tag: 'Building now', title: 'Phase 3 · Statewide', body: 'Infrastructure & sustainability: a shared framework, a cross-agency coalition, and a lasting funding base so parent leadership can grow across the Commonwealth.', bg: '#2E5B3B', color: '#FFFFFF', tagBg: '#C19844', tagColor: '#17301F', minH: 380 },
   ]
 
   return (
-    <section className="py-28" style={{ background: '#FBF7E8' }}>
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
-          Learn More
-        </span>
-        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-
-        <h2 className="mt-8 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#0C3B38' }}>
-          Join the Mass<br />ParentCorps Initiative
+    <section id="journey" style={{ background: '#EEF3EF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <Eyebrow color="#2E5B3B">The journey so far</Eyebrow>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 48px', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
+        >
+          Elevating, step by step.
         </h2>
-        <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          Both cohorts of the pilot are now underway. Explore the program or reach out to learn
-          more about future opportunities and how your organization can get involved.
-        </p>
-
-        <div className="mt-10 flex flex-wrap justify-center gap-3 mb-12">
-          {audiences.map((a, i) => (
-            <span
-              key={i}
-              className="px-4 py-2 rounded-full text-sm font-medium"
-              style={{ background: 'white', color: '#4B5563', border: '1px solid rgba(0,0,0,0.08)' }}
+        <div className="flex flex-wrap gap-5 items-end">
+          {phases.map((p) => (
+            <div
+              key={p.title}
+              className="rounded-3xl"
+              style={{ flex: '1 1 300px', minWidth: 0, background: p.bg, color: p.color, padding: 32, minHeight: p.minH, boxSizing: 'border-box' }}
             >
-              {a}
-            </span>
+              <div className="flex justify-between items-start gap-3">
+                <span className="inline-block rounded-full font-bold" style={{ background: p.tagBg, color: p.tagColor, fontSize: 14, padding: '6px 12px' }}>
+                  {p.tag}
+                </span>
+                {p.withSeal && <CredentialSeal />}
+              </div>
+              <h3 className="font-bold" style={{ margin: '16px 0 8px', fontSize: 26 }}>{p.title}</h3>
+              <p style={{ margin: 0, fontSize: 17, color: p.color === '#FFFFFF' ? '#E6EFE8' : undefined }}>{p.body}</p>
+            </div>
           ))}
         </div>
+      </div>
+    </section>
+  )
+}
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+function CredentialSeal() {
+  return (
+    <svg
+      viewBox="0 0 72 72"
+      width="72"
+      height="72"
+      aria-label="Mass ParentCorps credential seal"
+      className="mpc-spin"
+      style={{ animation: 'mpcSpin 40s linear infinite' }}
+    >
+      <circle cx="36" cy="36" r="33" fill="#F3E8CF" stroke="#C19844" strokeWidth="3" />
+      <circle cx="36" cy="36" r="24" fill="none" stroke="#2E5B3B" strokeWidth="2" strokeDasharray="3 4" />
+      <text x="36" y="32" textAnchor="middle" fontSize="9" fontWeight="800" fill="#2E5B3B">MPC</text>
+      <text x="36" y="44" textAnchor="middle" fontSize="7" fontWeight="700" fill="#2E5B3B">CREDENTIAL</text>
+      <style>{`@keyframes mpcSpin{to{transform:rotate(360deg)}}@media (prefers-reduced-motion: reduce){.mpc-spin{animation:none}}`}</style>
+    </svg>
+  )
+}
+
+// ─── MEET OUR PARENT LEADERS ───────────────────────────────────────────
+
+const COHORTS = [
+  { id: 1, label: 'Cohort 1 · Urban College of Boston', note: '19 parent leaders, launched June 2026. [Add each photo with the parent’s written consent.]' },
+  { id: 2, label: 'Cohort 2 · Middlesex Community College', note: 'Now underway. [Add each photo with the parent’s written consent.]' },
+]
+
+function MeetOurParentLeaders() {
+  const [cohort, setCohort] = useState(1)
+  const current = COHORTS.find((c) => c.id === cohort) ?? COHORTS[0]
+  const people = Array.from({ length: 8 }, () => ({ name: '[Parent leader name]', place: '[Neighborhood] · [Partner organization]' }))
+
+  return (
+    <section id="parents" style={{ background: '#F3E8CF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <Eyebrow color="#2E5B3B">Meet our parent leaders</Eyebrow>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 16px', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
+        >
+          The faces of the movement.
+        </h2>
+        <p style={{ margin: '0 0 36px', fontSize: 20, maxWidth: '42rem' }}>
+          Parents from Dorchester, East Boston, and communities across Massachusetts, many of
+          them immigrants and multilingual, leading where they live.
+        </p>
+
+        <div role="group" aria-label="Choose a cohort" className="flex flex-wrap gap-3" style={{ marginBottom: 14 }}>
+          {COHORTS.map((k) => {
+            const selected = k.id === cohort
+            return (
+              <button
+                key={k.id}
+                type="button"
+                className="mpc-bar font-bold rounded-full cursor-pointer"
+                aria-pressed={selected}
+                onClick={() => setCohort(k.id)}
+                style={{
+                  minHeight: 48, padding: '12px 22px', fontSize: 17,
+                  border: '2px solid #2E5B3B', background: selected ? '#2E5B3B' : '#FFFFFF',
+                  color: selected ? '#FFFFFF' : '#2E5B3B',
+                }}
+              >
+                {k.label}
+              </button>
+            )
+          })}
+        </div>
+        <p className="font-medium" style={{ margin: '0 0 44px', fontSize: 16 }}>{current.note}</p>
+
+        <div className="grid gap-x-7 gap-y-10" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(170px, 1fr))' }}>
+          {people.map((pp, i) => (
+            <figure key={i} className="mpc-card text-center" style={{ margin: 0 }}>
+              <div
+                className="rounded-full flex items-center justify-center mx-auto"
+                style={{ aspectRatio: '3 / 4', overflow: 'hidden', background: '#FFFFFF', border: '4px solid #FFFFFF', boxShadow: '0 0 0 2px #2E5B3B', marginBottom: 16, maxWidth: 200 }}
+              >
+                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#A9C6B0" strokeWidth="1.6" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4" />
+                  <path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8" />
+                </svg>
+              </div>
+              <figcaption>
+                <p className="font-extrabold" style={{ margin: 0, fontSize: 18, lineHeight: 1.3 }}>{pp.name}</p>
+                <p style={{ margin: '2px 0 0', fontSize: 15, lineHeight: 1.4 }}>{pp.place}</p>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// ─── JOIN ──────────────────────────────────────────────────────────────
+
+const ROLES = [
+  { id: 'parent', label: 'Parent or caregiver', eyebrow: 'For parents & caregivers', title: 'You’re already leading. Let’s make it count.', body: 'Turn the leadership you already do into a Mass ParentCorps Credential, 3–6 college credits, and a community of parent leaders who have your back.', cta: 'Start your path', href: 'https://www.massparentcorps.org/for-parents' },
+  { id: 'org', label: 'Community organization', eyebrow: 'For organizations', title: 'Grow leaders from within your community.', body: 'Sponsor a parent leader, join the coalition, and help shape a shared Parent Leadership Framework for the field.', cta: 'Partner with us', href: 'https://www.massparentcorps.org/for-agencies' },
+  { id: 'funder', label: 'Funder', eyebrow: 'For funders', title: 'Invest where a healthy economy starts.', body: 'Help build the statewide infrastructure: a shared framework, a cross-agency coalition, and a lasting funding base for parent leadership.', cta: 'Talk with us', href: 'mailto:mpc@massparentcorps.org?subject=Investing%20in%20parent%20leadership' },
+  { id: 'policy', label: 'Policymaker', eyebrow: 'For policymakers', title: 'Champion parent leadership across the Commonwealth.', body: 'Recognize parent leadership as a profession and connect it to real pathways that elevate families and communities.', cta: 'Connect with us', href: 'mailto:mpc@massparentcorps.org?subject=Parent%20leadership%20policy' },
+]
+
+const PARTNERS = [
+  'Families First', 'Union Capital Boston', 'East Boston Social Centers',
+  'Family Nurturing Center of Massachusetts', 'Urban College of Boston',
+  'Middlesex Community College', 'NYU Metro Center', 'EEC', 'DESE',
+]
+
+function Join() {
+  const [role, setRole] = useState('parent')
+  const current = ROLES.find((r) => r.id === role) ?? ROLES[0]
+
+  return (
+    <section id="join" style={{ background: '#FFFFFF' }}>
+      <div className="max-w-7xl mx-auto px-6" style={{ paddingTop: 'clamp(72px, 8vw, 104px)', paddingBottom: 'clamp(72px, 8vw, 104px)' }}>
+        <h2
+          className="font-extrabold"
+          style={{ margin: '0 0 12px', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', lineHeight: 1.05, letterSpacing: '-0.02em' }}
+        >
+          I am a parent. I am a leader. <span style={{ color: '#376846' }}>Who are you?</span>
+        </h2>
+        <p style={{ margin: '0 0 28px', fontSize: 20, maxWidth: '40rem' }}>
+          Everyone has a role in elevating parent leadership. Join us to build it. <strong>I am a…</strong>
+        </p>
+
+        <div role="group" aria-label="Choose who you are" className="flex flex-wrap gap-3" style={{ marginBottom: 28 }}>
+          {ROLES.map((r) => {
+            const selected = r.id === role
+            return (
+              <button
+                key={r.id}
+                type="button"
+                className="mpc-bar font-bold rounded-full cursor-pointer"
+                aria-pressed={selected}
+                onClick={() => setRole(r.id)}
+                style={{
+                  minHeight: 48, padding: '12px 22px', fontSize: 17,
+                  border: '2px solid #2E5B3B', background: selected ? '#2E5B3B' : '#FFFFFF',
+                  color: selected ? '#FFFFFF' : '#2E5B3B',
+                }}
+              >
+                {r.label}
+              </button>
+            )
+          })}
+        </div>
+
+        <div
+          className="mpc-pop rounded-3xl flex flex-wrap gap-8 items-center justify-between"
+          style={{ background: '#2E5B3B', color: '#FFFFFF', padding: 48 }}
+        >
+          <div style={{ flex: '1 1 520px', minWidth: 0 }}>
+            <p className="font-bold uppercase" style={{ margin: '0 0 12px', fontSize: 15, letterSpacing: '0.08em', color: '#EBD29A' }}>
+              {current.eyebrow}
+            </p>
+            <h3 className="font-extrabold" style={{ margin: '0 0 14px', fontSize: 'clamp(1.9rem, 3.2vw, 2.6rem)', lineHeight: 1.08 }}>
+              {current.title}
+            </h3>
+            <p style={{ margin: 0, fontSize: 20, color: '#E6EFE8', maxWidth: '40rem' }}>{current.body}</p>
+          </div>
           <a
-            href="/impact"
-            className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
-            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+            href={current.href}
+            className="font-bold rounded-full"
+            style={{ background: '#C19844', color: '#17301F', padding: '18px 30px', fontSize: 19, textDecoration: 'none' }}
           >
-            Explore the Pilot
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </a>
-          <a
-            href="mailto:mpc@massparentcorps.org"
-            className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
-            style={{ background: '#0C3B38', color: '#F0DC9A' }}
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            Get in Touch
+            {current.cta}
           </a>
         </div>
-        <a href="mailto:mpc@massparentcorps.org" className="mt-4 block text-base font-medium" style={{ color: '#2EC4B6' }}>
-          mpc@massparentcorps.org
-        </a>
+
+        <div style={{ marginTop: 72, borderTop: '1px solid #DCE6DE', paddingTop: 40 }}>
+          <Eyebrow color="#2E5B3B">Building it together with</Eyebrow>
+          <div className="flex flex-wrap gap-2.5" style={{ fontSize: 16, fontWeight: 500 }}>
+            {PARTNERS.map((p) => (
+              <span key={p} className="mpc-chip rounded-full" style={{ background: '#EEF3EF', padding: '10px 16px' }}>
+                {p}
+              </span>
+            ))}
+          </div>
+        </div>
       </div>
+      <style>{`.mpc-chip{transition:background .15s ease, color .15s ease}.mpc-chip:hover{background:#2E5B3B;color:#FFFFFF}`}</style>
     </section>
   )
 }

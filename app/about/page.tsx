@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <PageHero />
       <Overview />
       <WhyItMatters />
@@ -42,12 +42,12 @@ function PageHero() {
         {/* Desktop overlay */}
         <div
           className="absolute inset-0 hidden md:flex items-start pt-20"
-          style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.10) 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(46,91,59,0.65) 0%, rgba(46,91,59,0.10) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6 w-full">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>The Initiative</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
               Parent leadership<br />already exists in Massachusetts.
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -65,10 +65,10 @@ function PageHero() {
       </div>
 
       {/* Mobile text below photo */}
-      <div className="md:hidden px-6 py-10" style={{ background: '#0C3B38' }}>
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>The Initiative</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+      <div className="md:hidden px-6 py-10" style={{ background: '#2E5B3B' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>The Initiative</span>
+        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
           Parent leadership already exists in Massachusetts.
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -90,17 +90,17 @@ function PageHero() {
 
 function Overview() {
   return (
-    <section id="overview" className="pt-16 pb-20" style={{ background: '#FBF7E8' }}>
+    <section id="overview" className="pt-16 pb-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Overview</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Overview</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
           <div>
-            <p className="text-3xl md:text-4xl font-semibold leading-snug mb-8" style={{ color: '#0C3B38' }}>
+            <p className="text-3xl md:text-4xl font-semibold leading-snug mb-8" style={{ color: '#2E5B3B' }}>
               Mass ParentCorps is building a collaborative model to{' '}
-              <span style={{ color: '#2EC4B6' }}>recognize parent leadership as a professional, compensated workforce.</span>
+              <span style={{ color: '#C19844' }}>recognize parent leadership as a professional, compensated workforce.</span>
             </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
               Across Massachusetts, parents contribute as leaders, advisors, and community advocates.
@@ -124,12 +124,12 @@ function Overview() {
             {/* Definition callout */}
             <div
               className="rounded-2xl p-8 mb-6"
-              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.25)' }}
+              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.25)' }}
             >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#1A6B63' }}>
+              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#1E3D28' }}>
                 What Is Parent Leadership?
               </div>
-              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#0C3B38' }}>
+              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#2E5B3B' }}>
                 The active engagement of parents &amp; caregivers in the design, implementation,
                 and evaluation of the systems that impact their families and communities.
               </p>
@@ -138,12 +138,12 @@ function Overview() {
             {/* Vision callout */}
             <div
               className="rounded-2xl p-8"
-              style={{ background: '#0C3B38' }}
+              style={{ background: '#2E5B3B' }}
             >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'rgba(46,196,182,0.8)' }}>
+              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'rgba(193,152,68,0.8)' }}>
                 Our Vision
               </div>
-              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#F0DC9A' }}>
+              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#EBD29A' }}>
                 Communities where parent leadership is recognized as a powerful asset and where
                 parents have meaningful opportunities to contribute professionally to organizations
                 that support families and communities.
@@ -181,11 +181,11 @@ function WhyItMatters() {
     <section id="why" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>
             Why This Initiative Matters
           </span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             The gap we're closing
           </h2>
         </div>
@@ -195,10 +195,10 @@ function WhyItMatters() {
             <div
               key={i}
               className="rounded-2xl p-8"
-              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.12)' }}
+              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.12)' }}
             >
               <div className="text-3xl mb-5">{r.icon}</div>
-              <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>{r.title}</h3>
+              <h3 className="font-bold text-xl mb-3" style={{ color: '#2E5B3B' }}>{r.title}</h3>
               <p className="text-base leading-relaxed" style={{ color: '#6B7280' }}>{r.desc}</p>
             </div>
           ))}
@@ -227,17 +227,17 @@ function WhatParentsToldUs() {
   ]
 
   return (
-    <section id="parents-voice" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
-      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', right: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+    <section id="parents-voice" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
+      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', right: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(193,152,68,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What Parents and Agencies Told Us</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What Parents and Agencies Told Us</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#F0DC9A' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#EBD29A' }}>
               Findings from the<br />January 2026 Focus Groups
             </h2>
             <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -253,7 +253,7 @@ function WhatParentsToldUs() {
                   className="rounded-2xl px-6 py-4 flex items-start gap-4"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                 >
-                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#2EC4B6' }} />
+                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#C19844' }} />
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
                 </div>
               ))}
@@ -262,9 +262,9 @@ function WhatParentsToldUs() {
             {/* Pull quote */}
             <div
               className="rounded-2xl p-8"
-              style={{ background: 'rgba(240,220,154,0.08)', border: '1px solid rgba(240,220,154,0.2)' }}
+              style={{ background: 'rgba(235,210,154,0.08)', border: '1px solid rgba(235,210,154,0.2)' }}
             >
-              <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#F0DC9A' }}>
+              <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#EBD29A' }}>
                 "Right now, we kind of play it by ear. I took one class, then another, but there wasn't a real pathway to follow."
               </p>
               <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>— Massachusetts Parent Leader</p>
@@ -275,7 +275,7 @@ function WhatParentsToldUs() {
             </p>
 
             {/* What Agencies Told Us */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#F0DC9A' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#EBD29A' }}>
               What Agencies Told Us
             </h2>
             <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -291,7 +291,7 @@ function WhatParentsToldUs() {
                   className="rounded-2xl px-6 py-4 flex items-start gap-4"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                 >
-                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#F0DC9A' }} />
+                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#EBD29A' }} />
                   <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
                 </div>
               ))}
@@ -311,14 +311,14 @@ function RecentVideo() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Watch</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Watch</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6" style={{ color: '#0C3B38' }}>
+            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6" style={{ color: '#2E5B3B' }}>
               Mass ParentCorps in Action
             </h2>
-            <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '16 / 9', border: '1px solid rgba(46,196,182,0.2)' }}>
+            <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '16 / 9', border: '1px solid rgba(193,152,68,0.2)' }}>
               <iframe
                 className="w-full h-full"
                 src="https://www.youtube.com/embed/fbjoawtn_1w"
@@ -396,16 +396,16 @@ function History() {
   ]
 
   return (
-    <section id="history" className="pt-16 pb-28" style={{ background: '#FBF7E8' }}>
+    <section id="history" className="pt-16 pb-28" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Our History</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Our History</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
               Parent Leadership in<br />Massachusetts
             </h2>
             <div className="mb-16 space-y-4">
@@ -431,23 +431,23 @@ function History() {
 
             {/* Timeline */}
             <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-px" style={{ background: 'rgba(46,196,182,0.25)', marginLeft: 11 }} />
+              <div className="absolute left-0 top-0 bottom-0 w-px" style={{ background: 'rgba(193,152,68,0.25)', marginLeft: 11 }} />
               <div className="space-y-10">
                 {timeline.map((event, i) => (
                   <div key={i} className="relative pl-10">
                     <div
                       className="absolute left-0 top-1.5 w-5 h-5 rounded-full border-2 flex items-center justify-center"
-                      style={{ background: '#FBF7E8', borderColor: '#2EC4B6' }}
+                      style={{ background: '#F3E8CF', borderColor: '#C19844' }}
                     >
-                      <div className="w-2 h-2 rounded-full" style={{ background: '#2EC4B6' }} />
+                      <div className="w-2 h-2 rounded-full" style={{ background: '#C19844' }} />
                     </div>
                     <div
                       className="inline-block text-xs font-bold tracking-widest uppercase px-2 py-0.5 rounded mb-2"
-                      style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+                      style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
                     >
                       {event.year}
                     </div>
-                    <h3 className="text-xl font-bold mb-2" style={{ color: '#0C3B38' }}>{event.title}</h3>
+                    <h3 className="text-xl font-bold mb-2" style={{ color: '#2E5B3B' }}>{event.title}</h3>
                     <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>{event.desc}</p>
                   </div>
                 ))}
@@ -455,8 +455,8 @@ function History() {
             </div>
 
             {/* Looking Ahead */}
-            <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: '#0C3B38' }}>
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#F0DC9A' }}>
+            <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: '#2E5B3B' }}>
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#EBD29A' }}>
                 Looking Ahead: Building Statewide Infrastructure
               </h3>
               <p className="text-lg leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -470,12 +470,12 @@ function History() {
                     className="rounded-2xl p-6"
                     style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                   >
-                    <h4 className="font-bold text-lg mb-2" style={{ color: '#2EC4B6' }}>{item.title}</h4>
+                    <h4 className="font-bold text-lg mb-2" style={{ color: '#C19844' }}>{item.title}</h4>
                     <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>{item.desc}</p>
                   </div>
                 ))}
               </div>
-              <p className="text-base font-medium leading-relaxed" style={{ color: '#F0DC9A' }}>
+              <p className="text-base font-medium leading-relaxed" style={{ color: '#EBD29A' }}>
                 We're not asking organizations and partners to fund this from the outside — we're
                 inviting you to help build it.
               </p>
@@ -509,12 +509,12 @@ function Founders() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Founders</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Founders</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
               The people behind<br />Mass ParentCorps
             </h2>
 
@@ -523,19 +523,19 @@ function Founders() {
                 <div
                   key={f.name}
                   className="rounded-2xl p-8"
-                  style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.15)' }}
+                  style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.15)' }}
                 >
                   <div
                     className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 text-xl font-bold"
-                    style={{ background: '#0C3B38', color: '#F0DC9A' }}
+                    style={{ background: '#2E5B3B', color: '#EBD29A' }}
                   >
                     {f.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
                   </div>
-                  <div className="font-bold text-xl mb-1" style={{ color: '#0C3B38' }}>{f.name}</div>
-                  <div className="text-sm font-medium mb-4" style={{ color: '#2EC4B6' }}>{f.title}</div>
+                  <div className="font-bold text-xl mb-1" style={{ color: '#2E5B3B' }}>{f.name}</div>
+                  <div className="text-sm font-medium mb-4" style={{ color: '#C19844' }}>{f.title}</div>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: '#4B5563' }}>{f.bio}</p>
                   {f.email && (
-                    <a href={`mailto:${f.email}`} className="text-sm font-medium" style={{ color: '#2EC4B6' }}>
+                    <a href={`mailto:${f.email}`} className="text-sm font-medium" style={{ color: '#C19844' }}>
                       {f.email}
                     </a>
                   )}
@@ -546,9 +546,9 @@ function Founders() {
             {/* Design Partners note */}
             <div
               className="rounded-2xl p-8"
-              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.15)' }}
+              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.15)' }}
             >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#2EC4B6' }}>
+              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#C19844' }}>
                 Design &amp; Government Partners
               </div>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#4B5563' }}>
@@ -560,7 +560,7 @@ function Founders() {
                   'Department of Elementary and Secondary Education (DESE)',
                 ].map((p, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
-                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
                     {p}
                   </li>
                 ))}
