@@ -20,17 +20,17 @@ export default function Nav() {
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50 border-b"
-      style={{ background: '#0C3B38', borderColor: 'rgba(255,255,255,0.08)' }}
+      style={{ background: '#2E5B3B', borderColor: 'rgba(255,255,255,0.08)' }}
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <div
             className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
-            style={{ background: '#F0DC9A', color: '#0C3B38' }}
+            style={{ background: '#EBD29A', color: '#2E5B3B' }}
           >
             MPC
           </div>
-          <span className="font-bold text-lg tracking-tight" style={{ color: '#F0DC9A' }}>
+          <span className="font-bold text-lg tracking-tight" style={{ color: '#EBD29A' }}>
             Mass ParentCorps
           </span>
         </Link>
@@ -40,7 +40,7 @@ export default function Nav() {
           className="md:hidden p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
-          style={{ color: '#F0DC9A' }}
+          style={{ color: '#EBD29A' }}
         >
           {open ? (
             <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
@@ -65,9 +65,9 @@ export default function Nav() {
                 key={link.label}
                 href={link.href}
                 className="text-sm transition-colors"
-                style={{ color: isActive ? '#F0DC9A' : 'rgba(255,255,255,0.7)' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#F0DC9A')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? '#F0DC9A' : 'rgba(255,255,255,0.7)')}
+                style={{ color: isActive ? '#EBD29A' : 'rgba(255,255,255,0.7)' }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = '#EBD29A')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? '#EBD29A' : 'rgba(255,255,255,0.7)')}
               >
                 {link.label}
               </Link>
@@ -75,10 +75,10 @@ export default function Nav() {
           })}
           <a
             href="mailto:mpc@massparentcorps.org"
-            className="px-5 py-2 rounded-full text-sm font-semibold transition-all"
-            style={{ background: '#F0DC9A', color: '#0C3B38' }}
+            className="px-5 py-2 rounded-full text-sm font-bold transition-all"
+            style={{ background: '#C19844', color: '#17301F' }}
           >
-            Get Involved
+            Join the Movement
           </a>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function Nav() {
       {open && (
         <div
           className="md:hidden border-t"
-          style={{ background: '#0C3B38', borderColor: 'rgba(255,255,255,0.08)' }}
+          style={{ background: '#2E5B3B', borderColor: 'rgba(255,255,255,0.08)' }}
         >
           <div className="px-6 py-4 flex flex-col gap-1">
             {links.map((link) => (
@@ -97,7 +97,7 @@ export default function Nav() {
                 onClick={() => setOpen(false)}
                 className="py-3 text-base font-medium border-b"
                 style={{
-                  color: pathname === link.href ? '#F0DC9A' : 'rgba(255,255,255,0.75)',
+                  color: pathname === link.href ? '#EBD29A' : 'rgba(255,255,255,0.75)',
                   borderColor: 'rgba(255,255,255,0.07)',
                 }}
               >
@@ -107,10 +107,10 @@ export default function Nav() {
             <a
               href="mailto:mpc@massparentcorps.org"
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-semibold"
-              style={{ background: '#F0DC9A', color: '#0C3B38' }}
+              className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-bold"
+              style={{ background: '#C19844', color: '#17301F' }}
             >
-              Get Involved
+              Join the Movement
             </a>
           </div>
         </div>

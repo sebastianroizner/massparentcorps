@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="py-16" style={{ background: '#0C3B38', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+    <footer className="py-16" style={{ background: '#2E5B3B', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12">
           {/* Brand */}
@@ -10,17 +10,17 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-4">
               <div
                 className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
-                style={{ background: '#F0DC9A', color: '#0C3B38' }}
+                style={{ background: '#EBD29A', color: '#2E5B3B' }}
               >
                 MPC
               </div>
-              <span className="font-bold text-lg" style={{ color: '#F0DC9A' }}>Mass ParentCorps</span>
+              <span className="font-bold text-lg" style={{ color: '#EBD29A' }}>Mass ParentCorps</span>
             </div>
             <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
               Building workforce pathways for parent leaders — a statewide initiative
               across Massachusetts.
             </p>
-            <div className="mt-6 text-xs font-medium" style={{ color: '#2EC4B6' }}>
+            <div className="mt-6 text-xs font-medium" style={{ color: '#C19844' }}>
               Now in Phase 3: Building Statewide Infrastructure
             </div>
           </div>
@@ -77,7 +77,7 @@ export default function Footer() {
               <a
                 href="mailto:mpc@massparentcorps.org"
                 className="text-sm transition-colors"
-                style={{ color: '#2EC4B6' }}
+                style={{ color: '#C19844' }}
               >
                 mpc@massparentcorps.org
               </a>

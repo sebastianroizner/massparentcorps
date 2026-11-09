@@ -51,13 +51,13 @@ export default function NewsPage() {
   const rest = posts.filter(p => !p.featured)
 
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
 
-      <section style={{ background: '#0C3B38', paddingTop: 64 }}>
+      <section style={{ background: '#2E5B3B', paddingTop: 64 }}>
         <div className="max-w-7xl mx-auto px-6 py-20">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>News & Updates</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>News & Updates</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
             From the field
           </h1>
           <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -68,7 +68,7 @@ export default function NewsPage() {
       </section>
 
       {/* Content */}
-      <section className="py-20" style={{ background: '#FBF7E8' }}>
+      <section className="py-20" style={{ background: '#F3E8CF' }}>
         <div className="max-w-7xl mx-auto px-6">
 
           {/* Category filter */}
@@ -78,10 +78,10 @@ export default function NewsPage() {
                 key={cat}
                 className="px-4 py-1.5 rounded-full text-sm font-medium cursor-pointer transition-all"
                 style={{
-                  background: i === 0 ? '#0C3B38' : 'white',
-                  color: i === 0 ? '#F0DC9A' : '#4B5563',
+                  background: i === 0 ? '#2E5B3B' : 'white',
+                  color: i === 0 ? '#EBD29A' : '#4B5563',
                   border: '1px solid',
-                  borderColor: i === 0 ? '#0C3B38' : 'rgba(0,0,0,0.1)',
+                  borderColor: i === 0 ? '#2E5B3B' : 'rgba(0,0,0,0.1)',
                 }}
               >
                 {cat}
@@ -93,13 +93,13 @@ export default function NewsPage() {
           {featured && (
             <div
               className="rounded-3xl overflow-hidden mb-10"
-              style={{ background: '#0C3B38' }}
+              style={{ background: '#2E5B3B' }}
             >
               <div className="p-10 md:p-14">
                 <div className="flex items-center gap-3 mb-6">
                   <span
                     className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full"
-                    style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
+                    style={{ background: 'rgba(193,152,68,0.2)', color: '#C19844' }}
                   >
                     {featured.category}
                   </span>
@@ -111,7 +111,7 @@ export default function NewsPage() {
                     {featured.readTime}
                   </span>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4" style={{ color: '#F0DC9A' }}>
+                <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4" style={{ color: '#EBD29A' }}>
                   {featured.title}
                 </h2>
                 <p className="text-lg leading-relaxed mb-8 max-w-2xl" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -119,7 +119,7 @@ export default function NewsPage() {
                 </p>
                 <span
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
-                  style={{ background: '#F0DC9A', color: '#0C3B38' }}
+                  style={{ background: '#EBD29A', color: '#2E5B3B' }}
                 >
                   Read article →
                 </span>
@@ -139,13 +139,13 @@ export default function NewsPage() {
                 <div className="flex items-center gap-3 mb-5">
                   <span
                     className="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded-full"
-                    style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+                    style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
                   >
                     {post.category}
                   </span>
                   <span className="text-xs" style={{ color: '#9CA3AF' }}>{post.readTime}</span>
                 </div>
-                <h3 className="text-xl font-bold leading-snug mb-3 flex-1" style={{ color: '#0C3B38' }}>
+                <h3 className="text-xl font-bold leading-snug mb-3 flex-1" style={{ color: '#2E5B3B' }}>
                   {post.title}
                 </h3>
                 <p className="text-sm leading-relaxed mb-6" style={{ color: '#6B7280' }}>
@@ -153,7 +153,7 @@ export default function NewsPage() {
                 </p>
                 <div className="flex items-center justify-between mt-auto pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
                   <span className="text-xs" style={{ color: '#9CA3AF' }}>{post.date}</span>
-                  <span className="text-sm font-semibold" style={{ color: '#2EC4B6' }}>Read →</span>
+                  <span className="text-sm font-semibold" style={{ color: '#C19844' }}>Read →</span>
                 </div>
               </div>
             ))}
@@ -161,11 +161,11 @@ export default function NewsPage() {
             {/* Subscribe card */}
             <div
               className="rounded-2xl p-8 flex flex-col justify-between"
-              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.2)' }}
+              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.2)' }}
             >
               <div>
                 <div className="text-2xl mb-3">📬</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#0C3B38' }}>Stay connected</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#2E5B3B' }}>Stay connected</h3>
                 <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>
                   Get updates about pilot cohorts, partnerships, evaluation insights, and future
                   opportunities delivered directly to your inbox.
@@ -174,7 +174,7 @@ export default function NewsPage() {
               <a
                 href="mailto:mpc@massparentcorps.org?subject=Subscribe to MPC Updates"
                 className="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-full text-sm font-semibold"
-                style={{ background: '#0C3B38', color: '#F0DC9A' }}
+                style={{ background: '#2E5B3B', color: '#EBD29A' }}
               >
                 Subscribe via Email →
               </a>

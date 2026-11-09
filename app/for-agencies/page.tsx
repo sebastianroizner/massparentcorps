@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ForAgenciesPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <PageHero />
       <RoleOfAgencies />
       <ReferralProcess />
@@ -21,11 +21,11 @@ export default function ForAgenciesPage() {
 
 function PageHero() {
   return (
-    <section style={{ background: '#0C3B38', paddingTop: 64 }}>
+    <section style={{ background: '#2E5B3B', paddingTop: 64 }}>
       <div className="max-w-7xl mx-auto px-6 py-20">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>For Agencies</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-        <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>For Agencies</span>
+        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+        <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
           Partner with us to<br />elevate parent leaders.
         </h1>
         <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -36,7 +36,7 @@ function PageHero() {
           <a
             href="mailto:mpc@massparentcorps.org?subject=Agency Partnership Inquiry - Mass ParentCorps"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
-            style={{ background: '#F0DC9A', color: '#0C3B38' }}
+            style={{ background: '#EBD29A', color: '#2E5B3B' }}
           >
             Contact Us to Partner →
           </a>
@@ -82,15 +82,15 @@ function RoleOfAgencies() {
   ]
 
   return (
-    <section className="py-20" style={{ background: '#FBF7E8' }}>
+    <section className="py-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Role of Agencies</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Role of Agencies</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
               How your organization<br />makes it work
             </h2>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
@@ -100,7 +100,7 @@ function RoleOfAgencies() {
             </p>
             <div
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold mb-12"
-              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+              style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
             >
               Join 15 sponsor agencies and 15+ partner organizations already part of the Mass ParentCorps network.
             </div>
@@ -109,10 +109,10 @@ function RoleOfAgencies() {
                 <div
                   key={i}
                   className="rounded-2xl p-8"
-                  style={{ background: 'white', border: '1px solid rgba(46,196,182,0.12)' }}
+                  style={{ background: 'white', border: '1px solid rgba(193,152,68,0.12)' }}
                 >
                   <div className="text-2xl mb-4">{r.icon}</div>
-                  <h3 className="font-bold text-lg mb-3" style={{ color: '#0C3B38' }}>{r.title}</h3>
+                  <h3 className="font-bold text-lg mb-3" style={{ color: '#2E5B3B' }}>{r.title}</h3>
                   <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{r.desc}</p>
                 </div>
               ))}
@@ -151,12 +151,12 @@ function ReferralProcess() {
   ]
 
   return (
-    <section id="referral" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
+    <section id="referral" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Referral Process</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#F0DC9A' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Referral Process</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#EBD29A' }}>
             How to refer a participant
           </h2>
           <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -171,7 +171,7 @@ function ReferralProcess() {
               className="rounded-2xl px-8 py-6 flex items-start gap-6"
               style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
             >
-              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(46,196,182,0.4)' }}>
+              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(193,152,68,0.4)' }}>
                 {s.step}
               </span>
               <div>
@@ -202,12 +202,12 @@ function PartnerCBOs() {
   ]
 
   return (
-    <section className="py-20" style={{ background: '#FBF7E8' }}>
+    <section className="py-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Our Partners</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Our Partners</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             Founding community partners
           </h2>
         </div>
@@ -217,10 +217,10 @@ function PartnerCBOs() {
             <div
               key={i}
               className="rounded-2xl px-6 py-5 flex items-center gap-4 bg-white"
-              style={{ border: '1px solid rgba(46,196,182,0.15)' }}
+              style={{ border: '1px solid rgba(193,152,68,0.15)' }}
             >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
-              <span className="font-medium text-sm" style={{ color: '#0C3B38' }}>{p}</span>
+              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
+              <span className="font-medium text-sm" style={{ color: '#2E5B3B' }}>{p}</span>
             </div>
           ))}
         </div>
@@ -235,7 +235,7 @@ function PartnerCBOs() {
               className="rounded-2xl px-6 py-5 flex items-center gap-4 bg-white"
               style={{ border: '1px solid rgba(0,0,0,0.07)' }}
             >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#F0DC9A' }} />
+              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#EBD29A' }} />
               <span className="font-medium text-sm" style={{ color: '#4B5563' }}>{p}</span>
             </div>
           ))}
@@ -254,9 +254,9 @@ function GetInvolved() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Get Involved</span>
-        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#2EC4B6' }} />
-        <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Get Involved</span>
+        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#C19844' }} />
+        <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
           Ready to partner?
         </h2>
         <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
@@ -267,14 +267,14 @@ function GetInvolved() {
           <a
             href="mailto:mpc@massparentcorps.org?subject=Agency Partnership Inquiry - Mass ParentCorps"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
-            style={{ background: '#0C3B38', color: '#F0DC9A' }}
+            style={{ background: '#2E5B3B', color: '#EBD29A' }}
           >
             Get in Touch →
           </a>
           <a
             href="mailto:mpc@massparentcorps.org"
             className="text-base font-medium"
-            style={{ color: '#2EC4B6' }}
+            style={{ color: '#C19844' }}
           >
             mpc@massparentcorps.org
           </a>

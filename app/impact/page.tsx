@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function ImpactPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
       <PageHero />
       <PilotOverview />
       <WhatYouWillEarn />
@@ -42,12 +42,12 @@ function PageHero() {
         {/* Desktop overlay */}
         <div
           className="absolute inset-0 hidden md:flex items-start pt-20"
-          style={{ background: 'linear-gradient(to bottom, rgba(12,59,56,0.65) 0%, rgba(12,59,56,0.10) 100%)' }}
+          style={{ background: 'linear-gradient(to bottom, rgba(46,91,59,0.65) 0%, rgba(46,91,59,0.10) 100%)' }}
         >
           <div className="max-w-7xl mx-auto px-6 w-full">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Pilot Program</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Pilot Program</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
               From design to<br />implementation
             </h1>
             <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
@@ -57,7 +57,7 @@ function PageHero() {
               <a
                 href="mailto:mpc@massparentcorps.org"
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
-                style={{ background: '#2EC4B6', color: '#0C3B38' }}
+                style={{ background: '#C19844', color: '#2E5B3B' }}
               >
                 Get Notified About Future Cohorts →
               </a>
@@ -72,10 +72,10 @@ function PageHero() {
       </div>
 
       {/* Mobile text below photo */}
-      <div className="md:hidden px-6 py-10" style={{ background: '#0C3B38' }}>
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Pilot Program</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+      <div className="md:hidden px-6 py-10" style={{ background: '#2E5B3B' }}>
+        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Pilot Program</span>
+        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
           From design to implementation
         </h1>
         <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -84,7 +84,7 @@ function PageHero() {
         <a
           href="mailto:mpc@massparentcorps.org"
           className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm"
-          style={{ background: '#2EC4B6', color: '#0C3B38' }}
+          style={{ background: '#C19844', color: '#2E5B3B' }}
         >
           Get Notified About Future Cohorts →
         </a>
@@ -109,31 +109,31 @@ function PilotOverview() {
   ]
 
   return (
-    <section id="overview" className="pt-16 pb-20" style={{ background: '#FBF7E8' }}>
+    <section id="overview" className="pt-16 pb-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Pilot Overview</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Pilot Overview</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#0C3B38' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
               Who's in the pilot
             </h2>
-            <div className="rounded-2xl p-5 mb-6" style={{ background: 'rgba(46,196,182,0.08)', border: '1px solid rgba(46,196,182,0.25)' }}>
-              <p className="text-sm font-semibold mb-1" style={{ color: '#1A6B63' }}>Cohort 1 — Urban College of Boston</p>
+            <div className="rounded-2xl p-5 mb-6" style={{ background: 'rgba(193,152,68,0.08)', border: '1px solid rgba(193,152,68,0.25)' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#1E3D28' }}>Cohort 1 — Urban College of Boston</p>
               <p className="text-base" style={{ color: '#4B5563' }}>
                 The first cohort of parent leaders completed their credentialing course in partnership
                 with Urban College of Boston — Course: <strong>HUS110: Core Competencies for
                 Community Behavioral Health Workers</strong>.
               </p>
             </div>
-            <div className="rounded-2xl p-5 mb-8" style={{ background: '#0C3B38' }}>
-              <p className="text-sm font-semibold mb-1" style={{ color: '#2EC4B6' }}>Cohort 2 — Middlesex Community College</p>
+            <div className="rounded-2xl p-5 mb-8" style={{ background: '#2E5B3B' }}>
+              <p className="text-sm font-semibold mb-1" style={{ color: '#C19844' }}>Cohort 2 — Middlesex Community College</p>
               <p className="text-base mb-3" style={{ color: 'rgba(255,255,255,0.8)' }}>
                 The second cohort is underway in partnership with Middlesex Community College.
-                Course: <strong style={{ color: '#F0DC9A' }}>SOC 110: Community Leadership &amp; Organizing</strong> — Mon &amp; Wed, 12:30–1:45 PM · 100% Online.
+                Course: <strong style={{ color: '#EBD29A' }}>SOC 110: Community Leadership &amp; Organizing</strong> — Mon &amp; Wed, 12:30–1:45 PM · 100% Online.
               </p>
             </div>
 
@@ -142,9 +142,9 @@ function PilotOverview() {
                 <div
                   key={i}
                   className="rounded-2xl p-6 text-center"
-                  style={{ background: 'white', border: '1px solid rgba(46,196,182,0.15)' }}
+                  style={{ background: 'white', border: '1px solid rgba(193,152,68,0.15)' }}
                 >
-                  <div className="text-5xl font-bold mb-2" style={{ color: '#0C3B38' }}>{s.number}</div>
+                  <div className="text-5xl font-bold mb-2" style={{ color: '#2E5B3B' }}>{s.number}</div>
                   <div className="text-sm font-medium mb-1" style={{ color: '#6B7280' }}>{s.label}</div>
                   <div className="text-xs" style={{ color: '#9CA3AF' }}>{s.sub}</div>
                 </div>
@@ -164,9 +164,9 @@ function WhatYouWillEarn() {
     <section id="earn" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What You Will Earn</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What You Will Earn</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             Two awards. Both yours to keep.
           </h2>
         </div>
@@ -175,15 +175,15 @@ function WhatYouWillEarn() {
           {/* Award 1 */}
           <div
             className="rounded-2xl p-10 flex flex-col"
-            style={{ background: '#0C3B38' }}
+            style={{ background: '#2E5B3B' }}
           >
             <div
               className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.2)', color: '#2EC4B6' }}
+              style={{ background: 'rgba(193,152,68,0.2)', color: '#C19844' }}
             >
               Award #1
             </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#F0DC9A' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#EBD29A' }}>
               Mass ParentCorps Credential
             </h3>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
@@ -195,15 +195,15 @@ function WhatYouWillEarn() {
           {/* Award 2 */}
           <div
             className="rounded-2xl p-10 flex flex-col"
-            style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.2)' }}
+            style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.2)' }}
           >
             <div
               className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-6"
-              style={{ background: 'rgba(46,196,182,0.12)', color: '#1A6B63' }}
+              style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
             >
               Award #2
             </div>
-            <h3 className="text-2xl font-bold mb-3" style={{ color: '#0C3B38' }}>
+            <h3 className="text-2xl font-bold mb-3" style={{ color: '#2E5B3B' }}>
               3–6 College Credits
             </h3>
             <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>
@@ -250,13 +250,13 @@ function DoYouQualify() {
   ]
 
   return (
-    <section id="qualify" className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
-      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', left: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+    <section id="qualify" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
+      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', left: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(193,152,68,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Eligibility</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#F0DC9A' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Eligibility</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
             Do You Qualify?
           </h2>
           <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
@@ -271,7 +271,7 @@ function DoYouQualify() {
               className="rounded-2xl px-8 py-6 flex items-start gap-6"
               style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
             >
-              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(46,196,182,0.4)' }}>
+              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(193,152,68,0.4)' }}>
                 {r.number}
               </span>
               <div>
@@ -286,7 +286,7 @@ function DoYouQualify() {
           <a
             href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full font-semibold text-lg"
-            style={{ background: '#2EC4B6', color: '#0C3B38' }}
+            style={{ background: '#C19844', color: '#2E5B3B' }}
           >
             Get Notified About Future Cohorts →
           </a>
@@ -342,9 +342,9 @@ function ProgramStructure() {
     <section id="structure" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Program Structure</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Program Structure</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             How the program works
           </h2>
           <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: '#4B5563' }}>
@@ -357,21 +357,21 @@ function ProgramStructure() {
             <div
               key={i}
               className="rounded-2xl p-8"
-              style={{ background: '#FBF7E8', border: '1px solid rgba(46,196,182,0.12)' }}
+              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.12)' }}
             >
               <div
                 className="inline-flex items-center self-start px-3 py-1 rounded-full text-xs font-bold mb-4"
-                style={{ background: 'rgba(46,196,182,0.15)', color: '#1A6B63' }}
+                style={{ background: 'rgba(193,152,68,0.15)', color: '#1E3D28' }}
               >
                 {el.tag}
               </div>
-              <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>{el.title}</h3>
+              <h3 className="font-bold text-xl mb-3" style={{ color: '#2E5B3B' }}>{el.title}</h3>
               <p className="text-base leading-relaxed mb-4" style={{ color: '#6B7280' }}>{el.desc}</p>
               {el.bullets.length > 0 && (
                 <ul className="space-y-2">
                   {el.bullets.map((b, j) => (
                     <li key={j} className="flex items-center gap-2 text-sm" style={{ color: '#4B5563' }}>
-                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
+                      <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
                       {b}
                     </li>
                   ))}
@@ -385,7 +385,7 @@ function ProgramStructure() {
           <a
             href="mailto:mpc@massparentcorps.org"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-base"
-            style={{ background: '#0C3B38', color: '#F0DC9A' }}
+            style={{ background: '#2E5B3B', color: '#EBD29A' }}
           >
             Get Notified About Future Cohorts →
           </a>
@@ -407,17 +407,17 @@ function WhatWeHopeToLearn() {
   ]
 
   return (
-    <section className="py-20 relative overflow-hidden" style={{ background: '#0C3B38' }}>
-      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', left: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(46,196,182,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+    <section className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
+      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', left: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(193,152,68,0.1) 0%, transparent 70%)', filter: 'blur(60px)' }} />
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
           <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>What We Hope to Learn</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
+            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What We Hope to Learn</span>
+            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
           </div>
 
           <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-10" style={{ color: '#F0DC9A' }}>
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-10" style={{ color: '#EBD29A' }}>
               Questions guiding<br />the pilot
             </h2>
             <div className="space-y-4">
@@ -427,7 +427,7 @@ function WhatWeHopeToLearn() {
                   className="rounded-2xl px-8 py-5 flex items-start gap-5"
                   style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
                 >
-                  <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(46,196,182,0.4)' }}>
+                  <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(193,152,68,0.4)' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <p className="text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{q}</p>
@@ -464,12 +464,12 @@ function PartnersEvaluation() {
   ]
 
   return (
-    <section id="partners" className="py-20" style={{ background: '#FBF7E8' }}>
+    <section id="partners" className="py-20" style={{ background: '#F3E8CF' }}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#2EC4B6' }}>Partners & Evaluation</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#2EC4B6' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#0C3B38' }}>
+          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Partners & Evaluation</span>
+          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
+          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
             How we partner and measure
           </h2>
         </div>
@@ -478,7 +478,7 @@ function PartnersEvaluation() {
           {/* Organizational */}
           <div className="rounded-2xl p-8 bg-white" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
             <div className="text-3xl mb-4">🏢</div>
-            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Founding Community Partners</h3>
+            <h3 className="font-bold text-xl mb-3" style={{ color: '#2E5B3B' }}>Founding Community Partners</h3>
             <p className="text-base leading-relaxed mb-5" style={{ color: '#4B5563' }}>
               Mass ParentCorps collaborates with founding community-based organizations that engage
               parents as leaders.
@@ -486,7 +486,7 @@ function PartnersEvaluation() {
             <ul className="space-y-2">
               {cbos.map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
-                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
                   {item}
                 </li>
               ))}
@@ -496,7 +496,7 @@ function PartnersEvaluation() {
           {/* Academic */}
           <div className="rounded-2xl p-8 bg-white" style={{ border: '1px solid rgba(0,0,0,0.07)' }}>
             <div className="text-3xl mb-4">🎓</div>
-            <h3 className="font-bold text-xl mb-3" style={{ color: '#0C3B38' }}>Academic Partnership</h3>
+            <h3 className="font-bold text-xl mb-3" style={{ color: '#2E5B3B' }}>Academic Partnership</h3>
             <p className="text-base leading-relaxed mb-3" style={{ color: '#4B5563' }}>
               <strong>Urban College of Boston</strong> partnered on Cohort 1, offering HUS110: Core
               Competencies for Community Behavioral Health Workers. <strong>Middlesex Community College</strong> is
@@ -507,7 +507,7 @@ function PartnersEvaluation() {
               <ul className="space-y-2">
                 {designPartners.map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
-                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#F0DC9A' }} />
+                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#EBD29A' }} />
                     {item}
                   </li>
                 ))}
@@ -516,9 +516,9 @@ function PartnersEvaluation() {
           </div>
 
           {/* Evaluation */}
-          <div className="rounded-2xl p-8" style={{ background: '#0C3B38' }}>
+          <div className="rounded-2xl p-8" style={{ background: '#2E5B3B' }}>
             <div className="text-3xl mb-4">🔬</div>
-            <h3 className="font-bold text-xl mb-3" style={{ color: '#F0DC9A' }}>Evaluation</h3>
+            <h3 className="font-bold text-xl mb-3" style={{ color: '#EBD29A' }}>Evaluation</h3>
             <p className="text-base leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.65)' }}>
               The pilot is being evaluated in partnership with NYU Metro Center's Center for Policy,
               Research &amp; Evaluation, led by Dr. Joanna Geller and Lisette DeSouza.
@@ -526,7 +526,7 @@ function PartnersEvaluation() {
             <ul className="space-y-2">
               {evalPoints.map((item, i) => (
                 <li key={i} className="flex items-center gap-2 text-sm" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#2EC4B6' }} />
+                  <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
                   {item}
                 </li>
               ))}
@@ -537,10 +537,10 @@ function PartnersEvaluation() {
         {/* CTA */}
         <div
           className="rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between gap-8"
-          style={{ background: '#0C3B38' }}
+          style={{ background: '#2E5B3B' }}
         >
           <div>
-            <h3 className="text-2xl font-bold mb-2" style={{ color: '#F0DC9A' }}>
+            <h3 className="text-2xl font-bold mb-2" style={{ color: '#EBD29A' }}>
               Interested in partnering?
             </h3>
             <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.6)' }}>
@@ -550,7 +550,7 @@ function PartnersEvaluation() {
           <a
             href="mailto:mpc@massparentcorps.org"
             className="flex-shrink-0 inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-sm"
-            style={{ background: '#F0DC9A', color: '#0C3B38' }}
+            style={{ background: '#EBD29A', color: '#2E5B3B' }}
           >
             Get in Touch →
           </a>
