@@ -1,574 +1,200 @@
-import type { Metadata } from 'next'
+import { Button, Card, H2, Lead, PageHero, Section, SectionLabel, StatTile, BulletList, Dot } from '../components/ui'
+import { Definition, FOCUS_ATTRIBUTION, FOCUS_QUOTE, FounderCards } from '../components/shared'
 
-export const metadata: Metadata = {
-  title: 'The Initiative | Mass ParentCorps',
-  description: 'Learn about the Mass ParentCorps initiative — its vision, history, and founders.',
+export const metadata = {
+  title: 'About',
+  description:
+    'Mass ParentCorps is building a statewide infrastructure for parent leadership in Massachusetts, with parent leaders and organizations.',
 }
+
+const FOUNDERS = [
+  {
+    name: 'Don Hawley',
+    title: 'Co-Founder and CEO',
+    photo: '/images/founders/don-hawley.jpg',
+    bio: 'A former business executive and consultant who, since 2010, has focused on nonprofit and early childhood systems change across Massachusetts. Years alongside organizations that engage parents as leaders showed him both the power of parent leadership and the need to connect it to structured pathways.',
+  },
+  {
+    name: 'Magda Rodriguez-Villafañe',
+    title: 'Co-Founder and President',
+    photo: '/images/founders/magda-rodriguez-villafane.jpg',
+    bio: 'A family engagement leader with a track record of advancing parent leadership. She led the Parent Leadership Initiative (Ripple) at Families First, recognized nationally at Harvard University, and developed Families United for School and Education (FUSE).',
+  },
+]
+
+const HISTORY = [
+  { when: 'Early 2000s', title: 'Community programs expand', text: 'Community organizations across Massachusetts engage parents as leaders.' },
+  { when: '2006–2010', title: 'Thrive in 5 and Parent Partners', text: 'Parent voices help shape early childhood policies and systems.' },
+  { when: '2009', title: 'Parent University', text: 'Leadership development for parents in schools and communities.' },
+  { when: '2010–2020', title: 'Expansion across Massachusetts', text: 'Organizations such as East Boston Social Centers advance parent leadership.' },
+  { when: '2015–2024', title: 'Exploring workforce pathways', text: 'Don Hawley explores how leadership experience can connect to careers.' },
+  { when: '2025', title: 'Mass ParentCorps begins', text: 'Co-founders Don Hawley and Magda Rodriguez-Villafañe design the pilot.' },
+  { when: 'June 2026', title: 'Pilot launch', text: 'Cohort 1 begins at Urban College of Boston; Cohort 2 follows at Middlesex.' },
+]
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-      <PageHero />
-      <Overview />
-      <WhyItMatters />
-      <WhatParentsToldUs />
-      <RecentVideo />
-      <History />
-      <Founders />
-    </div>
-  )
-}
+    <>
+      <PageHero
+        label="About Mass ParentCorps"
+        title={
+          <>
+            Parents are already leading
+            <Dot />
+          </>
+        }
+        lead="Our job is to help the world recognize it, invest in it, and build the structures that allow it to thrive."
+      >
+        <Button href="/#join">Join the Movement</Button>
+        <Button href="#founders" variant="outline-light">
+          Meet the founders
+        </Button>
+      </PageHero>
 
-// ─── PAGE HERO ─────────────────────────────────────────────────────────────
-
-function PageHero() {
-  const navLinks = [
-    { label: 'Overview', href: '#overview' },
-    { label: 'Why It Matters', href: '#why' },
-    { label: 'What Parents Told Us', href: '#parents-voice' },
-    { label: 'Our History', href: '#history' },
-    { label: 'Founders', href: '#founders' },
-  ]
-
-  return (
-    <section style={{ background: '#000' }}>
-      {/* Photo */}
-      <div className="relative w-full h-[55vw] md:h-[80vh] md:min-h-[500px]" style={{ marginTop: 64 }}>
-        <img
-          src="/parent-leader.jpg"
-          alt="Parent leader in the community"
-          className="w-full h-full object-cover object-top"
-        />
-        {/* Desktop overlay */}
-        <div
-          className="absolute inset-0 hidden md:flex items-start pt-20"
-          style={{ background: 'linear-gradient(to bottom, rgba(46,91,59,0.65) 0%, rgba(46,91,59,0.10) 100%)' }}
-        >
-          <div className="max-w-7xl mx-auto px-6 w-full">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>The Initiative</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-            <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
-              Parent leadership<br />already exists in Massachusetts.
-            </h1>
-            <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              What's been missing is the infrastructure to recognize it, credential it, and connect
-              it to a career — that's what we're building, together with the organizations already
-              doing this work.
+      {/* 2. Mission and vision */}
+      <Section bg="white">
+        <SectionLabel>Mission and vision</SectionLabel>
+        <H2 className="mb-10">What we&apos;re building, and why.</H2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card bg="ivory">
+            <h3 className="m-0 mb-3 font-extrabold text-[26px]">Our mission</h3>
+            <p className="m-0 text-[18px]">
+              Build a statewide infrastructure for parent leadership in Massachusetts, with parent leaders and
+              organizations, that increases awareness of parent leadership&apos;s impact, expands pathways and
+              opportunities, influences policy and systems, and attracts investment to the field.
             </p>
-            <div className="mt-10 flex flex-wrap gap-3">
-              {navLinks.map((link) => (
-                <a key={link.label} href={link.href} className="px-5 py-2 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile text below photo */}
-      <div className="md:hidden px-6 py-10" style={{ background: '#2E5B3B' }}>
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>The Initiative</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-        <h1 className="mt-5 text-4xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
-          Parent leadership already exists in Massachusetts.
-        </h1>
-        <p className="mt-4 text-lg leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>
-          What's been missing is the infrastructure to recognize it, credential it, and connect
-          it to a career — that's what we're building, together with the organizations already
-          doing this work.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-2">
-          {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="px-4 py-1.5 rounded-full text-sm font-medium border" style={{ color: 'rgba(255,255,255,0.8)', borderColor: 'rgba(255,255,255,0.25)' }}>{link.label}</a>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── OVERVIEW ───────────────────────────────────────────────────────────────
-
-function Overview() {
-  return (
-    <section id="overview" className="pt-16 pb-20" style={{ background: '#F3E8CF' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Overview</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-          <div>
-            <p className="text-3xl md:text-4xl font-semibold leading-snug mb-8" style={{ color: '#2E5B3B' }}>
-              Mass ParentCorps is building a collaborative model to{' '}
-              <span style={{ color: '#C19844' }}>recognize parent leadership as a professional, compensated workforce.</span>
+          </Card>
+          <Card bg="evergreen">
+            <h3 className="m-0 mb-3 font-extrabold text-[26px] text-gold-light">Our vision</h3>
+            <p className="m-0 text-[18px] text-ivory">
+              A Commonwealth where parent leadership is visible, recognized, valued, and invested in; where systems
+              serving families have structures for parents to lead and shape solutions; and where parent leaders have
+              pathways to grow in leadership, education, and careers.
             </p>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              Across Massachusetts, parents contribute as leaders, advisors, and community advocates.
-              Yet too often, this leadership is treated as volunteerism rather than recognized as
-              skilled, impactful work — and there is an opportunity to better connect parent
-              leadership experience to structured, professional pathways.
+          </Card>
+        </div>
+      </Section>
+
+      {/* 7. Founders */}
+      <Section id="founders" bg="ivory">
+        <SectionLabel>Founders</SectionLabel>
+        <H2 className="mb-10">The people behind Mass ParentCorps.</H2>
+        <FounderCards founders={FOUNDERS} bg="white" />
+      </Section>
+
+      {/* 5. History */}
+      <Section bg="white">
+        <SectionLabel>Our history</SectionLabel>
+        <H2>Honoring those who came before.</H2>
+        <Lead>
+          Mass ParentCorps did not start from scratch. This work has been shaped by generations of parent leaders and
+          the organizations that believed in them, including pioneers such as <strong>Gloria DeVine</strong> and{' '}
+          <strong>Cyntoria Grant</strong>. With gratitude, we build on what they started.
+        </Lead>
+        <ol className="m-0 p-0 list-none max-w-[48rem]">
+          {HISTORY.map((h, i) => {
+            const last = i === HISTORY.length - 1
+            return (
+              <li key={h.when} className="relative pl-10 pb-8 last:pb-0">
+                {!last && <span aria-hidden="true" className="absolute left-[7px] top-5 bottom-0 w-[2px] bg-tint-300" />}
+                <span
+                  aria-hidden="true"
+                  className={`absolute left-0 top-1.5 w-4 h-4 rounded-full ${last ? 'bg-gold' : 'bg-evergreen'}`}
+                />
+                <p className="m-0 font-extrabold text-evergreen text-[17px]">{h.when}</p>
+                <p className="m-0 mt-0.5 text-[18px]">
+                  <strong>{h.title}:</strong> {h.text}
+                </p>
+              </li>
+            )
+          })}
+        </ol>
+      </Section>
+
+      {/* 3. What is parent leadership */}
+      <Section bg="ivory">
+        <SectionLabel>What is parent leadership?</SectionLabel>
+        <Definition onIvory className="text-[28px] md:text-[42px] max-w-[60rem]" />
+        <div className="grid gap-6 md:grid-cols-2 mt-12">
+          <Card bg="white">
+            <h3 className="m-0 mb-2 font-extrabold text-[24px] text-evergreen-light">Family engagement</h3>
+            <p className="m-0 text-[19px] font-bold">Invites parents in.</p>
+          </Card>
+          <Card bg="evergreen">
+            <h3 className="m-0 mb-2 font-extrabold text-[24px] text-gold-light">Shared leadership</h3>
+            <p className="m-0 text-[19px] font-bold">
+              Gives parents a real say in setting priorities, making decisions, and evaluating the systems that shape
+              their families&apos; lives.
             </p>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              Mass ParentCorps works alongside partners to do just that. We connect parent
-              leadership experience with academic learning and workforce preparation —
-              transforming parent leadership into a recognized, compensated, and professional
-              pathway. Participants earn a new, emerging credential gaining statewide recognition
-              across Massachusetts, as well as 3–6 college credits through Urban College of Boston
-              or Middlesex Community College.
-            </p>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: '#4B5563' }}>
-              Together, we are closing opportunity gaps, creating meaningful career pathways for
-              parents, and advancing community-driven leadership across Massachusetts.
-            </p>
-
-            {/* Definition callout */}
-            <div
-              className="rounded-2xl p-8 mb-6"
-              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.25)' }}
-            >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#1E3D28' }}>
-                What Is Parent Leadership?
-              </div>
-              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#2E5B3B' }}>
-                The active engagement of parents &amp; caregivers in the design, implementation,
-                and evaluation of the systems that impact their families and communities.
-              </p>
-            </div>
-
-            {/* Vision callout */}
-            <div
-              className="rounded-2xl p-8"
-              style={{ background: '#2E5B3B' }}
-            >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: 'rgba(193,152,68,0.8)' }}>
-                Our Vision
-              </div>
-              <p className="text-xl font-semibold leading-relaxed" style={{ color: '#EBD29A' }}>
-                Communities where parent leadership is recognized as a powerful asset and where
-                parents have meaningful opportunities to contribute professionally to organizations
-                that support families and communities.
-              </p>
-            </div>
-          </div>
+          </Card>
         </div>
-      </div>
-    </section>
-  )
-}
+      </Section>
 
-// ─── WHY IT MATTERS ─────────────────────────────────────────────────────────
-
-function WhyItMatters() {
-  const reasons = [
-    {
-      icon: '📈',
-      title: 'Parent Leadership Is Growing',
-      desc: 'Across Massachusetts, organizations increasingly recognize the importance of engaging parents as partners and leaders in shaping programs, services, and systems.',
-    },
-    {
-      icon: '🏢',
-      title: 'Trusted Leadership Matters',
-      desc: 'Parents bring lived experience, cultural knowledge, and trusted relationships that strengthen connections between organizations and the communities they serve.',
-    },
-    {
-      icon: '🚀',
-      title: 'Career Pathways Matter',
-      desc: 'Many parent leaders are seeking opportunities to translate their leadership into careers — pathways that provide economic stability while allowing them to continue contributing to their communities.',
-    },
-  ]
-
-  return (
-    <section id="why" className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>
-            Why This Initiative Matters
-          </span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
-            The gap we're closing
-          </h2>
+      {/* 4. What we heard */}
+      <Section bg="white">
+        <SectionLabel>What parents and agencies told us</SectionLabel>
+        <H2>Built on what we heard.</H2>
+        <Lead>
+          In January 2026 we held six focus groups with 27 parent leaders, four in English and two in Spanish, from five
+          community-based organizations. These findings shaped the design of Mass ParentCorps.
+        </Lead>
+        <div className="flex flex-wrap gap-3 mb-10">
+          <StatTile n="6" label="Focus groups" />
+          <StatTile n="27" label="Parent leaders" />
+          <StatTile n="2" label="Languages" />
+          <StatTile n="5" label="Community organizations" />
         </div>
-
-        <div className="grid md:grid-cols-3 gap-5">
-          {reasons.map((r, i) => (
-            <div
-              key={i}
-              className="rounded-2xl p-8"
-              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.12)' }}
-            >
-              <div className="text-3xl mb-5">{r.icon}</div>
-              <h3 className="font-bold text-xl mb-3" style={{ color: '#2E5B3B' }}>{r.title}</h3>
-              <p className="text-base leading-relaxed" style={{ color: '#6B7280' }}>{r.desc}</p>
-            </div>
-          ))}
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card bg="ivory" lift={false}>
+            <h3 className="m-0 mb-4 font-extrabold text-[24px]">Parents told us</h3>
+            <BulletList
+              items={[
+                'Leadership is advocacy: they use lived experience to influence systems and support families',
+                'They are building workforce-ready skills without formal recognition',
+                'No clear pathway exists to turn leadership into career advancement',
+                'There is strong demand for credentials, paid roles, and college credit',
+                'Equity and multilingual access are non-negotiable',
+              ]}
+            />
+          </Card>
+          <Card bg="ivory" lift={false}>
+            <h3 className="m-0 mb-4 font-extrabold text-[24px]">Agencies told us</h3>
+            <BulletList
+              items={[
+                'A persistent lack of dedicated funding for parent leadership roles',
+                'Parent leadership is not consistently recognized as a formal role',
+                'A disconnected framework, with no shared standards across organizations',
+                'Burnout among the staff who support parent leaders',
+              ]}
+            />
+          </Card>
         </div>
-      </div>
-    </section>
-  )
-}
+        <figure className="m-0 mt-6 rounded-card bg-terracotta text-white p-8 md:p-10">
+          <blockquote className="m-0 font-bold text-[22px] md:text-[28px] leading-[1.3]">“{FOCUS_QUOTE}”</blockquote>
+          <figcaption className="mt-4 text-ivory font-bold">{FOCUS_ATTRIBUTION}</figcaption>
+        </figure>
+      </Section>
 
-// ─── WHAT PARENTS TOLD US ────────────────────────────────────────────────────
-
-function WhatParentsToldUs() {
-  const findings = [
-    'Leadership is advocacy — they use lived experience to influence systems and support families',
-    'They are building workforce-ready skills without formal recognition',
-    'No clear pathway exists to turn leadership into career advancement',
-    'There is strong demand for credentials, paid roles, and college credit',
-    'Equity and multilingual access are non-negotiable',
-  ]
-
-  const agencyFindings = [
-    'A persistent lack of dedicated funding for parent leadership roles',
-    'Parent leadership not consistently recognized as a formal role within organizations',
-    'A disconnected framework — no shared standards or structure across organizations doing this work',
-    'Burnout among the staff who support and sustain parent leaders',
-  ]
-
-  return (
-    <section id="parents-voice" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
-      <div className="absolute rounded-full pointer-events-none" style={{ top: '50%', right: '-5%', transform: 'translateY(-50%)', width: 600, height: 600, background: 'radial-gradient(circle, rgba(193,152,68,0.08) 0%, transparent 70%)', filter: 'blur(60px)' }} />
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>What Parents and Agencies Told Us</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#EBD29A' }}>
-              Findings from the<br />January 2026 Focus Groups
-            </h2>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
-              In January 2026, Mass ParentCorps conducted six focus groups with 27 parent leaders
-              from across Massachusetts — four in English and two in Spanish — representing five
-              community-based organizations. Parents told us clearly:
-            </p>
-
-            <div className="space-y-3 mb-10">
-              {findings.map((f, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl px-6 py-4 flex items-start gap-4"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#C19844' }} />
-                  <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Pull quote */}
-            <div
-              className="rounded-2xl p-8"
-              style={{ background: 'rgba(235,210,154,0.08)', border: '1px solid rgba(235,210,154,0.2)' }}
-            >
-              <p className="text-xl font-semibold italic leading-relaxed mb-4" style={{ color: '#EBD29A' }}>
-                "Right now, we kind of play it by ear. I took one class, then another, but there wasn't a real pathway to follow."
-              </p>
-              <p className="text-sm" style={{ color: 'rgba(255,255,255,0.5)' }}>— Massachusetts Parent Leader</p>
-            </div>
-
-            <p className="mt-8 text-base leading-relaxed mb-16" style={{ color: 'rgba(255,255,255,0.55)' }}>
-              These findings directly shaped the design of Mass ParentCorps.
-            </p>
-
-            {/* What Agencies Told Us */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: '#EBD29A' }}>
-              What Agencies Told Us
-            </h2>
-            <p className="text-lg leading-relaxed mb-10" style={{ color: 'rgba(255,255,255,0.65)' }}>
-              Alongside parent voices, MPC's stakeholder and strategic planning conversations —
-              corroborated by Dr. Joanna Geller's "The Ripple" research with Families First —
-              surfaced a consistent set of challenges from the organizations that support parent
-              leaders:
-            </p>
-            <div className="space-y-3">
-              {agencyFindings.map((f, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl px-6 py-4 flex items-start gap-4"
-                  style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-                >
-                  <span className="w-2 h-2 rounded-full flex-shrink-0 mt-2" style={{ background: '#EBD29A' }} />
-                  <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.8)' }}>{f}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+      {/* 6. Watch */}
+      <Section bg="ivory">
+        <SectionLabel>Watch</SectionLabel>
+        <H2>Hear from Huong and Peace.</H2>
+        <Lead>
+          Huong Vu and Peace Junaid, Cohort 1 parent leaders from Boys &amp; Girls Clubs of Dorchester, share their
+          experience as parent leaders in Mass ParentCorps.
+        </Lead>
+        <div className="relative w-full max-w-[960px] overflow-hidden rounded-[28px] bg-ink" style={{ aspectRatio: '16 / 9' }}>
+          <iframe
+            className="absolute inset-0 w-full h-full"
+            src="https://www.youtube-nocookie.com/embed/fbjoawtn_1w"
+            title="Huong Vu and Peace Junaid on parent leadership"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── MOST RECENT VIDEO ──────────────────────────────────────────────────────
-
-function RecentVideo() {
-  return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Watch</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-6" style={{ color: '#2E5B3B' }}>
-              Mass ParentCorps in Action
-            </h2>
-            <div className="rounded-2xl overflow-hidden" style={{ aspectRatio: '16 / 9', border: '1px solid rgba(193,152,68,0.2)' }}>
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/fbjoawtn_1w"
-                title="Watch: Mass ParentCorps in Action"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── HISTORY ────────────────────────────────────────────────────────────────
-
-function History() {
-  const timeline = [
-    {
-      year: 'Early 2000s',
-      title: 'Community Programs Expand',
-      desc: 'Community-based organizations across Massachusetts expand programs that engage parents as leaders, laying the foundation for more formalized parent leadership efforts.',
-    },
-    {
-      year: '2006–2010',
-      title: 'Thrive in 5 & Parent Partners',
-      desc: 'The launch of Thrive in 5 helps elevate parent voices in shaping early childhood policies and systems. Parent Partners work alongside organizations to strengthen early childhood systems. During this period, initiatives also promote the use of Ages and Stages developmental screening tools to support early identification and connection to services.',
-    },
-    {
-      year: '2009',
-      title: 'Parent University',
-      desc: 'Parent University initiatives begin offering leadership development opportunities for parents in schools and communities.',
-    },
-    {
-      year: '2010–2020',
-      title: 'Expansion Across Massachusetts',
-      desc: 'Parent leadership initiatives expand across Massachusetts through community-based organizations and collaborative programs. Organizations such as East Boston Social Centers contribute to advancing parent leadership and community engagement.',
-    },
-    {
-      year: '2015–2024',
-      title: 'Exploring Workforce Pathways',
-      desc: 'Don Hawley works closely with community-based organizations that engage parents as leaders and begins exploring how parent leadership experience can be connected to workforce pathways.',
-    },
-    {
-      year: '2025',
-      title: 'Mass ParentCorps Begins',
-      desc: 'Mass ParentCorps begins conversations with community organizations across Massachusetts to develop a new, emerging Parent Leadership Workforce Credential gaining statewide recognition.',
-    },
-    {
-      year: 'Summer 2025',
-      title: 'Co-Founders Unite',
-      desc: 'Magda Rodriguez-Villafañe joins the initiative and begins working with Don Hawley to develop the Mass ParentCorps pilot. She previously led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University, and developed Families United for School and Education (FUSE).',
-    },
-    {
-      year: 'June 17, 2026',
-      title: 'Pilot Launch',
-      desc: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College of Boston. A second cohort follows in Fall 2026 with Middlesex Community College — together enrolling 39 parent leaders across Massachusetts.',
-    },
-  ]
-
-  const lookingAhead = [
-    {
-      title: 'Framework & Curriculum',
-      desc: 'Finalizing a shared Parent Leadership Framework and a universal, credit-bearing curriculum — deepening partnerships with higher education so training becomes real college credit and career pathways.',
-    },
-    {
-      title: 'Funding & Policy',
-      desc: 'Building a standing coalition of state agencies, community organizations, and higher education partners, pursuing durable public funding, and engaging policymakers to formally recognize parent leadership.',
-    },
-    {
-      title: 'Evaluation & Research',
-      desc: 'Building a statewide evidence base, in partnership with NYU Metro Center, that lets the field prove its impact and continuously improve the model.',
-    },
-  ]
-
-  return (
-    <section id="history" className="pt-16 pb-28" style={{ background: '#F3E8CF' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Our History</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
-              Parent Leadership in<br />Massachusetts
-            </h2>
-            <div className="mb-16 space-y-4">
-              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
-                Massachusetts has a strong and evolving history of initiatives that elevate parent
-                leadership and strengthen partnerships between families and organizations.
-              </p>
-              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
-                This work has been shaped by generations of parent leaders across the state —
-                including pioneers such as Gloria Devine and Cyntoria Grant — alongside many others
-                who have led change within their communities, organizations, and systems.
-              </p>
-              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
-                Together, these leaders have shown that parent leadership is a powerful force for
-                strengthening communities, shaping systems, and improving outcomes for families.
-              </p>
-              <p className="text-lg leading-relaxed" style={{ color: '#4B5563' }}>
-                Mass ParentCorps builds on this collective legacy — advancing a model that
-                recognizes parent leadership as a professional, compensated, and sustainable
-                workforce.
-              </p>
-            </div>
-
-            {/* Timeline */}
-            <div className="relative">
-              <div className="absolute left-0 top-0 bottom-0 w-px" style={{ background: 'rgba(193,152,68,0.25)', marginLeft: 11 }} />
-              <div className="space-y-10">
-                {timeline.map((event, i) => (
-                  <div key={i} className="relative pl-10">
-                    <div
-                      className="absolute left-0 top-1.5 w-5 h-5 rounded-full border-2 flex items-center justify-center"
-                      style={{ background: '#F3E8CF', borderColor: '#C19844' }}
-                    >
-                      <div className="w-2 h-2 rounded-full" style={{ background: '#C19844' }} />
-                    </div>
-                    <div
-                      className="inline-block text-xs font-bold tracking-widest uppercase px-2 py-0.5 rounded mb-2"
-                      style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
-                    >
-                      {event.year}
-                    </div>
-                    <h3 className="text-xl font-bold mb-2" style={{ color: '#2E5B3B' }}>{event.title}</h3>
-                    <p className="text-base leading-relaxed" style={{ color: '#4B5563' }}>{event.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Looking Ahead */}
-            <div className="mt-16 rounded-2xl p-8 md:p-10" style={{ background: '#2E5B3B' }}>
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#EBD29A' }}>
-                Looking Ahead: Building Statewide Infrastructure
-              </h3>
-              <p className="text-lg leading-relaxed mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                The pilot proved the concept. The next phase is building the infrastructure to
-                bring it to scale across Massachusetts — organized around three working areas:
-              </p>
-              <div className="grid sm:grid-cols-3 gap-5 mb-8">
-                {lookingAhead.map((item) => (
-                  <div
-                    key={item.title}
-                    className="rounded-2xl p-6"
-                    style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-                  >
-                    <h4 className="font-bold text-lg mb-2" style={{ color: '#C19844' }}>{item.title}</h4>
-                    <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.7)' }}>{item.desc}</p>
-                  </div>
-                ))}
-              </div>
-              <p className="text-base font-medium leading-relaxed" style={{ color: '#EBD29A' }}>
-                We're not asking organizations and partners to fund this from the outside — we're
-                inviting you to help build it.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── FOUNDERS ───────────────────────────────────────────────────────────────
-
-function Founders() {
-  const founders = [
-    {
-      name: 'Don Hawley',
-      title: 'Co-Founder',
-      bio: 'Don Hawley spent much of his career in senior leadership roles across the business sector, working as both a consultant and executive focused on strategy, organizational leadership, and performance. In 2010, he transitioned from the corporate world to apply his experience in service of local nonprofit organizations. Over time, his work became increasingly focused on early childhood, where he has contributed through pro bono consulting and active philanthropic engagement across Massachusetts. Through years of collaboration with community-based organizations that engage parents as leaders, Don observed both the profound impact of parent leadership and a critical opportunity: the need to better connect that leadership experience to structured workforce pathways. He brings deep experience in public policy, nonprofit leadership, and early childhood systems change, having worked alongside community organizations, philanthropic partners, and government agencies to support programs serving children and families. These experiences helped inspire the creation of Mass ParentCorps — an effort to recognize parent leadership as a new, emerging credential gaining statewide recognition and expand economic opportunity for parents across Massachusetts.',
-    },
-    {
-      name: 'Magda Rodriguez-Villafañe',
-      title: 'Co-Founder',
-      bio: 'Magda Rodriguez-Villafañe is a family engagement leader and co-founder of Mass ParentCorps, with a strong track record of advancing parent leadership and community-driven change. She spearheaded and led the Parent Leadership Initiative (Ripple) at Families First, which received national recognition at Harvard University for its innovative approach to empowering parents as leaders. Magda also developed Families United for School and Education (FUSE), an initiative designed to support families in advocating for their children and strengthening leadership within their communities. At Mass ParentCorps, she works in partnership with community organizations, Urban College, and research partners to design and implement the pilot — helping to transform parent leadership into a recognized, professional, and compensated pathway.',
-      email: 'mpc@massparentcorps.org',
-    },
-  ]
-
-  return (
-    <section id="founders" className="py-28 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Founders</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
-              The people behind<br />Mass ParentCorps
-            </h2>
-
-            <div className="grid sm:grid-cols-2 gap-5 mb-10">
-              {founders.map((f) => (
-                <div
-                  key={f.name}
-                  className="rounded-2xl p-8"
-                  style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.15)' }}
-                >
-                  <div
-                    className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 text-xl font-bold"
-                    style={{ background: '#2E5B3B', color: '#EBD29A' }}
-                  >
-                    {f.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </div>
-                  <div className="font-bold text-xl mb-1" style={{ color: '#2E5B3B' }}>{f.name}</div>
-                  <div className="text-sm font-medium mb-4" style={{ color: '#C19844' }}>{f.title}</div>
-                  <p className="text-sm leading-relaxed mb-4" style={{ color: '#4B5563' }}>{f.bio}</p>
-                  {f.email && (
-                    <a href={`mailto:${f.email}`} className="text-sm font-medium" style={{ color: '#C19844' }}>
-                      {f.email}
-                    </a>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Design Partners note */}
-            <div
-              className="rounded-2xl p-8"
-              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.15)' }}
-            >
-              <div className="text-xs font-bold tracking-widest uppercase mb-3" style={{ color: '#C19844' }}>
-                Design &amp; Government Partners
-              </div>
-              <p className="text-base leading-relaxed mb-4" style={{ color: '#4B5563' }}>
-                EEC and DESE participated in the initial design phase of Mass ParentCorps.
-              </p>
-              <ul className="space-y-2">
-                {[
-                  'Department of Early Education and Care (EEC)',
-                  'Department of Elementary and Secondary Education (DESE)',
-                ].map((p, i) => (
-                  <li key={i} className="flex items-center gap-2 text-sm" style={{ color: '#6B7280' }}>
-                    <span className="w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
-                    {p}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </Section>
+    </>
   )
 }

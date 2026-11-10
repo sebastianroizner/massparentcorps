@@ -89,3 +89,9 @@ export function Definition({ className = '', onIvory = false }: { className?: st
     </blockquote>
   )
 }
+
+export const CREDIT_BULLETS = [
+  '3 credits for completing the college course',
+  '3 credits for prior learning, by demonstrating the leadership you already have',
+  '3 more at Urban College of Boston for earning the Mass ParentCorps Credential',
+]
