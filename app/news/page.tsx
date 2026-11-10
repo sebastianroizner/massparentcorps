@@ -1,187 +1,62 @@
-import type { Metadata } from 'next'
+import { Button, Dot, H2, Lead, PageHero, Section, SectionLabel } from '../components/ui'
+import NewsList from '../components/NewsList'
 
-export const metadata: Metadata = {
-  title: 'News & Updates | Mass ParentCorps',
-  description: 'Latest updates, stories, and announcements from Mass ParentCorps.',
+export const metadata = {
+  title: 'News',
+  description: 'Updates on Mass ParentCorps cohorts, partnerships, research, and events as the movement grows.',
 }
 
-const posts = [
-  {
-    slug: 'infrastructure-sustainability-planning',
-    category: 'Milestone',
-    date: 'September 2026',
-    title: 'Building What’s Next: MPC Enters Infrastructure & Sustainability Planning',
-    excerpt: 'With both pilot cohorts underway, Mass ParentCorps is turning to its next phase: building the statewide infrastructure to bring parent leadership pathways to scale across Massachusetts. This work is organized around three working areas — Framework & Curriculum, Funding & Policy, and Evaluation & Research — led by a newly formed coalition of partners, funders, and parent leaders.',
-    readTime: '3 min read',
-    featured: true,
-  },
-  {
-    slug: 'pilot-launch-june-2026',
-    category: 'Milestone',
-    date: 'June 2026',
-    title: 'Pilot Launch: First Credentialing Cohort Begins June 17, 2026',
-    excerpt: 'Mass ParentCorps launches its first credentialing cohort in partnership with Urban College on June 17, 2026 — 20 parent leaders from across Massachusetts, Wednesdays 6:30–8:30 PM via Zoom. A second cohort is planned.\n\nUpdate — September 2026: Both cohorts are now underway. Cohort 1 completed its credentialing course with Urban College of Boston; Cohort 2 began in Fall 2026 with Middlesex Community College. Together, 39 parent leaders are enrolled across the two cohorts, representing 15 sponsor agencies and 15+ other partner organizations statewide.',
-    readTime: '3 min read',
-    featured: false,
-  },
-  {
-    slug: 'focus-group-report',
-    category: 'Research',
-    date: 'January 2026',
-    title: 'Focus Group Report: What Parent Leaders Told Us',
-    excerpt: 'In January 2026, Mass ParentCorps conducted six focus groups with 27 parent leaders — four in English, two in Spanish — representing five community-based organizations. Key findings: parent leaders are building workforce-ready skills without formal recognition, and there is strong demand for credentials, paid roles, and college credit.',
-    readTime: '5 min read',
-    featured: false,
-  },
-  {
-    slug: 'urban-college-partnership',
-    category: 'Academic',
-    date: '2026',
-    title: 'Urban College Named as Academic Partner',
-    excerpt: "Urban College of Boston is the named partner for the credit-bearing course — offering 3–6 college credits through HUS110: Core Competencies for Community Behavioral Health Workers. Credits are applicable toward future certificates, associate's degrees, and advanced degrees.",
-    readTime: '3 min read',
-    featured: false,
-  },
-]
-
-const categories = ['All', 'Milestone', 'Outreach', 'Program', 'Academic', 'Research']
+const SUBSCRIBE = 'mailto:mpc@massparentcorps.org?subject=Subscribe%20to%20MPC%20updates'
 
 export default function NewsPage() {
-  const featured = posts.find(p => p.featured)
-  const rest = posts.filter(p => !p.featured)
-
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-
-      <section style={{ background: '#2E5B3B', paddingTop: 64 }}>
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>News & Updates</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
+    <>
+      <PageHero
+        art={false}
+        label="News and updates"
+        title={
+          <>
             From the field
-          </h1>
-          <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-            Updates on pilot cohorts, partnerships, evaluation insights, and future opportunities
-            as Mass ParentCorps grows.
+            <Dot />
+          </>
+        }
+        lead="Updates on our cohorts, partnerships, research, and events as the movement grows."
+      >
+        <Button href={SUBSCRIBE}>Subscribe for updates</Button>
+      </PageHero>
+
+      <Section bg="white">
+        <div className="rounded-card bg-ivory p-8 md:p-12 mb-16">
+          <SectionLabel>Upcoming event</SectionLabel>
+          <h2 className="m-0 mb-4 font-extrabold text-[28px] md:text-[40px] leading-[1.1] max-w-[48rem]">
+            Elevating Parent Leadership: Lessons from Our First Cohort
+          </h2>
+          <p className="m-0 mb-8 text-[18px] max-w-[46rem]">
+            Tuesday, November 17, 2026, 9:30 to 11:00 a.m. Urban College of Boston, 2 Boylston Street, and online.
+            Breakfast provided; in-person seating is limited to 40.
           </p>
-        </div>
-      </section>
-
-      {/* Content */}
-      <section className="py-20" style={{ background: '#F3E8CF' }}>
-        <div className="max-w-7xl mx-auto px-6">
-
-          {/* Category filter */}
-          <div className="flex flex-wrap gap-2 mb-14">
-            {categories.map((cat, i) => (
-              <span
-                key={cat}
-                className="px-4 py-1.5 rounded-full text-sm font-medium cursor-pointer transition-all"
-                style={{
-                  background: i === 0 ? '#2E5B3B' : 'white',
-                  color: i === 0 ? '#EBD29A' : '#4B5563',
-                  border: '1px solid',
-                  borderColor: i === 0 ? '#2E5B3B' : 'rgba(0,0,0,0.1)',
-                }}
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
-
-          {/* Featured post */}
-          {featured && (
-            <div
-              className="rounded-3xl overflow-hidden mb-10"
-              style={{ background: '#2E5B3B' }}
-            >
-              <div className="p-10 md:p-14">
-                <div className="flex items-center gap-3 mb-6">
-                  <span
-                    className="text-xs font-bold tracking-widest uppercase px-3 py-1 rounded-full"
-                    style={{ background: 'rgba(193,152,68,0.2)', color: '#C19844' }}
-                  >
-                    {featured.category}
-                  </span>
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    {featured.date}
-                  </span>
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>·</span>
-                  <span className="text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                    {featured.readTime}
-                  </span>
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold leading-tight mb-4" style={{ color: '#EBD29A' }}>
-                  {featured.title}
-                </h2>
-                <p className="text-lg leading-relaxed mb-8 max-w-2xl" style={{ color: 'rgba(255,255,255,0.65)' }}>
-                  {featured.excerpt}
-                </p>
-                <span
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold"
-                  style={{ background: '#EBD29A', color: '#2E5B3B' }}
-                >
-                  Read article →
-                </span>
-                <p className="mt-3 text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>Full articles coming soon</p>
-              </div>
-            </div>
-          )}
-
-          {/* Post grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {rest.map((post) => (
-              <div
-                key={post.slug}
-                className="rounded-2xl p-8 flex flex-col bg-white"
-                style={{ border: '1px solid rgba(0,0,0,0.07)' }}
-              >
-                <div className="flex items-center gap-3 mb-5">
-                  <span
-                    className="text-xs font-bold tracking-wider uppercase px-2.5 py-1 rounded-full"
-                    style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
-                  >
-                    {post.category}
-                  </span>
-                  <span className="text-xs" style={{ color: '#9CA3AF' }}>{post.readTime}</span>
-                </div>
-                <h3 className="text-xl font-bold leading-snug mb-3 flex-1" style={{ color: '#2E5B3B' }}>
-                  {post.title}
-                </h3>
-                <p className="text-sm leading-relaxed mb-6" style={{ color: '#6B7280' }}>
-                  {post.excerpt}
-                </p>
-                <div className="flex items-center justify-between mt-auto pt-4" style={{ borderTop: '1px solid rgba(0,0,0,0.06)' }}>
-                  <span className="text-xs" style={{ color: '#9CA3AF' }}>{post.date}</span>
-                  <span className="text-sm font-semibold" style={{ color: '#C19844' }}>Read →</span>
-                </div>
-              </div>
-            ))}
-
-            {/* Subscribe card */}
-            <div
-              className="rounded-2xl p-8 flex flex-col justify-between"
-              style={{ background: '#F3E8CF', border: '1px solid rgba(193,152,68,0.2)' }}
-            >
-              <div>
-                <div className="text-2xl mb-3">📬</div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#2E5B3B' }}>Stay connected</h3>
-                <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>
-                  Get updates about pilot cohorts, partnerships, evaluation insights, and future
-                  opportunities delivered directly to your inbox.
-                </p>
-              </div>
-              <a
-                href="mailto:mpc@massparentcorps.org?subject=Subscribe to MPC Updates"
-                className="mt-6 inline-flex items-center justify-center px-5 py-3 rounded-full text-sm font-semibold"
-                style={{ background: '#2E5B3B', color: '#EBD29A' }}
-              >
-                Subscribe via Email →
-              </a>
-            </div>
+          <div className="flex flex-wrap gap-3.5">
+            <Button href="https://forms.gle/SriwfVDiQMvBxqXZ7" variant="dark">
+              RSVP to join online
+            </Button>
+            <Button href="mailto:qli@massparentcorps.org?subject=Panel%20RSVP" variant="outline-dark">
+              RSVP to attend in person
+            </Button>
           </div>
         </div>
-      </section>
-    </div>
+
+        <H2 className="mb-8">All updates</H2>
+        <NewsList />
+      </Section>
+
+      <Section bg="evergreen">
+        <SectionLabel tone="light">Stay connected</SectionLabel>
+        <Lead className="text-ivory mb-8">
+          Get updates about pilot cohorts, partnerships, evaluation insights, and future opportunities delivered directly
+          to your inbox.
+        </Lead>
+        <Button href={SUBSCRIBE}>Subscribe via email</Button>
+      </Section>
+    </>
   )
 }
