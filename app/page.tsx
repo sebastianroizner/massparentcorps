@@ -11,9 +11,12 @@ import { useState } from 'react'
 // Mint section bg:    #EEF3EF
 // Soft mint card bg:  #E6EFE8 / #EEF3EF
 
+// Hidden until real names and photos are in (Prompt 1).
+const SHOW_PARENT_LEADERS = false
+
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ paddingTop: 64 }}>
+    <div className="min-h-screen" style={{ paddingTop: 112 }}>
       <Hero />
       <ThreeBigQuestions />
       <WhatIsParentLeadership />
@@ -22,7 +25,7 @@ export default function Home() {
       <CaseForInvestment />
       <Voice />
       <Journey />
-      <MeetOurParentLeaders />
+      {SHOW_PARENT_LEADERS && <MeetOurParentLeaders />}
       <Join />
       <FinalCTA />
     </div>
@@ -577,10 +580,10 @@ function Voice() {
           <path d="M0 44V26C0 11 8 2 22 0l3 6c-8 3-12 9-12 16h10v22H0zm31 0V26C31 11 39 2 53 0l3 6c-8 3-12 9-12 16h10v22H31z" fill="#C19844" />
         </svg>
         <p className="font-bold" style={{ margin: '20px 0 16px', fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', lineHeight: 1.2 }}>
-          [Parent leader quote from the January 2026 focus groups]
+          “Right now, we kind of play it by ear. I took one class, then another, but there wasn’t a real pathway to follow.”
         </p>
         <p className="font-bold" style={{ margin: 0, fontSize: 17, color: '#2E5B3B' }}>
-          [First name], Parent Leader · [Cohort / Community]
+          Massachusetts parent leader, January 2026 focus groups
         </p>
       </div>
     </section>

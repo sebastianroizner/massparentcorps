@@ -74,10 +74,7 @@ function WhatIsMPC() {
               college credits, and career pathways.
             </p>
             <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              <strong>Cohort 1</strong> with Urban College of Boston and <strong>Cohort 2</strong> with
-              Middlesex Community College are both now underway. Interested in a future cohort?
-              Email us at <a href="mailto:mpc@massparentcorps.org" style={{ color: '#1E3D28' }}>mpc@massparentcorps.org</a> to
-              be notified when applications open again.
+              Cohort 1 (Urban College of Boston) is complete. Cohort 2 (Middlesex Community College) is underway. Sign up to hear when the next cohort opens.
             </p>
             <div
               className="rounded-2xl p-6 mt-4"

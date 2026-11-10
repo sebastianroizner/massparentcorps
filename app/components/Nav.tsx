@@ -22,6 +22,15 @@ export default function Nav() {
       className="fixed top-0 left-0 right-0 z-50 border-b"
       style={{ background: '#2E5B3B', borderColor: 'rgba(255,255,255,0.08)' }}
     >
+      {pathname === '/' && (
+        <div className="text-center text-sm px-4 py-3" style={{ background: '#C8A645', color: '#15251D' }}>
+          Elevating Parent Leadership: Lessons from Our First Cohort. Tuesday, November 17, 9:30 a.m.,
+          Urban College of Boston and online.{' '}
+          <a href="https://forms.gle/SriwfVDiQMvBxqXZ7" target="_blank" rel="noopener noreferrer" className="font-bold underline">
+            RSVP
+          </a>
+        </div>
+      )}
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <div
