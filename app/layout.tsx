@@ -10,20 +10,26 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Mass ParentCorps | Transforming Communities by Elevating Parent Leadership',
-  description: 'Mass ParentCorps is a Massachusetts initiative building the statewide infrastructure for parent leadership — connecting parent leadership experience to academic learning, college credit, and career pathways across the Commonwealth.',
+  title: {
+    default: 'Mass ParentCorps | A statewide movement for parent leadership',
+    template: '%s | Mass ParentCorps',
+  },
+  description:
+    'Mass ParentCorps is a statewide movement to recognize, elevate, and invest in parent leadership in Massachusetts.',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={plusJakartaSans.className}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-white focus:text-ink focus:px-4 focus:py-2 focus:rounded-full"
+        >
+          Skip to content
+        </a>
         <Nav />
-        {children}
+        <main id="main">{children}</main>
         <Footer />
       </body>
     </html>

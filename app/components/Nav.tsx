@@ -2,128 +2,119 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Menu, X } from 'lucide-react'
+import { Logo } from './ui'
 
 const links = [
-  { label: 'Home', href: '/' },
-  { label: 'The Initiative', href: '/about' },
-  { label: 'Pilot Program', href: '/impact' },
+  { label: 'The Movement', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'The Pilot', href: '/impact' },
   { label: 'For Parents', href: '/for-parents' },
-  { label: 'For Agencies', href: '/for-agencies' },
-  { label: 'News & Updates', href: '/news' },
+  { label: 'For Organizations', href: '/for-organizations' },
+  { label: 'Invest', href: '/invest' },
+  { label: 'News', href: '/news' },
 ]
 
 export default function Nav() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
 
+  useEffect(() => setOpen(false), [pathname])
+
   return (
-    <nav
-      className="fixed top-0 left-0 right-0 z-50 border-b"
-      style={{ background: '#2E5B3B', borderColor: 'rgba(255,255,255,0.08)' }}
-    >
+    <>
       {pathname === '/' && (
-        <div className="text-center text-sm px-4 py-3" style={{ background: '#C8A645', color: '#15251D' }}>
-          Elevating Parent Leadership: Lessons from Our First Cohort. Tuesday, November 17, 9:30 a.m.,
-          Urban College of Boston and online.{' '}
-          <a href="https://forms.gle/SriwfVDiQMvBxqXZ7" target="_blank" rel="noopener noreferrer" className="font-bold underline">
+        <div className="bg-gold text-ink text-center text-[15px] leading-snug px-4 py-2.5">
+          Elevating Parent Leadership: Lessons from Our First Cohort. Tuesday, November 17, 9:30 a.m., Urban
+          College of Boston and online.{' '}
+          <a
+            href="https://forms.gle/SriwfVDiQMvBxqXZ7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-extrabold underline underline-offset-2"
+          >
             RSVP
           </a>
         </div>
       )}
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <div
-            className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
-            style={{ background: '#EBD29A', color: '#2E5B3B' }}
-          >
-            MPC
-          </div>
-          <span className="font-bold text-lg tracking-tight" style={{ color: '#EBD29A' }}>
-            Mass ParentCorps
-          </span>
-        </Link>
+      <header className="sticky top-0 z-50 bg-white border-b border-tint-200">
+        <nav aria-label="Main" className="mpc-container flex items-center justify-between gap-6 py-3">
+          <Link href="/" aria-label="Mass ParentCorps, home" className="flex-none">
+            <Logo height={44} />
+          </Link>
 
-        {/* Mobile: hamburger */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
-          style={{ color: '#EBD29A' }}
-        >
-          {open ? (
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <line x1="18" y1="6" x2="6" y2="18" />
-              <line x1="6" y1="6" x2="18" y2="18" />
-            </svg>
-          ) : (
-            <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
-          )}
-        </button>
+          <ul className="hidden xl:flex items-center gap-6 m-0 p-0 list-none">
+            {links.map((l) => {
+              const active = l.href === '/' ? pathname === '/' : pathname.startsWith(l.href)
+              return (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    aria-current={active ? 'page' : undefined}
+                    className={`block py-2 text-[15px] font-bold text-ink hover:text-evergreen border-b-[3px] ${
+                      active ? 'border-gold' : 'border-transparent'
+                    }`}
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
 
-        {/* Desktop: nav links + button */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.slice(1).map((link) => {
-            const isActive = pathname === link.href
-            return (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-sm transition-colors"
-                style={{ color: isActive ? '#EBD29A' : 'rgba(255,255,255,0.7)' }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = '#EBD29A')}
-                onMouseLeave={(e) => (e.currentTarget.style.color = isActive ? '#EBD29A' : 'rgba(255,255,255,0.7)')}
-              >
-                {link.label}
-              </Link>
-            )
-          })}
-          <a
-            href="mailto:mpc@massparentcorps.org"
-            className="px-5 py-2 rounded-full text-sm font-bold transition-all"
-            style={{ background: '#C19844', color: '#17301F' }}
-          >
-            Join the Movement
-          </a>
-        </div>
-      </div>
-
-      {/* Mobile menu dropdown */}
-      {open && (
-        <div
-          className="md:hidden border-t"
-          style={{ background: '#2E5B3B', borderColor: 'rgba(255,255,255,0.08)' }}
-        >
-          <div className="px-6 py-4 flex flex-col gap-1">
-            {links.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="py-3 text-base font-medium border-b"
-                style={{
-                  color: pathname === link.href ? '#EBD29A' : 'rgba(255,255,255,0.75)',
-                  borderColor: 'rgba(255,255,255,0.07)',
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
-            <a
-              href="mailto:mpc@massparentcorps.org"
-              onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center px-6 py-3 rounded-full text-sm font-bold"
-              style={{ background: '#C19844', color: '#17301F' }}
+          <div className="flex items-center gap-2">
+            <Link
+              href="/#join"
+              className="hidden sm:inline-flex items-center min-h-[44px] px-6 rounded-full bg-evergreen text-white font-bold text-[15px] hover:bg-evergreen-light"
             >
               Join the Movement
-            </a>
+            </Link>
+            <button
+              type="button"
+              className="xl:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-evergreen hover:bg-tint-100"
+              aria-expanded={open}
+              aria-controls="mobile-menu"
+              aria-label={open ? 'Close menu' : 'Open menu'}
+              onClick={() => setOpen((o) => !o)}
+            >
+              {open ? <X size={26} /> : <Menu size={26} />}
+            </button>
           </div>
-        </div>
-      )}
-    </nav>
+        </nav>
+
+        {open && (
+          <div id="mobile-menu" className="xl:hidden border-t border-tint-200 bg-white">
+            <ul className="mpc-container py-3 m-0 list-none flex flex-col">
+              {links.map((l) => {
+                const active = l.href === '/' ? pathname === '/' : pathname.startsWith(l.href)
+                return (
+                  <li key={l.href}>
+                    <Link
+                      href={l.href}
+                      aria-current={active ? 'page' : undefined}
+                      className={`flex items-center min-h-[48px] text-[17px] font-bold border-b border-tint-100 ${
+                        active ? 'text-evergreen' : 'text-ink'
+                      }`}
+                    >
+                      {active && <span aria-hidden="true" className="w-2.5 h-2.5 rounded-full bg-gold mr-2.5" />}
+                      {l.label}
+                    </Link>
+                  </li>
+                )
+              })}
+              <li className="pt-4 pb-2">
+                <Link
+                  href="/#join"
+                  className="flex items-center justify-center min-h-[48px] rounded-full bg-evergreen text-white font-bold"
+                >
+                  Join the Movement
+                </Link>
+              </li>
+            </ul>
+          </div>
+        )}
+      </header>
+    </>
   )
 }

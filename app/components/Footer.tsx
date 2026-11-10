@@ -1,104 +1,73 @@
 import Link from 'next/link'
+import { Logo } from './ui'
+
+const cols = [
+  {
+    title: 'Explore',
+    links: [
+      { label: 'The Movement', href: '/' },
+      { label: 'About', href: '/about' },
+      { label: 'The Pilot', href: '/impact' },
+      { label: 'News', href: '/news' },
+    ],
+  },
+  {
+    title: 'Get involved',
+    links: [
+      { label: 'For Parents', href: '/for-parents' },
+      { label: 'For Organizations', href: '/for-organizations' },
+      { label: 'Invest', href: '/invest' },
+      { label: 'Join the Movement', href: '/#join' },
+    ],
+  },
+]
 
 export default function Footer() {
   return (
-    <footer className="py-16" style={{ background: '#2E5B3B', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12">
-          {/* Brand */}
+    <footer className="bg-evergreen text-white">
+      <div className="mpc-container py-16 md:py-20">
+        <div className="grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold"
-                style={{ background: '#EBD29A', color: '#2E5B3B' }}
-              >
-                MPC
-              </div>
-              <span className="font-bold text-lg" style={{ color: '#EBD29A' }}>Mass ParentCorps</span>
-            </div>
-            <p className="text-sm leading-relaxed max-w-xs" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Building workforce pathways for parent leaders — a statewide initiative
-              across Massachusetts.
+            <Logo light height={48} />
+            <p className="mt-5 mb-0 text-ivory max-w-[22rem]">
+              A statewide movement to recognize, elevate, and invest in parent leadership.
             </p>
-            <div className="mt-6 text-xs font-medium" style={{ color: '#C19844' }}>
-              Now in Phase 3: Building Statewide Infrastructure
+            <p className="mt-4 mb-0 text-gold-light font-bold text-[15px]">
+              Now in Phase 3: building statewide infrastructure.
+            </p>
+          </div>
+
+          {cols.map((c) => (
+            <div key={c.title}>
+              <h2 className="text-[15px] font-bold uppercase tracking-[0.08em] text-gold-light m-0 mb-4">{c.title}</h2>
+              <ul className="m-0 p-0 list-none flex flex-col gap-2.5">
+                {c.links.map((l) => (
+                  <li key={l.label}>
+                    <Link href={l.href} className="text-white hover:underline underline-offset-4">
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          </div>
+          ))}
 
-          {/* Navigation */}
           <div>
-            <div className="font-semibold text-sm mb-4 text-white">Navigate</div>
-            <ul className="space-y-2">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'The Initiative', href: '/about' },
-                { label: 'Pilot Program', href: '/impact' },
-                { label: 'For Parents', href: '/for-parents' },
-                { label: 'For Agencies', href: '/for-agencies' },
-                { label: 'News & Updates', href: '/news' },
-              ].map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm transition-colors"
-                    style={{ color: 'rgba(255,255,255,0.45)' }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h2 className="text-[15px] font-bold uppercase tracking-[0.08em] text-gold-light m-0 mb-4">Contact</h2>
+            <ul className="m-0 p-0 list-none flex flex-col gap-2.5">
+              <li>
+                <a href="mailto:mpc@massparentcorps.org" className="text-white underline underline-offset-4 break-all">
+                  mpc@massparentcorps.org
+                </a>
+              </li>
+              <li className="text-ivory">Boston, Massachusetts</li>
             </ul>
-          </div>
-
-          {/* Program elements */}
-          <div>
-            <div className="font-semibold text-sm mb-4 text-white">The Program</div>
-            <ul className="space-y-2">
-              {[
-                'College Credit Course (3–6 credits)',
-                'Leadership Experience (60 hrs)',
-                'Leadership Training (8 hrs)',
-                'Applied Learning Project',
-                'Community Learning Sessions',
-                'Evaluations & Graduation',
-              ].map((s) => (
-                <li key={s} className="text-sm" style={{ color: 'rgba(255,255,255,0.45)' }}>{s}</li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <div className="font-semibold text-sm mb-4 text-white">Contact</div>
-            <div className="space-y-1">
-              <div className="text-sm font-medium" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Magda Rodriguez-Villafañe
-              </div>
-              <a
-                href="mailto:mpc@massparentcorps.org"
-                className="text-sm transition-colors"
-                style={{ color: '#C19844' }}
-              >
-                mpc@massparentcorps.org
-              </a>
-              <div className="mt-3 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-                Massachusetts
-              </div>
-            </div>
           </div>
         </div>
 
-        <div
-          className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"
-          style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
-        >
-          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            © 2026 Mass ParentCorps. All rights reserved.
-          </div>
-          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.25)' }}>
-            Serving families across the Commonwealth of Massachusetts
-          </div>
-        </div>
+        <p className="mt-14 pt-8 mb-0 border-t border-white/15 text-[14px] text-ivory">
+          © 2026 Mass ParentCorps. Serving families across the Commonwealth of Massachusetts.
+        </p>
       </div>
     </footer>
   )
