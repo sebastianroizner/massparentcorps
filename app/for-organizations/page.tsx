@@ -1,285 +1,122 @@
-import type { Metadata } from 'next'
+import { BadgeCheck, Briefcase, ClipboardCheck, UserPlus } from 'lucide-react'
+import { Button, Card, C, Dot, H2, Lead, PageHero, Section, SectionLabel } from '../components/ui'
 
-export const metadata: Metadata = {
-  title: 'For Agencies | Mass ParentCorps',
-  description: 'Learn how community-based organizations can partner with Mass ParentCorps to refer and support parent leaders.',
+export const metadata = {
+  title: 'For Organizations',
+  description:
+    'Community organizations are co-designers of the pathway that turns parent leadership into recognized, credentialed work.',
 }
 
-export default function ForAgenciesPage() {
+export default function ForOrganizationsPage() {
   return (
-    <div className="min-h-screen" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-      <PageHero />
-      <RoleOfAgencies />
-      <ReferralProcess />
-      <PartnerCBOs />
-      <GetInvolved />
-    </div>
-  )
-}
+    <>
+      <PageHero
+        label="For community organizations"
+        title={
+          <>
+            Grow leaders from within your community
+            <Dot />
+          </>
+        }
+        lead="Community organizations are not just a referral source. You are co-designers of the pathway that turns parent leadership into recognized, credentialed work."
+      >
+        <Button href="mailto:mpc@massparentcorps.org?subject=Agency%20partnership">Become a partner</Button>
+        <Button href="#refer" variant="outline-light">
+          Request the referral guide
+        </Button>
+      </PageHero>
 
-// ─── PAGE HERO ─────────────────────────────────────────────────────────────
-
-function PageHero() {
-  return (
-    <section style={{ background: '#2E5B3B', paddingTop: 64 }}>
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>For Agencies</span>
-        <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-        <h1 className="mt-6 text-5xl md:text-6xl font-bold leading-tight" style={{ color: '#EBD29A' }}>
-          Partner with us to<br />elevate parent leaders.
-        </h1>
-        <p className="mt-6 text-xl max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.75)' }}>
-          Community-based organizations play a central role in Mass ParentCorps — from
-          referring participants to supporting their leadership journey.
-        </p>
-        <div className="mt-8 flex flex-col sm:flex-row gap-4">
-          <a
-            href="mailto:mpc@massparentcorps.org?subject=Agency Partnership Inquiry - Mass ParentCorps"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg"
-            style={{ background: '#EBD29A', color: '#2E5B3B' }}
-          >
-            Contact Us to Partner →
-          </a>
-          <a
-            href="https://docs.google.com/document/d/1Ei474xjRataSddf__vO6cpHhSVTv3-0J/edit"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold text-lg border"
-            style={{ color: 'white', borderColor: 'rgba(255,255,255,0.25)' }}
-          >
-            Learn More
-          </a>
+      <Section bg="white">
+        <SectionLabel>Your role</SectionLabel>
+        <H2 className="mb-10">How your organization makes it work.</H2>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: UserPlus, t: 'Identify and refer', d: 'Spot parent leaders in your programs who meet eligibility and refer them.' },
+            { icon: ClipboardCheck, t: 'Verify hours', d: 'Confirm 60 hours of leadership experience and 8 hours of approved training.' },
+            { icon: BadgeCheck, t: 'Support applied learning', d: "Host and guide each participant's Applied Learning Project." },
+            { icon: Briefcase, t: 'Create hiring pathways', d: 'Help build routes from parent leadership into paid staff roles.' },
+          ].map(({ icon: Icon, t, d }) => (
+            <Card key={t} bg="ivory">
+              <Icon size={36} color={C.evergreen} aria-hidden="true" />
+              <h3 className="m-0 mt-5 mb-2 font-extrabold text-[22px]">{t}</h3>
+              <p className="m-0">{d}</p>
+            </Card>
+          ))}
         </div>
-      </div>
-    </section>
-  )
-}
+      </Section>
 
-// ─── ROLE OF AGENCIES ────────────────────────────────────────────────────────
-
-function RoleOfAgencies() {
-  const roles = [
-    {
-      icon: '🤝',
-      title: 'Identify & Refer Parent Leaders',
-      desc: 'Organizations identify parent leaders in their programs who meet eligibility requirements and refer them through the agency referral process.',
-    },
-    {
-      icon: '📋',
-      title: 'Verify Leadership Hours',
-      desc: 'Sponsoring organizations verify that referred participants have completed 60 hours of leadership experience and 8 hours of approved training.',
-    },
-    {
-      icon: '🌱',
-      title: 'Support Applied Learning',
-      desc: "Organizations host and support participants' Applied Learning Projects — practical projects connected to real community work.",
-    },
-    {
-      icon: '🔗',
-      title: 'Create Hiring Pathways',
-      desc: 'A key goal of Mass ParentCorps is helping organizations build pathways to hire parent leaders into paid staff roles.',
-    },
-  ]
-
-  return (
-    <section className="py-20" style={{ background: '#F3E8CF' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid md:grid-cols-[220px_1fr] gap-16 items-start">
-          <div className="md:pt-2">
-            <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Role of Agencies</span>
-            <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          </div>
-          <div>
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-8" style={{ color: '#2E5B3B' }}>
-              How your organization<br />makes it work
-            </h2>
-            <p className="text-lg leading-relaxed mb-6" style={{ color: '#4B5563' }}>
-              Mass ParentCorps is a partnership between community-based organizations,
-              parent leaders, and academic partners. CBOs are not just a referral source —
-              they are essential co-designers of the pathway.
-            </p>
-            <div
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold mb-12"
-              style={{ background: 'rgba(193,152,68,0.12)', color: '#1E3D28' }}
-            >
-              Join 15 sponsor agencies and 15+ partner organizations already part of the Mass ParentCorps network.
-            </div>
-            <div className="grid sm:grid-cols-2 gap-5">
-              {roles.map((r, i) => (
-                <div
-                  key={i}
-                  className="rounded-2xl p-8"
-                  style={{ background: 'white', border: '1px solid rgba(193,152,68,0.12)' }}
-                >
-                  <div className="text-2xl mb-4">{r.icon}</div>
-                  <h3 className="font-bold text-lg mb-3" style={{ color: '#2E5B3B' }}>{r.title}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#6B7280' }}>{r.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+      <Section id="refer" bg="ivory" innerClassName="grid gap-12 lg:grid-cols-[1fr_1.3fr] items-start">
+        <div>
+          <SectionLabel>Referral process</SectionLabel>
+          <H2>Refer a parent leader in four steps.</H2>
+          <p className="m-0 mb-8 text-[19px]">Every participant is referred by a sponsoring community-based organization.</p>
+          {/* TODO: if the Agency Referral and Screening Guide PDF is added to /public, link to it here instead. */}
+          <Button href="mailto:mpc@massparentcorps.org?subject=Agency%20referral%20guide" variant="dark">
+            Email us for the guide
+          </Button>
         </div>
-      </div>
-    </section>
-  )
-}
-
-// ─── REFERRAL PROCESS ────────────────────────────────────────────────────────
-
-function ReferralProcess() {
-  const steps = [
-    {
-      step: '01',
-      title: 'Review Eligibility Criteria',
-      desc: 'Confirm the parent leader has 60+ hours of leadership experience, 8+ hours of training, a HS diploma/GED, and English proficiency.',
-    },
-    {
-      step: '02',
-      title: 'Download the Agency Guide',
-      desc: 'Review the Agency Referral & Screening Guide for full requirements and the referral form. Contact us at mpc@massparentcorps.org to request the guide.',
-    },
-    {
-      step: '03',
-      title: 'Submit Your Referral',
-      desc: 'Complete the referral form and submit it on behalf of your candidate before the application deadline.',
-    },
-    {
-      step: '04',
-      title: 'Support Their Journey',
-      desc: 'Stay connected as their sponsoring organization — support their Applied Learning Project and help build their pathway to a paid role.',
-    },
-  ]
-
-  return (
-    <section id="referral" className="py-20 relative overflow-hidden" style={{ background: '#2E5B3B' }}>
-      <div className="relative max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Referral Process</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#EBD29A' }}>
-            How to refer a participant
-          </h2>
-          <p className="mt-4 text-lg max-w-2xl leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>
-            Participants must be referred by a sponsoring community-based organization.
-          </p>
-        </div>
-
-        <div className="space-y-4">
-          {steps.map((s) => (
-            <div
-              key={s.step}
-              className="rounded-2xl px-8 py-6 flex items-start gap-6"
-              style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)' }}
-            >
-              <span className="text-2xl font-bold flex-shrink-0 mt-0.5" style={{ color: 'rgba(193,152,68,0.4)' }}>
-                {s.step}
+        <ol className="m-0 p-0 list-none flex flex-col gap-3">
+          {[
+            ['Review eligibility', 'Confirm 60+ hours of leadership experience, 8+ hours of training, a high school diploma or GED, and comfort learning in English.'],
+            ['Get the referral guide', 'Email us for the Agency Referral and Screening Guide and the referral form.'],
+            ['Submit your referral', 'Complete the form for your candidate before the cohort deadline.'],
+            ['Support their journey', 'Stay connected as their sponsor through the project and toward a paid role.'],
+          ].map(([t, d], i) => (
+            <li key={t} className="flex gap-5 rounded-2xl bg-white p-6">
+              <span className="flex-none w-11 h-11 rounded-full bg-evergreen text-white font-extrabold text-[20px] flex items-center justify-center">
+                {i + 1}
               </span>
-              <div>
-                <h3 className="font-bold text-lg mb-1" style={{ color: 'white' }}>{s.title}</h3>
-                <p className="text-base leading-relaxed" style={{ color: 'rgba(255,255,255,0.65)' }}>{s.desc}</p>
-              </div>
-            </div>
+              <span>
+                <span className="block font-extrabold text-[19px]">{t}</span>
+                <span className="block mt-1">{d}</span>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </Section>
+
+      <Section bg="evergreen">
+        <SectionLabel tone="light">Phase 3</SectionLabel>
+        <H2>Help shape the statewide infrastructure.</H2>
+        <Lead className="text-ivory">
+          We&apos;re not asking organizations to watch from the outside. We&apos;re inviting you to help build it, across
+          three working areas.
+        </Lead>
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            ['Framework and curriculum', 'A shared Parent Leadership Framework and a universal, credit-bearing curriculum.'],
+            ['Funding and policy', 'A standing coalition pursuing durable public funding and formal recognition.'],
+            ['Evaluation and research', 'A statewide evidence base, with NYU Metro Center, to prove impact and improve the model.'],
+          ].map(([t, d]) => (
+            <Card key={t} bg="white">
+              <h3 className="m-0 mb-2 font-extrabold text-[22px]">{t}</h3>
+              <p className="m-0">{d}</p>
+            </Card>
           ))}
         </div>
-      </div>
-    </section>
-  )
-}
+      </Section>
 
-// ─── PARTNER CBOs ────────────────────────────────────────────────────────────
-
-function PartnerCBOs() {
-  const cbos = [
-    'Families First',
-    'East Boston Social Centers',
-    'Family Nurturing Center of Massachusetts',
-    'Union Capital Boston',
-  ]
-
-  const designPartners = [
-    'Department of Early Education and Care (EEC)',
-    'Department of Elementary and Secondary Education (DESE)',
-  ]
-
-  return (
-    <section className="py-20" style={{ background: '#F3E8CF' }}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="mb-12">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Our Partners</span>
-          <div className="mt-2 w-10 h-px" style={{ background: '#C19844' }} />
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
-            Founding community partners
-          </h2>
-        </div>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-          {cbos.map((p, i) => (
-            <div
-              key={i}
-              className="rounded-2xl px-6 py-5 flex items-center gap-4 bg-white"
-              style={{ border: '1px solid rgba(193,152,68,0.15)' }}
-            >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#C19844' }} />
-              <span className="font-medium text-sm" style={{ color: '#2E5B3B' }}>{p}</span>
-            </div>
+      <Section bg="white">
+        <SectionLabel>Our partners</SectionLabel>
+        <H2 className="mb-8">Our community partners.</H2>
+        <ul className="m-0 p-0 list-none flex flex-wrap gap-2.5 mb-8">
+          {[
+            'Families First',
+            'East Boston Social Centers',
+            'Family Nurturing Center of Massachusetts',
+            'Union Capital Boston',
+            'Boys & Girls Clubs of Dorchester',
+          ].map((p) => (
+            <li key={p} className="rounded-full bg-ivory px-5 py-3 font-bold">
+              {p}
+            </li>
           ))}
-        </div>
-
-        <div className="mb-3">
-          <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#9CA3AF' }}>Design &amp; Government Partners</span>
-        </div>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {designPartners.map((p, i) => (
-            <div
-              key={i}
-              className="rounded-2xl px-6 py-5 flex items-center gap-4 bg-white"
-              style={{ border: '1px solid rgba(0,0,0,0.07)' }}
-            >
-              <span className="w-2 h-2 rounded-full flex-shrink-0" style={{ background: '#EBD29A' }} />
-              <span className="font-medium text-sm" style={{ color: '#4B5563' }}>{p}</span>
-            </div>
-          ))}
-        </div>
-        <p className="mt-4 text-sm" style={{ color: '#9CA3AF' }}>
-          EEC and DESE participated in the initial design phase of Mass ParentCorps.
+        </ul>
+        <p className="m-0 text-[18px] max-w-[48rem]">
+          Design and government partners: the Department of Early Education and Care (EEC) and the Department of
+          Elementary and Secondary Education (DESE) took part in the initial design phase.
         </p>
-      </div>
-    </section>
-  )
-}
-
-// ─── GET INVOLVED ────────────────────────────────────────────────────────────
-
-function GetInvolved() {
-  return (
-    <section className="py-20 bg-white">
-      <div className="max-w-4xl mx-auto px-6 text-center">
-        <span className="text-xs font-bold tracking-widest uppercase" style={{ color: '#C19844' }}>Get Involved</span>
-        <div className="mt-2 w-10 h-px mx-auto" style={{ background: '#C19844' }} />
-        <h2 className="mt-8 text-4xl md:text-5xl font-bold" style={{ color: '#2E5B3B' }}>
-          Ready to partner?
-        </h2>
-        <p className="mt-6 text-xl leading-relaxed max-w-2xl mx-auto" style={{ color: '#4B5563' }}>
-          We welcome conversations with community-based organizations, educators, researchers,
-          and government partners interested in the initiative.
-        </p>
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="mailto:mpc@massparentcorps.org?subject=Agency Partnership Inquiry - Mass ParentCorps"
-            className="inline-flex items-center gap-2 px-10 py-5 rounded-full text-lg font-semibold"
-            style={{ background: '#2E5B3B', color: '#EBD29A' }}
-          >
-            Get in Touch →
-          </a>
-          <a
-            href="mailto:mpc@massparentcorps.org"
-            className="text-base font-medium"
-            style={{ color: '#C19844' }}
-          >
-            mpc@massparentcorps.org
-          </a>
-        </div>
-      </div>
-    </section>
+      </Section>
+    </>
   )
 }
