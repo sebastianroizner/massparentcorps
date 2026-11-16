@@ -40,8 +40,8 @@ export default function Nav() {
       )}
       <header className="sticky top-0 z-50 bg-white border-b border-tint-200">
         <nav aria-label="Main" className="mpc-container flex items-center justify-between gap-6 py-3">
-          <Link href="/" aria-label="Mass ParentCorps, home" className="flex-none">
-            <Logo height={44} />
+          <Link href="/" className="flex-none">
+            <Logo height={64} />
           </Link>
 
           <ul className="hidden xl:flex items-center gap-6 m-0 p-0 list-none">

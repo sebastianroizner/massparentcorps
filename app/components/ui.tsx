@@ -186,21 +186,18 @@ export function LogoMark({ size = 40, light = false }: { size?: number; light?: 
   )
 }
 
-/**
- * Logo lockup. TODO: swap for /images/logo-color.png and /images/logo-white.png
- * once the Mass-ParentCorps-Logos-Evergreen.zip files are added to public/images/.
- */
+/** Logo lockup: full-color on light backgrounds, all-white on evergreen. */
 export function Logo({ light = false, height = 50 }: { light?: boolean; height?: number }) {
   return (
-    <span className="inline-flex items-center gap-2.5" style={{ height }}>
-      <LogoMark size={Math.round(height * 0.82)} light={light} />
-      <span
-        className={`font-extrabold tracking-[-0.02em] leading-none ${light ? 'text-white' : 'text-evergreen'}`}
-        style={{ fontSize: Math.round(height * 0.4) }}
-      >
-        Mass ParentCorps
-      </span>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={light ? '/images/logo-white.png' : '/images/logo-color.png'}
+      alt="Mass ParentCorps"
+      width={Math.round(height * (2830 / 910))}
+      height={height}
+      className="block w-auto"
+      style={{ height }}
+    />
   )
 }
 
