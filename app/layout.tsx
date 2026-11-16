@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   description:
     'Mass ParentCorps is a statewide movement to recognize, elevate, and invest in parent leadership in Massachusetts.',
+  icons: { icon: '/images/icon.png', apple: '/images/icon.png' },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

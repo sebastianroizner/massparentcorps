@@ -2,23 +2,11 @@ import moments from '../../data/moments.json'
 import Photo from './Photo'
 import { C } from './ui'
 
-/**
- * Credential seal. TODO: replace with /images/seal.png
- * (08_Seal_FullColor_Transparent_ForWhite.png) once the logo files are uploaded.
- */
+/** Mass ParentCorps Credential seal. */
 export function Seal({ size = 88 }: { size?: number }) {
   return (
-    <svg viewBox="0 0 100 100" width={size} height={size} role="img" aria-label="Mass ParentCorps Credential seal">
-      <circle cx="50" cy="50" r="47" fill={C.ivory} stroke={C.gold} strokeWidth="4" />
-      <circle cx="50" cy="50" r="38" fill="none" stroke={C.evergreen} strokeWidth="1.5" strokeDasharray="3 3" />
-      <rect x="30" y="50" width="10" height="18" rx="5" fill={C.evergreen} />
-      <rect x="45" y="42" width="10" height="26" rx="5" fill={C.evergreen} />
-      <rect x="60" y="34" width="10" height="34" rx="5" fill={C.evergreen} />
-      <circle cx="65" cy="27" r="4.5" fill={C.gold} />
-      <text x="50" y="81" textAnchor="middle" fontSize="7.5" fontWeight="800" fill={C.evergreen} letterSpacing="0.6">
-        CREDENTIAL
-      </text>
-    </svg>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img src="/images/seal.png" alt="Mass ParentCorps Credential seal" width={size} height={size} className="block flex-none" />
   )
 }
 

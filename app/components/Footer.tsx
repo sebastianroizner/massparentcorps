@@ -28,7 +28,7 @@ export default function Footer() {
       <div className="mpc-container py-16 md:py-20">
         <div className="grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
           <div>
-            <Logo light height={48} />
+            <Logo light height={64} />
             <p className="mt-5 mb-0 text-ivory max-w-[22rem]">
               A statewide movement to recognize, elevate, and invest in parent leadership.
             </p>
